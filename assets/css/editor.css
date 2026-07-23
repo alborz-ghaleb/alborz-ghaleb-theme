@@ -1,0 +1,36 @@
+/**
+ * Editor Styles — Alborz Ghaleb
+ * تطبیق ظاهر ویرایشگر با فرانت‌اند (فونت/رنگ).
+ */
+:root {
+    --fl-primary: #2D5F93;
+    --fl-text: #17212B;
+    --fl-text-light: #64748B;
+}
+
+.editor-styles-wrapper,
+.block-editor-writing-flow {
+    font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+    color: var(--fl-text);
+    line-height: 1.8;
+    direction: rtl;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4 {
+    font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+    font-weight: 700;
+    color: var(--fl-text);
+}
+
+.editor-styles-wrapper a {
+    color: var(--fl-primary);
+}
+
+.editor-styles-wrapper blockquote {
+    border-inline-start: 4px solid var(--fl-primary);
+    padding-inline-start: 16px;
+    color: #334155;
+}

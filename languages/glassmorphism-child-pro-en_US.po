@@ -1,0 +1,381 @@
+# glassmorphism-child-pro — en_US
+msgid ""
+msgstr ""
+"Project-Id-Version: Glassmorphism Child PRO 4.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%s دیدگاه"
+msgstr "%s comments"
+
+msgid "Address"
+msgstr "Address"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Contact Email"
+msgstr "Contact Email"
+
+msgid "Contact Phone"
+msgstr "Contact Phone"
+
+msgid "Copyright Text"
+msgstr "Copyright Text"
+
+msgid "Footer Description"
+msgstr "Footer Description"
+
+msgid "Glassmorphism PRO"
+msgstr "Glassmorphism PRO"
+
+msgid "Navigation"
+msgstr "Navigation"
+
+msgid "No content found."
+msgstr "No content found."
+
+msgid "Open menu"
+msgstr "Open menu"
+
+msgid "Paste Your Transaction Hash (TxID) Here"
+msgstr "Paste Your Transaction Hash (TxID) Here"
+
+msgid "Please enter the transaction hash (TxID) of your USDT payment."
+msgstr "Please enter the transaction hash (TxID) of your USDT payment."
+
+msgid "Primary - Default"
+msgstr "Primary - Default"
+
+msgid "Primary - English"
+msgstr "Primary - English"
+
+msgid "Primary - Türkçe"
+msgstr "Primary - Turkish"
+
+msgid "Primary - Русский"
+msgstr "Primary - Russian"
+
+msgid "Primary - Հայերեն"
+msgstr "Primary - Armenian"
+
+msgid "Primary - العربية"
+msgstr "Primary - Arabic"
+
+msgid "Primary - فارسی"
+msgstr "Primary - Persian"
+
+msgid "Primary Navigation"
+msgstr "Primary Navigation"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Search..."
+msgstr "Search..."
+
+msgid "Show Info Bar"
+msgstr "Show Info Bar"
+
+msgid "Submit Ad & Verify Payment"
+msgstr "Submit Ad & Verify Payment"
+
+msgid "Submit Classified Ad"
+msgstr "Submit Classified Ad"
+
+msgid "The transaction hash (TxID) entered is invalid."
+msgstr "The transaction hash (TxID) entered is invalid."
+
+msgid "Toggle"
+msgstr "Toggle"
+
+msgid "Toggle Dark Mode"
+msgstr "Toggle Dark Mode"
+
+msgid "Toggle submenu"
+msgstr "Toggle submenu"
+
+msgid "We have received your payment transaction ID. Our administrator is verifying your transaction. Your ad will be published as soon as the transaction is confirmed!"
+msgstr "We have received your payment transaction ID. Our administrator is verifying your transaction. Your ad will be published as soon as the transaction is confirmed!"
+
+msgid "Your ad has been submitted successfully!"
+msgstr "Your ad has been submitted successfully!"
+
+msgid "آخرین به‌روزرسانی:"
+msgstr "Last updated:"
+
+msgid "آدرس ولت تتر (Tether USDT - TRC20)"
+msgstr "Tether Wallet Address (USDT - TRC20)"
+
+msgid "آدرس کیف پول تتر شبکه TRC20 جهت واریز هزینه آگهی."
+msgstr "Tether wallet address on the TRC20 network for paying the ad fee."
+
+msgid "آگهی با موفقیت تایید و در سایت منتشر شد."
+msgstr "The ad was successfully approved and published on the site."
+
+msgid "آگهی‌ای یافت نشد."
+msgstr "No ads found."
+
+msgid "آیکون"
+msgstr "Icon"
+
+msgid "ارتباط با ما"
+msgstr "Contact Us"
+
+msgid "استایل"
+msgstr "Style"
+
+msgid "امکان ثبت دیدگاه جدید وجود ندارد."
+msgstr "New comments are not allowed."
+
+msgid "برای آگهی‌هایی که در صفحات غیرفارسی ثبت می‌شوند."
+msgstr "For ads submitted on non-Persian pages."
+
+msgid "برچسب:"
+msgstr "Tag:"
+
+msgid "بعدی"
+msgstr "Next"
+
+msgid "بیشتر بخوانید"
+msgstr "Read more"
+
+msgid "تبلیغات"
+msgstr "Advertisement"
+
+msgid "تجربه و دیدگاه خود را با ما و دیگر کاربران به اشتراک بگذارید"
+msgstr "Share your experience and opinion with us and other users"
+
+msgid "تعداد آگهی"
+msgstr "Number of Ads"
+
+msgid "تعداد تلاش‌های ناموفق بیش از حد مجاز است. لطفاً چند دقیقه بعد دوباره تلاش کنید."
+msgstr "Too many failed attempts. Please try again in a few minutes."
+
+msgid "تعداد ستون"
+msgstr "Number of Columns"
+
+msgid "تنظیمات"
+msgstr "Settings"
+
+msgid "توضیح کوتاه کارت اینجا قرار می‌گیرد."
+msgstr "A short card description goes here."
+
+msgid "ثبت آگهی جدید"
+msgstr "Post New Ad"
+
+msgid "خانه"
+msgstr "Home"
+
+msgid "خروج"
+msgstr "Logout"
+
+msgid "خطا در اتصال به درگاه زرین‌پال. آگهی شما ذخیره نشد."
+msgstr "Error connecting to the ZarinPal gateway. Your ad was not saved."
+
+msgid "خطای امنیتی رخ داده است."
+msgstr "A security error has occurred."
+
+msgid "خطای امنیتی رخ داده است. لطفاً صفحه را رفرش کرده و دوباره تلاش کنید."
+msgstr "A security error has occurred. Please refresh the page and try again."
+
+msgid "داشبورد من"
+msgstr "My Dashboard"
+
+msgid "درباره ما"
+msgstr "About Us"
+
+msgid "درج هرگونه آدرس اینترنتی (لینک، دامنه‌ مانند com. یا ir.، وب‌سایت شروع‌شونده با www یا http) و همچنین کدهای HTML و اسکریپت در فیلدهای آگهی مجاز نیست."
+msgstr "Including any web address (link, domain such as .com or .ir, a website starting with www or http) as well as HTML and script code in the ad fields is not allowed."
+
+msgid "دسترسی سریع"
+msgstr "Quick Access"
+
+msgid "دسته‌بندی"
+msgstr "Category"
+
+msgid "دیدگاه‌ها و نظرات"
+msgstr "Comments & Reviews"
+
+msgid "رنگ آیکون"
+msgstr "Icon Color"
+
+msgid "رنگ عنوان"
+msgstr "Title Color"
+
+msgid "شماره تماس الزامی است."
+msgstr "Phone number is required."
+
+msgid "شماره تماس وارد شده معتبر نیست. لطفاً یک شماره ۱۱ رقمی معتبر وارد کنید (مثال: 09121234567)."
+msgstr "The phone number entered is invalid. Please enter a valid 11-digit number (e.g. 09121234567)."
+
+msgid "صفحه"
+msgstr "Page"
+
+msgid "عنوان"
+msgstr "Title"
+
+msgid "عنوان آگهی نمی‌تواند خالی باشد."
+msgstr "The ad title cannot be empty."
+
+msgid "عنوان کارت"
+msgstr "Card Title"
+
+msgid "فایل %s بزرگتر از ۱ مگابایت است."
+msgstr "The file %s is larger than 1 MB."
+
+msgid "فرمت فایل %s معتبر نیست. فقط JPG, JPEG, PNG مجاز هستند."
+msgstr "The file format of %s is invalid. Only JPG, JPEG, PNG are allowed."
+
+msgid "فعال‌سازی درگاه زرین‌پال (فارسی)"
+msgstr "Enable ZarinPal Gateway (Persian)"
+
+msgid "فعال‌سازی پرداخت کریپتو (سایر زبان‌ها)"
+msgstr "Enable Crypto Payment (other languages)"
+
+msgid "قبلی"
+msgstr "Previous"
+
+msgid "لطفاً دسته‌بندی آگهی را انتخاب کنید."
+msgstr "Please select an ad category."
+
+msgid "لطفاً نام شهر آگهی را وارد کنید."
+msgstr "Please enter the ad's city."
+
+msgid "لینک"
+msgstr "Link"
+
+msgid "مبلغ ثبت آگهی زرین‌پال (تومان)"
+msgstr "ZarinPal Ad Fee (Toman)"
+
+msgid "مبلغ ثبت آگهی کریپتو (USDT)"
+msgstr "Crypto Ad Fee (USDT)"
+
+msgid "متأسفانه در ثبت آگهی مشکلی پیش آمد. لطفا مجدداً تلاش کنید."
+msgstr "Unfortunately, there was a problem submitting the ad. Please try again."
+
+msgid "متن"
+msgstr "Text"
+
+msgid "متن آگهی نمی‌تواند خالی باشد."
+msgstr "The ad text cannot be empty."
+
+msgid "متن دکمه"
+msgstr "Button Text"
+
+msgid "محتوا"
+msgstr "Content"
+
+msgid "محتوایی یافت نشد."
+msgstr "No content found."
+
+msgid "محصول"
+msgstr "Product"
+
+msgid "مشاهده محصول"
+msgstr "View Product"
+
+msgid "مطالعه مقاله"
+msgstr "Read Article"
+
+msgid "مقاله"
+msgstr "Article"
+
+msgid "مقاله ویژه"
+msgstr "Featured Article"
+
+msgid "منتشر شده:"
+msgstr "Published:"
+
+msgid "نام و نام خانوادگی نمی‌تواند خالی باشد."
+msgstr "First and last name cannot be empty."
+
+msgid "نتایج جستجو"
+msgstr "Search Results"
+
+msgid "نتایج جستجو برای:"
+msgstr "Search results for:"
+
+msgid "نتیجه‌ای برای جستجوی \"%s\" یافت نشد."
+msgstr "No results found for \"%s\"."
+
+msgid "نظر شما برای ما ارزشمنده"
+msgstr "Your opinion matters to us"
+
+msgid "همه دسته‌ها"
+msgstr "All Categories"
+
+msgid "هنوز دیدگاهی ثبت نشده. اولین نفر باشید!"
+msgstr "No comments yet. Be the first!"
+
+msgid "هیچ مقاله‌ای یافت نشد."
+msgstr "No articles found."
+
+msgid "هیچ پستی با این برچسب یافت نشد."
+msgstr "No posts found with this tag."
+
+msgid "وبلاگ"
+msgstr "Blog"
+
+msgid "ورود / ثبت‌نام"
+msgstr "Login / Register"
+
+msgid "وضعیت تایید آگهی"
+msgstr "Ad Approval Status"
+
+msgid "پرش به محتوای اصلی"
+msgstr "Skip to main content"
+
+msgid "کارت شیشه‌ای"
+msgstr "Glass Card"
+
+msgid "کد مرچنت زرین‌پال (Merchant ID)"
+msgstr "ZarinPal Merchant ID"
+
+msgid "گرید آگهی‌ها"
+msgstr "Ads Grid"
+
+msgid "⬆ Header Info Bar"
+msgstr "⬆ Header Info Bar"
+
+msgid "⬇ Footer Settings"
+msgstr "⬇ Footer Settings"
+
+msgid "💳 درگاه پرداخت آگهی (ریالی و کریپتو)"
+msgstr "💳 Ad Payment Gateway (Rial & Crypto)"
+
+msgid "📍 Address"
+msgstr "📍 Address"
+
+msgid "📞 Phone 1"
+msgstr "📞 Phone 1"
+
+msgid "📞 Phone 2 (Optional)"
+msgstr "📞 Phone 2 (Optional)"
+
+msgid "📧 Email (Optional)"
+msgstr "📧 Email (Optional)"
+
+
+#: inc/legacy/portfolio-submit/submission-handler.php:95
+msgid "The transaction hash (TxID) entered is invalid. Expected: 0x…64 hex (ETH) or 64 hex (TRON)."
+msgstr "The transaction hash (TxID) entered is invalid. Expected: 0x…64 hex (ETH) or 64 hex (TRON)."
+
+#: inc/legacy/portfolio-submit/payment-callback.php:45
+msgid "Payment verification HMAC failed – possible tampering detected."
+msgstr "Payment verification HMAC failed – possible tampering detected."
+
+#: inc/legacy/portfolio-submit/payment-callback.php:102
+msgid "This payment has already been processed (Zarinpal code 101)."
+msgstr "This payment has already been processed (Zarinpal code 101)."
+
+#: inc/security.php:28
+msgid "توصیه امنیتی Glassmorphism PRO: لطفاً define('DISALLOW_FILE_EDIT', true) را در wp-config.php قرار دهید."
+msgstr "Glassmorphism PRO security recommendation: please add define('DISALLOW_FILE_EDIT', true) to wp-config.php."
+
+#: inc/security.php:55
+msgid "Trusted proxy IP validation active"
+msgstr "Trusted proxy IP validation active"

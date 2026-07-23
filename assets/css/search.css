@@ -1,0 +1,402 @@
+:root {
+  --gs-1: #A2B109;
+  --gs-2: #295E8D;
+  --gs-1-rgb: 162, 177, 9;
+  --gs-2-rgb: 41, 94, 141;
+  --gs-text: #1a1a2e;
+  --gs-muted: #6b7280;
+  --gs-white: #ffffff;
+  --gs-border: #ffffff;
+  --gs-glass: #ffffff;
+  --gs-glass-hover: #ffffff;
+  --gs-blur: 16px;
+  --gs-radius: 22px;
+}
+
+/* ═══════════════════════════════════════
+   SOFT GRID BACKGROUND
+   ═══════════════════════════════════════ */
+.gs-page {
+  position: relative;
+  padding: 56px 0 100px;
+}
+
+.gs-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 70%);
+}
+
+.gs-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ═══════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════ */
+.gs-hero {
+  margin-bottom: 44px;
+  padding: 8px 8px;
+  border-radius: 28px;
+  background: var(--gs-glass);
+  border: 1px solid var(--gs-border);
+}
+
+.gs-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gs-2);
+  background: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.gs-hero__title {
+  margin: 16px 0 12px;
+  font-size: clamp(26px, 3.8vw, 44px);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--gs-text);
+}
+
+.gs-hero__title span {
+  background: linear-gradient(135deg, var(--gs-2) 0%, var(--gs-1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gs-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.gs-hero__count {
+  margin: 0;
+  font-weight: 600;
+  font-size: 15px;
+  color: #334155;
+}
+
+.gs-hero__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #f8fafc;
+  background: linear-gradient(135deg, var(--gs-2) 0%, var(--gs-1) 100%);
+}
+
+/* ═══════════════════════════════════════
+   GRID
+   ═══════════════════════════════════════ */
+.gs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* ═══════════════════════════════════════
+   CARD — Alborz Ghaleb
+   ═══════════════════════════════════════ */
+.gs-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--gs-radius);
+  background: var(--gs-glass);
+  border: 1px solid var(--gs-border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1),
+              background 0.35s ease,
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.gs-card:hover {
+  transform: translateY(-8px);
+  background: var(--gs-glass-hover);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+  border-color: #ffffff;
+}
+
+.gs-card__link {
+  display: block;
+  text-decoration: none;
+}
+
+/* Image */
+.gs-card__img-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  margin: 10px 10px 0;
+  border-radius: 16px;
+}
+
+.gs-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.gs-card:hover .gs-card__img-wrap img {
+  transform: scale(1.06);
+}
+
+.gs-card__img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+  color: #17212b; /* [FIX] قبلاً #d1d5db بود که روی پس‌زمینه روشن کم‌رنگ/نامرئی می‌شد */
+}
+
+/* Overlay */
+.gs-card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.30);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gs-card:hover .gs-card__overlay {
+  opacity: 1;
+}
+
+/* View button */
+.gs-card__view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #17212b;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  transform: translateY(20px) scale(0.92);
+  opacity: 0;
+  transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1),
+              opacity 0.35s ease,
+              background 0.3s ease;
+}
+
+.gs-card:hover .gs-card__view-btn {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.gs-card__view-btn:hover {
+  background: #ffffff;
+}
+
+/* Card body */
+.gs-card__body {
+  padding: 16px 16px 18px;
+}
+
+.gs-card__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--gs-text);
+  transition: color 0.25s ease;
+}
+
+.gs-card__link:hover .gs-card__title {
+  color: var(--gs-2);
+}
+
+/* ═══════════════════════════════════════
+   EMPTY
+   ═══════════════════════════════════════ */
+.gs-empty {
+  text-align: center;
+  padding: 10px 32px;
+  border-radius: 28px;
+  background: var(--gs-glass);
+  border: 1px solid var(--gs-border);
+}
+
+.gs-empty__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: var(--gs-2);
+}
+
+.gs-empty h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--gs-text);
+}
+
+.gs-empty p {
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #334155;
+  line-height: 1.9;
+}
+
+/* ═══════════════════════════════════════
+   PAGINATION
+   ═══════════════════════════════════════ */
+.gs-pagination {
+  margin-top: 8px;
+}
+
+.gs-pagination ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.gs-pagination .page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--gs-text);
+  background: var(--gs-glass);
+  border: 1px solid var(--gs-border);
+  transition: all 0.25s ease;
+}
+
+.gs-pagination .page-numbers.current {
+  color: var(--gs-white);
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--gs-2) 0%, var(--gs-1) 100%);
+}
+
+.gs-pagination a.page-numbers:hover {
+  color: var(--gs-2);
+  border-color: rgba(var(--gs-2-rgb), 0.20);
+  background: var(--gs-glass-hover);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════
+   RTL
+   ═══════════════════════════════════════ */
+[dir="rtl"] .gs-hero,
+[dir="rtl"] .gs-card__body,
+[dir="rtl"] .gs-empty {
+  text-align: right;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .gs-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .gs-page {
+    padding: 8px 0 8px;
+  }
+
+  .gs-page::before {
+    background-size: 32px 32px;
+  }
+
+  .gs-hero {
+    padding: 5px;
+    border-radius: 22px;
+    margin-bottom: 28px;
+  }
+
+  .gs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .gs-card__img-wrap {
+    margin: 8px 8px 0;
+    border-radius: 14px;
+  }
+
+  .gs-card__body {
+    padding: 12px 12px 14px;
+  }
+
+  .gs-card__title {
+    font-size: 14px;
+  }
+
+  .gs-card__overlay {
+    opacity: 1;
+  }
+
+  .gs-card__view-btn {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    font-size: 11px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gs-hero__title {
+    font-size: 24px;
+  }
+}

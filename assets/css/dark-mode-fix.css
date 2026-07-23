@@ -1,0 +1,454 @@
+/* ════════════════════════════════════════
+   DARK MODE FIX — v8.1
+   این فایل بعد از همه CSSها لود می‌شود
+   و تمام مشکلات dark mode را حل می‌کند
+   ════════════════════════════════════════ */
+
+/* ── BODY ── */
+.dark-mode,
+.dark-mode body,
+html.dark-mode body {
+    background: #0F1724 !important;
+    color: #e5e7eb !important;
+}
+
+/* ── HEADER ── */
+.dark-mode .fl-info { background: #162B3F !important; }
+.dark-mode .fl-bar { background: #162B3F !important; }
+.dark-mode .fl-header-group.stuck .fl-bar { background: #162B3F !important; }
+.dark-mode .fl-header-group.stuck .fl-info { background: #162B3F !important; }
+.dark-mode .fl-nav-link.active { background: #2D5F93 !important; color: #fff !important; }
+.dark-mode .fl-icon-btn { background: #2D5F93 !important; }
+.dark-mode .fl-icon-btn:hover { background: #1B4A73 !important; }
+.dark-mode .fl-burger { background: #2D5F93 !important; }
+.dark-mode .fl-burger:hover { background: #1B4A73 !important; }
+
+/* ── DRAWER ── */
+.dark-mode .fl-drawer { background: #162B3F !important; }
+.dark-mode .fl-drawer-head { background: #162B3F !important; }
+.dark-mode .fl-drawer-close { background: #2D5F93 !important; }
+.dark-mode .fl-drawer-close:hover { background: #1B4A73 !important; }
+
+/* ── FOOTER (high specificity) — matches footer.css v8.0 design ── */
+html.dark-mode body #fl-footer-wrap .fl-ft-bg {
+    background: linear-gradient(135deg, #162B3F 0%, #0F1724 100%) !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-col {
+    background: #162B3F !important;
+    border-color: rgba(255,255,255,.08) !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-col:hover {
+    border-color: rgba(96, 165, 250, 0.20) !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-col-title {
+    color: #e5e7eb !important;
+    border-bottom-color: rgba(164, 180, 0, 0.35) !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-logo-name {
+    color: #e5e7eb !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-desc {
+    color: #9ca3af !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-link {
+    color: #9ca3af !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-link:hover {
+    background: rgba(255,255,255,.06) !important;
+    color: #A4B400 !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-social {
+    background: rgba(255,255,255,.05) !important;
+    border-color: rgba(255,255,255,.08) !important;
+    color: #d1d5db !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-contact-item {
+    background: rgba(255,255,255,.05) !important;
+    border-color: rgba(255,255,255,.06) !important;
+    color: #9ca3af !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-contact-item:hover {
+    background: rgba(255,255,255,.10) !important;
+    color: #e5e7eb !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-bottom {
+    background: rgba(0,0,0,.3) !important;
+    border-top-color: rgba(255,255,255,.06) !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-copy {
+    color: #9ca3af !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-back-top {
+    background: rgba(255,255,255,.06) !important;
+    border-color: rgba(255,255,255,.08) !important;
+    color: #d1d5db !important;
+}
+html.dark-mode body #fl-footer-wrap .fl-ft-back-top:hover {
+    background: #A4B400 !important;
+    color: #ffffff !important;
+    border-color: #A4B400 !important;
+}
+
+/* ── BUTTONS — یکسان در هر دو حالت ── */
+.dark-mode .fl-info-submit-ad { background: #A4B400 !important; color: #ffffff !important; }
+.dark-mode .fl-info-submit-ad:hover { background: #7C8B00 !important; color: #ffffff !important; }
+.dark-mode .fl-header-submit-ad { background: #A4B400 !important; color: #ffffff !important; }
+.dark-mode .fl-header-submit-ad:hover { background: #7C8B00 !important; color: #ffffff !important; }
+
+/* ── CARDS — خاکستری تیره ── */
+.dark-mode .fl-sb-glass,
+.dark-mode .fl-blog-card,
+.dark-mode .fl-pf-card,
+.dark-mode .fl-pf-panel,
+.dark-mode .gs-card,
+.dark-mode .gs-empty,
+.dark-mode .gs-hero,
+.dark-mode .fl-contact-card,
+.dark-mode .fl-contact-form-section,
+.dark-mode .gl-page-card,
+.dark-mode .gl-page-hero-card,
+.dark-mode .fl-breadcrumb-inner,
+.dark-mode .comment-body,
+.dark-mode .comment-form,
+.dark-mode .fl-sb-toc-inner,
+.dark-mode .fl-sb-rel-card,
+.dark-mode .fl-sb-cats-wrap {
+    background: #162B3F !important;
+    border-color: rgba(255,255,255,.08) !important;
+}
+
+/* ── VIP SECTION ── */
+.dark-mode .fl-sb-vip {
+    background: linear-gradient(135deg, #0F1724 0%, #162B3F 100%) !important;
+}
+.dark-mode .fl-sb-vip-title { color: #e5e7eb !important; }
+.dark-mode .fl-sb-vip-sub { color: #9ca3af !important; }
+.dark-mode .fl-sb-vip-phone { color: #d1d5db !important; }
+.dark-mode .fl-sb-vip-phone-num { color: #e5e7eb !important; }
+
+/* ── AUTH PROMPT ── */
+.dark-mode .glass-auth-prompt--out {
+    background: linear-gradient(135deg, rgba(164,180,0,0.08), rgba(45,95,147,0.06)) !important;
+    border-color: rgba(255,255,255,0.1) !important;
+}
+
+/* ── TOGGLE ── */
+.dark-mode .fl-dark-toggle {
+    background: linear-gradient(135deg, #374151, #4b5563) !important;
+    border-color: rgba(255,255,255,0.15) !important;
+}
+
+/* ── LANGUAGE TOGGLE ── */
+.dark-mode .fl-lang-toggle {
+    background: rgba(255,255,255,0.08) !important;
+    border-color: rgba(255,255,255,0.12) !important;
+    color: #d1d5db !important;
+}
+
+/* ── FLOATING BUTTONS ── */
+.dark-mode #fl-fab-social-btn {
+    background: #2D5F93 !important;
+}
+.dark-mode #fl-fab-social-btn:hover {
+    background: #1B4A73 !important;
+}
+.dark-mode #fl-fab-menu .fl-fab-item {
+    background: #162B3F !important;
+    border-color: rgba(255,255,255,0.08) !important;
+    color: #e2e8f0 !important;
+}
+.dark-mode #fl-fab-menu .fl-fab-item:hover {
+    color: #ffffff !important;
+}
+.dark-mode #fl-fab-call {
+    background: #25D366 !important;
+    color: #ffffff !important;
+}
+.dark-mode #fl-fab-call:hover {
+    background: #1da851 !important;
+    color: #ffffff !important;
+}
+
+/* ── GRID BACKGROUND ── */
+.dark-mode body::before {
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(96, 165, 250, 0.12) 1px, transparent 1px),
+        linear-gradient(rgba(96, 165, 250, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96, 165, 250, 0.04) 1px, transparent 1px) !important;
+}
+
+/* ══════════════════════════════════════════
+   BUTTON TEXT — fix light-blue (#76B6DB/#7FB3E8) text in dark mode
+   All buttons and button-like controls → white and readable.
+   ══════════════════════════════════════════ */
+html.dark-mode button,
+html.dark-mode input[type="submit"],
+html.dark-mode input[type="button"],
+html.dark-mode .button,
+html.dark-mode a.button,
+html.dark-mode .btn,
+html.dark-mode a[class*="btn"],
+html.dark-mode a[class*="button"],
+html.dark-mode a[class*="cta"],
+html.dark-mode .elementor-button,
+html.dark-mode .elementor-button-text,
+html.dark-mode .elementor-button .elementor-button-text,
+html.dark-mode .elementor-button-content-wrapper,
+html.dark-mode .elementor-button-icon,
+html.dark-mode .wp-block-button__link,
+html.dark-mode .wp-element-button,
+html.dark-mode .glass-cta-btn,
+html.dark-mode .glass-cta-btn--primary,
+html.dark-mode .glass-cta-btn--ghost,
+html.dark-mode .glass-cta-btn--wa,
+html.dark-mode .agh-btn,
+html.dark-mode .agh-btn--primary,
+html.dark-mode .agh-btn--wa,
+html.dark-mode .glass-btn,
+html.dark-mode .glass-btn--primary,
+html.dark-mode .glass-btn--ghost,
+html.dark-mode .glass-btn--wa,
+html.dark-mode .fl-info-submit-ad,
+html.dark-mode .fl-header-submit-ad,
+html.dark-mode .fl-pf-submit-banner-btn,
+html.dark-mode .glass-btn-submit,
+html.dark-mode .blog-post-readmore,
+html.dark-mode .glass-ads-btn,
+html.dark-mode .gc-submit,
+html.dark-mode .fl-sb-share-btn,
+html.dark-mode .fl-sb-vip-channel,
+html.dark-mode .fl-sb-nav-btn,
+html.dark-mode .fl-pf-pagi a,
+html.dark-mode .fl-pf-pagi span,
+html.dark-mode .fl-pf-pagi .current,
+html.dark-mode .blog-pagination-num,
+html.dark-mode .blog-pagination-btn,
+html.dark-mode .nav-links a,
+html.dark-mode .nav-links span,
+html.dark-mode .gs-pagination .page-numbers,
+html.dark-mode .comment-reply-link,
+html.dark-mode .fl-ft-back-top,
+html.dark-mode .fl-dark-toggle,
+html.dark-mode .gs-form__button,
+html.dark-mode .glass-dash-btn,
+html.dark-mode .glass-auth-prompt-btn,
+html.dark-mode .fl-drawer-close,
+html.dark-mode .fl-pf-drawer-x,
+html.dark-mode .fl-icon-btn,
+html.dark-mode .fl-burger,
+html.dark-mode .fl-lang-toggle,
+html.dark-mode .fl-info-dash-link,
+html.dark-mode .glass-ads-arrow,
+html.dark-mode .fl-sb-vip-chat,
+html.dark-mode .btn-chat-vip,
+html.dark-mode .fl-arch-card-more,
+body.dark-mode button,
+body.dark-mode input[type="submit"],
+body.dark-mode input[type="button"],
+body.dark-mode .button,
+body.dark-mode a.button,
+body.dark-mode .btn,
+body.dark-mode a[class*="btn"],
+body.dark-mode a[class*="button"],
+body.dark-mode a[class*="cta"],
+body.dark-mode .elementor-button,
+body.dark-mode .elementor-button-text,
+body.dark-mode .elementor-button .elementor-button-text,
+body.dark-mode .elementor-button-content-wrapper,
+body.dark-mode .elementor-button-icon,
+body.dark-mode .wp-block-button__link,
+body.dark-mode .wp-element-button,
+body.dark-mode .glass-cta-btn,
+body.dark-mode .glass-cta-btn--primary,
+body.dark-mode .glass-cta-btn--ghost,
+body.dark-mode .glass-cta-btn--wa,
+body.dark-mode .agh-btn,
+body.dark-mode .agh-btn--primary,
+body.dark-mode .agh-btn--wa,
+body.dark-mode .glass-btn,
+body.dark-mode .glass-btn--primary,
+body.dark-mode .glass-btn--ghost,
+body.dark-mode .glass-btn--wa,
+body.dark-mode .fl-info-submit-ad,
+body.dark-mode .fl-header-submit-ad,
+body.dark-mode .fl-pf-submit-banner-btn,
+body.dark-mode .glass-btn-submit,
+body.dark-mode .blog-post-readmore,
+body.dark-mode .glass-ads-btn,
+body.dark-mode .gc-submit,
+body.dark-mode .fl-sb-share-btn,
+body.dark-mode .fl-sb-vip-channel,
+body.dark-mode .fl-sb-nav-btn,
+body.dark-mode .fl-pf-pagi a,
+body.dark-mode .fl-pf-pagi span,
+body.dark-mode .fl-pf-pagi .current,
+body.dark-mode .blog-pagination-num,
+body.dark-mode .blog-pagination-btn,
+body.dark-mode .nav-links a,
+body.dark-mode .nav-links span,
+body.dark-mode .gs-pagination .page-numbers,
+body.dark-mode .comment-reply-link,
+body.dark-mode .fl-ft-back-top,
+body.dark-mode .fl-dark-toggle,
+body.dark-mode .gs-form__button,
+body.dark-mode .glass-dash-btn,
+body.dark-mode .glass-auth-prompt-btn,
+body.dark-mode .fl-drawer-close,
+body.dark-mode .fl-pf-drawer-x,
+body.dark-mode .fl-icon-btn,
+body.dark-mode .fl-burger,
+body.dark-mode .fl-lang-toggle,
+body.dark-mode .fl-info-dash-link,
+body.dark-mode .glass-ads-arrow,
+body.dark-mode .fl-sb-vip-chat,
+body.dark-mode .btn-chat-vip,
+body.dark-mode .fl-arch-card-more { color: #ffffff !important; }
+
+/* Accent / light-background buttons keep dark text like light mode */
+html.dark-mode .glass-cta-btn--accent,
+html.dark-mode .agh-btn--accent,
+html.dark-mode .fl-pf-more,
+html.dark-mode .glass-ads-arrow:hover,
+body.dark-mode .glass-cta-btn--accent,
+body.dark-mode .agh-btn--accent,
+body.dark-mode .fl-pf-more,
+body.dark-mode .glass-ads-arrow:hover { color: #0F1724 !important; }
+
+/* White CTA button keeps dark text */
+html.dark-mode .agh-cta-band .agh-btn,
+html.dark-mode .agh-cta-band .agh-btn:hover,
+body.dark-mode .agh-cta-band .agh-btn,
+body.dark-mode .agh-cta-band .agh-btn:hover { color: #0F1724 !important; }
+
+/* ═══════════════════════════════════════════
+   BUTTON TEXT — final catch-all for any remaining light-blue text
+   Smaller, high-specificity groups to avoid invalid selector lists.
+   ═══════════════════════════════════════════ */
+
+/* Generic / WordPress buttons */
+html.dark-mode button,
+html.dark-mode input[type="submit"],
+html.dark-mode input[type="button"],
+html.dark-mode .button,
+html.dark-mode a.button,
+html.dark-mode .wp-block-button__link,
+html.dark-mode .wp-element-button,
+html.dark-mode .wp-block-search__button,
+html.dark-mode .search-submit,
+html.dark-mode .submit,
+html.dark-mode .comment-reply-link,
+body.dark-mode button,
+body.dark-mode input[type="submit"],
+body.dark-mode input[type="button"],
+body.dark-mode .button,
+body.dark-mode a.button,
+body.dark-mode .wp-block-button__link,
+body.dark-mode .wp-element-button,
+body.dark-mode .wp-block-search__button,
+body.dark-mode .search-submit,
+body.dark-mode .submit,
+body.dark-mode .comment-reply-link { color: #ffffff !important; }
+
+/* Elementor buttons */
+html.dark-mode .elementor-button,
+html.dark-mode .elementor-button-link,
+html.dark-mode .elementor-button .elementor-button-text,
+html.dark-mode .elementor-button-content-wrapper,
+html.dark-mode .elementor-button-icon,
+html.dark-mode .elementor-element .elementor-button,
+html.dark-mode .elementor-kit .elementor-button,
+html.dark-mode .elementor-widget-button .elementor-button,
+body.dark-mode .elementor-button,
+body.dark-mode .elementor-button-link,
+body.dark-mode .elementor-button .elementor-button-text,
+body.dark-mode .elementor-button-content-wrapper,
+body.dark-mode .elementor-button-icon,
+body.dark-mode .elementor-element .elementor-button,
+body.dark-mode .elementor-kit .elementor-button,
+body.dark-mode .elementor-widget-button .elementor-button { color: #ffffff !important; }
+
+/* Theme buttons that may have been missed */
+html.dark-mode .glass-auth-btn,
+html.dark-mode .glass-auth-btn--ghost,
+html.dark-mode .glass-auth-tab,
+html.dark-mode .glass-auth-link,
+html.dark-mode .glass-btn,
+html.dark-mode .glass-btn--ghost,
+html.dark-mode .glass-btn-submit,
+html.dark-mode .glass-submit-form-wrap button,
+html.dark-mode .glass-ads-btn,
+html.dark-mode .glass-ads-arrow,
+html.dark-mode .glass-dash-btn,
+html.dark-mode .glass-dash-newad,
+html.dark-mode .glass-dash-logout,
+html.dark-mode .phone-row,
+html.dark-mode .btn-chat-vip,
+html.dark-mode .fl-sp-city-overlay-btn,
+html.dark-mode .fl-sp-lb-nav,
+html.dark-mode .fl-sp-lb-close,
+html.dark-mode .fl-pf-mob-btn,
+html.dark-mode .fl-pf-drawer-x,
+body.dark-mode .glass-auth-btn,
+body.dark-mode .glass-auth-btn--ghost,
+body.dark-mode .glass-auth-tab,
+body.dark-mode .glass-auth-link,
+body.dark-mode .glass-btn,
+body.dark-mode .glass-btn--ghost,
+body.dark-mode .glass-btn-submit,
+body.dark-mode .glass-submit-form-wrap button,
+body.dark-mode .glass-ads-btn,
+body.dark-mode .glass-ads-arrow,
+body.dark-mode .glass-dash-btn,
+body.dark-mode .glass-dash-newad,
+body.dark-mode .glass-dash-logout,
+body.dark-mode .phone-row,
+body.dark-mode .btn-chat-vip,
+body.dark-mode .fl-sp-city-overlay-btn,
+body.dark-mode .fl-sp-lb-nav,
+body.dark-mode .fl-sp-lb-close,
+body.dark-mode .fl-pf-mob-btn,
+body.dark-mode .fl-pf-drawer-x { color: #ffffff !important; }
+
+/* Popular form-plugin submit buttons */
+html.dark-mode .wpforms-submit,
+html.dark-mode .gform_button,
+html.dark-mode .ninja-forms-submit,
+html.dark-mode .wpcf7-submit,
+html.dark-mode .fluentform-submit,
+html.dark-mode .forminator-button,
+html.dark-mode .wsf-button,
+html.dark-mode .mc4wp-form input[type="submit"],
+html.dark-mode .mailpoet_submit,
+html.dark-mode .um-button,
+html.dark-mode .woocommerce-button,
+html.dark-mode .woocommerce .button,
+html.dark-mode .edd-submit,
+html.dark-mode .give-btn,
+body.dark-mode .wpforms-submit,
+body.dark-mode .gform_button,
+body.dark-mode .ninja-forms-submit,
+body.dark-mode .wpcf7-submit,
+body.dark-mode .fluentform-submit,
+body.dark-mode .forminator-button,
+body.dark-mode .wsf-button,
+body.dark-mode .mc4wp-form input[type="submit"],
+body.dark-mode .mailpoet_submit,
+body.dark-mode .um-button,
+body.dark-mode .woocommerce-button,
+body.dark-mode .woocommerce .button,
+body.dark-mode .edd-submit,
+body.dark-mode .give-btn { color: #ffffff !important; }
+
+/* Accent / light-background buttons keep dark text for readability */
+html.dark-mode .glass-cta-btn--accent,
+html.dark-mode .agh-btn--accent,
+html.dark-mode .glass-btn--accent,
+html.dark-mode .fl-pf-more,
+html.dark-mode .glass-ads-arrow:hover,
+html.dark-mode .glass-dash-btn--renew,
+body.dark-mode .glass-cta-btn--accent,
+body.dark-mode .agh-btn--accent,
+body.dark-mode .glass-btn--accent,
+body.dark-mode .fl-pf-more,
+body.dark-mode .glass-ads-arrow:hover,
+body.dark-mode .glass-dash-btn--renew { color: #0F1724 !important; }

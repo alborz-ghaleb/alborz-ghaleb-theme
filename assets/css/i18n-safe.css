@@ -1,0 +1,165 @@
+/**
+ * i18n-Safe Layout Guard — Alborz Ghaleb
+ *
+ * هدف: جلوگیری از بهم‌ریختگی قالب وقتی متنِ ترجمه‌شده بلندتر از فارسی است
+ * (انگلیسی/روسی/ارمنی معمولاً ۳۰–۴۰٪ بلندترند).
+ *
+ * این قواعد:
+ *   - متن بلند را به‌جای سرریز، یا wrap می‌کنند یا با «…» کوتاه می‌کنند.
+ *   - عرض/ارتفاع را انعطاف‌پذیر می‌کنند بدون تغییر طراحی پایه.
+ *
+ * 🚨 برای حفظ ظاهرِ فارسی، این فایل فقط روی body با کلاس
+ *    .glass-i18n-nonfa اعمال می‌شود (یعنی زبان جاری فارسی نیست).
+ *    در فارسی هیچ‌کدام از این قواعد فعال نمی‌شوند.
+ */
+
+/* ────────────────────────────────────────
+   ۱) دکمه‌ها و چیپ‌های CTA — اجازهٔ شکستن خط در صورت نیاز
+   ──────────────────────────────────────── */
+.glass-i18n-nonfa .glass-cta-btn,
+.glass-i18n-nonfa .fl-info-submit-ad,
+.glass-i18n-nonfa .fl-info-dash-link,
+.glass-i18n-nonfa .glass-btn-submit,
+.glass-i18n-nonfa .fl-fab-label {
+    white-space: normal;          /* به‌جای nowrap → اجازهٔ wrap */
+    overflow-wrap: anywhere;      /* شکستن کلمات خیلی بلند */
+    word-break: break-word;
+    text-align: center;
+    line-height: 1.3;
+    height: auto;                 /* ارتفاع بر اساس محتوا */
+    min-height: 0;
+}
+
+/* ────────────────────────────────────────
+   ۲) چیپ‌های نوار اطلاعات هدر — اجازهٔ wrap و عرض انعطاف‌پذیر
+   ──────────────────────────────────────── */
+.glass-i18n-nonfa .fl-info-chip {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    min-width: 0;
+}
+.glass-i18n-nonfa .fl-info-chip span {
+    overflow: hidden;
+    text-overflow: ellipsis;      /* در صورت خیلی بلند → «…» */
+}
+
+/* ────────────────────────────────────────
+   ۳) آیتم‌های منو — اجازهٔ wrap، جلوگیری از سرریز افقی
+   ──────────────────────────────────────── */
+.glass-i18n-nonfa .fl-nav-link {
+    white-space: normal;
+    line-height: 1.3;
+}
+.glass-i18n-nonfa .fl-nav-item > .fl-nav-link {
+    max-width: 220px;             /* سقف عرض آیتم منو تا نوار بهم نریزد */
+}
+
+/* ────────────────────────────────────────
+   ۴) تیترها و توضیحات کارت‌ها — کوتاه‌سازی چندخطی (line-clamp)
+   ──────────────────────────────────────── */
+.glass-i18n-nonfa .gs-card__title,
+.glass-i18n-nonfa .glass-pro-card__title,
+.glass-i18n-nonfa .fl-ft-col-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;        /* حداکثر ۲ خط */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.glass-i18n-nonfa .glass-pro-card__desc,
+.glass-i18n-nonfa .fl-ft-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;        /* توضیحات حداکثر ۴ خط */
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+
+/* ────────────────────────────────────────
+   ۵) badge مبلغ پرداخت + برچسب‌ها — اجازهٔ wrap
+   ──────────────────────────────────────── */
+.glass-i18n-nonfa .glass-pay-badge,
+.glass-i18n-nonfa .fl-info-submit-ad span,
+.glass-i18n-nonfa .glass-cta-btn span {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* ────────────────────────────────────────
+   ۶) دکمه‌های گرید (تمام‌عرض) — متن وسط‌چین و چندخطی
+   ──────────────────────────────────────── */
+.glass-i18n-nonfa .glass-cta-buttons--block .glass-cta-btn {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+/* ────────────────────────────────────────
+   ۷) فرم‌ها: label و دکمه‌ها — جلوگیری از سرریز
+   ──────────────────────────────────────── */
+.glass-i18n-nonfa .glass-form-label,
+.glass-i18n-nonfa .glass-auth-field label {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* ────────────────────────────────────────
+   ۸) محافظ عمومی: جلوگیری از سرریز افقی کل صفحه
+   ──────────────────────────────────────── */
+/* [FIX] نوار info دیگر wrap نمی‌شود (قبلاً flex-wrap:wrap باعث می‌شد
+   نوار بالای هدر در زبان‌های غیرفارسی دو‌ردیفه شود). به‌جای آن، نوار را
+   در یک ردیف نگه می‌داریم و فقط محتوای منو (fl-bar) در صورت نیاز wrap شود. */
+.glass-i18n-nonfa .fl-info-inner {
+    flex-wrap: nowrap;
+}
+.glass-i18n-nonfa .fl-bar {
+    flex-wrap: wrap;             /* فقط نوار منوی اصلی، نه نوار info */
+}
+
+/* ────────────────────────────────────────
+   ۹) [FIX] نوار info تک‌ردیفه در زبان‌های غیرفارسی
+   متن‌های انگلیسی/روسی بلندترند؛ با فشرده‌سازیِ ظریف، همه در یک ردیف جا می‌شوند.
+   ──────────────────────────────────────── */
+
+/* چیپ‌های info باید nowrap بمانند تا خود چیپ دوخطی نشود */
+.glass-i18n-nonfa .fl-info-chip {
+    white-space: nowrap;
+}
+.glass-i18n-nonfa .fl-info-chip span {
+    white-space: nowrap;
+    max-width: 22ch;             /* سقف عرض؛ متنِ خیلی بلند با «…» کوتاه می‌شود */
+}
+
+/* فاصله‌ها و فونت کمی فشرده‌تر تا فضای بیشتری آزاد شود */
+.glass-i18n-nonfa .fl-info-inner {
+    gap: 8px;
+}
+.glass-i18n-nonfa .fl-info-group {
+    gap: 9px;
+    min-width: 0;
+}
+.glass-i18n-nonfa .fl-info-chip {
+    font-size: 0.63rem;
+}
+.glass-i18n-nonfa .fl-info-submit-ad,
+.glass-i18n-nonfa .fl-info-dash-link {
+    white-space: nowrap;         /* دکمه‌ها تک‌خطی بمانند */
+    font-size: 0.72rem;
+    padding-inline: 10px;
+}
+
+/* در فضاهای تنگ‌تر، اطلاعات کم‌اهمیت‌تر (آدرس/ایمیل/تلفن دوم) مخفی شوند
+   تا نوار هیچ‌وقت به ردیف دوم نرود (روی فارسی اثری ندارد). */
+@media (max-width: 1100px) {
+    .glass-i18n-nonfa .fl-info-chip--hide-sm {
+        display: none !important;
+    }
+}
+@media (max-width: 900px) {
+    .glass-i18n-nonfa .fl-info-chip span {
+        max-width: 16ch;
+    }
+}

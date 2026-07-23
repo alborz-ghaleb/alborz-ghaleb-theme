@@ -1,0 +1,151 @@
+/* Mobile inner content padding — controls and table cells are not targeted. */
+@media (max-width: 768px) {
+    /* Core page/post content cards. */
+    .gl-page-card,
+    .fl-sb-content,
+    .fl-sp-header,
+    .fl-sp-body {
+        padding-inline: 8px !important;
+    }
+
+    /* Featured page image can approach the card edge safely. */
+    .gl-page-hero-card {
+        padding-inline: 4px !important;
+    }
+
+    /* Contact/search/comment content surfaces. */
+    .fl-contact-card,
+    .fl-contact-custom-inner,
+    .fl-contact-form-section,
+    .gs-card__body,
+    .comment-body {
+        padding-inline: 8px !important;
+    }
+
+    /* Archive and portfolio cards, including inline legacy styles. */
+    .fl-arch-card-body,
+    .fl-pf-body,
+    .fl-sp-submit-wrap {
+        padding-inline: 6px !important;
+    }
+
+    /* Secondary content rows inside single posts. */
+    .fl-sb-footer-meta,
+    .fl-sb-share-nav,
+    .fl-sp-tags,
+    .fl-sb-related-grid,
+    .fl-sp-related-grid {
+        padding-inline: 8px !important;
+    }
+
+    /* Content design helpers used on standard/Elementor pages. */
+    .agh-glass,
+    .agh-formula,
+    .agh-highlight,
+    .agh-warning,
+    .agh-info,
+    body:not(.elementor-active) .site-main {
+        padding-inline: 8px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .gl-page-card,
+    .fl-sb-content,
+    .fl-sp-header,
+    .fl-sp-body,
+    .fl-contact-card,
+    .fl-contact-custom-inner,
+    .fl-contact-form-section,
+    .gs-card__body,
+    .comment-body,
+    .fl-sb-footer-meta,
+    .fl-sb-share-nav,
+    .fl-sp-tags,
+    .fl-sb-related-grid,
+    .fl-sp-related-grid,
+    .agh-glass,
+    .agh-formula,
+    .agh-highlight,
+    .agh-warning,
+    .agh-info,
+    body:not(.elementor-active) .site-main {
+        padding-inline: 6px !important;
+    }
+
+    .gl-page-hero-card {
+        padding-inline: 3px !important;
+    }
+
+    .fl-arch-card-body,
+    .fl-pf-body,
+    .fl-sp-submit-wrap {
+        padding-inline: 4px !important;
+    }
+}
+
+/* Internal product/content cards: always two cards per row on mobile. */
+@media (max-width: 768px) {
+    .agh-grid,
+    .agh-grid--2,
+    .agh-grid--3,
+    .agh-grid--4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+        align-items: stretch;
+    }
+
+    .agh-card {
+        min-width: 0;
+        height: 100%;
+    }
+    .agh-card img {
+        width: 100%;
+        height: 110px !important;
+        object-fit: cover;
+    }
+    .agh-card__body {
+        min-width: 0;
+        padding: 8px 6px !important;
+    }
+    .agh-card__body h3 {
+        margin-bottom: 5px;
+        font-size: .80rem !important;
+        line-height: 1.55;
+        overflow-wrap: anywhere;
+    }
+    .agh-card__body p {
+        font-size: .72rem !important;
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+    }
+    .agh-card .agh-btn {
+        min-width: 0;
+        padding: 6px 4px !important;
+        font-size: .68rem !important;
+        white-space: normal;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 380px) {
+    .agh-grid,
+    .agh-grid--2,
+    .agh-grid--3,
+    .agh-grid--4 {
+        gap: 4px !important;
+    }
+    .agh-card img {
+        height: 92px !important;
+    }
+    .agh-card__body {
+        padding: 6px 4px !important;
+    }
+    .agh-card__body h3 {
+        font-size: .74rem !important;
+    }
+    .agh-card__body p {
+        font-size: .68rem !important;
+    }
+}

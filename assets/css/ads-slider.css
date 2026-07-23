@@ -1,0 +1,279 @@
+/* ════════════════════════════════════════
+   Glass Ads Slider PRO — اسلایدر تبلیغی حرفه‌ای
+   فلش + نقطه + progress + محتوای روی تصویر + افکت slide/fade
+   ════════════════════════════════════════ */
+
+.glass-ads-slider {
+	--gads-gap: 24px;
+	--gads-ratio: 2.5;
+	--gads-radius: var(--fl-radius, 20px);
+	position: relative;
+	width: 100%;
+	max-width: 1344px;
+	margin: 28px auto;
+	direction: rtl;
+}
+
+/* ── ناحیه نمایش ── */
+.glass-ads-viewport {
+	overflow: hidden;
+	border-radius: var(--gads-radius);
+	cursor: grab;
+	touch-action: pan-y;
+}
+.glass-ads-viewport:active { cursor: grabbing; }
+
+/* ── ریل ── */
+.glass-ads-track {
+	display: flex;
+	gap: var(--gads-gap);
+	transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+	will-change: transform;
+}
+
+/* ── هر اسلاید ── */
+.glass-ads-slide {
+	position: relative;
+	flex: 0 0 calc((100% - var(--gads-gap)) / 2);
+	aspect-ratio: var(--gads-ratio);
+	border-radius: var(--gads-radius);
+	overflow: hidden;
+	display: block;
+	background: var(--fl-glass-bg, #ffffff);
+	border: 1px solid var(--fl-glass-border, #ffffff);
+	box-shadow: var(--fl-shadow, 0 12px 40px rgba(0, 0, 0, 0.06));
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
+	user-select: none;
+}
+a.glass-ads-slide:hover { transform: translateY(-4px); box-shadow: 0 18px 48px rgba(45, 95, 147, 0.18); }
+
+.glass-ads-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	pointer-events: none;
+}
+
+/* ── overlay برای خوانایی متن ── */
+.glass-ads-overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.15) 60%, transparent);
+	pointer-events: none;
+}
+
+/* ── محتوای روی تصویر ── */
+.glass-ads-content {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+	padding: clamp(16px, 4vw, 40px);
+	z-index: 2;
+	pointer-events: none;
+}
+.glass-ads-content > * { pointer-events: auto; }
+
+.glass-ads-sub {
+	font-size: clamp(0.75rem, 1.4vw, 0.95rem);
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	opacity: 0.92;
+	display: inline-block;
+	background: rgba(255, 255, 255, 0.18);
+	padding: 4px 12px;
+	border-radius: 999px;
+	width: fit-content;
+}
+.glass-ads-title {
+	margin: 0;
+	font-size: clamp(1.2rem, 3.2vw, 2.2rem);
+	font-weight: 700;
+	line-height: 1.25;
+	text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+}
+.glass-ads-desc {
+	margin: 0;
+	font-size: clamp(0.85rem, 1.7vw, 1.05rem);
+	line-height: 1.7;
+	max-width: 60ch;
+	opacity: 0.95;
+	text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.glass-ads-btn {
+	margin-top: 6px;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	background: var(--fl-primary, #2D5F93);
+	color: #fff;
+	font-weight: 700;
+	font-size: clamp(0.82rem, 1.5vw, 0.95rem);
+	padding: 10px 22px;
+	border-radius: 12px;
+	width: fit-content;
+	box-shadow: 0 6px 18px rgba(45, 95, 147, 0.35);
+	transition: transform 0.2s ease, background 0.2s ease;
+}
+.glass-ads-btn:hover { transform: translateY(-2px); background: var(--fl-primary-dark, #1B4A73); color: #fff; }
+
+/* ── موقعیت‌های متن ── */
+.glass-ads-pos-center        { align-items: center; text-align: center; }
+.glass-ads-pos-center .glass-ads-sub,
+.glass-ads-pos-center .glass-ads-btn { margin-inline: auto; }
+.glass-ads-pos-center-left   { align-items: flex-start; text-align: start; }
+.glass-ads-pos-center-right  { align-items: flex-end;   text-align: end; }
+.glass-ads-pos-bottom-left   { justify-content: flex-end; align-items: flex-start; text-align: start; }
+.glass-ads-pos-bottom-right  { justify-content: flex-end; align-items: flex-end;   text-align: end; }
+.glass-ads-pos-top-left      { justify-content: flex-start; align-items: flex-start; text-align: start; }
+.glass-ads-pos-top-right     { justify-content: flex-start; align-items: flex-end;   text-align: end; }
+
+/* ════════════════════════════════════════
+   افکت FADE (روی هم محو می‌شوند)
+   ════════════════════════════════════════ */
+.glass-ads--fade .glass-ads-track {
+	display: block;
+	position: relative;
+	transform: none !important;
+	transition: none;
+}
+.glass-ads--fade .glass-ads-slide {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	flex: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.7s ease, visibility 0.7s ease;
+	z-index: 1;
+}
+.glass-ads--fade .glass-ads-slide.is-active {
+	opacity: 1;
+	visibility: visible;
+	z-index: 2;
+}
+.glass-ads--fade .glass-ads-viewport {
+	position: relative;
+	aspect-ratio: var(--gads-ratio);
+}
+
+/* ════════════════════════════════════════
+   فلش‌های ناوبری
+   ════════════════════════════════════════ */
+.glass-ads-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--fl-glass-bg, #ffffff);
+	border: 1px solid var(--fl-glass-border, rgba(0,0,0,0.07));
+	color: var(--fl-primary, #2D5F93);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+	cursor: pointer;
+	z-index: 5;
+	opacity: 0;
+	transition: opacity 0.3s ease, transform 0.25s ease, background 0.25s ease;
+}
+.glass-ads-slider:hover .glass-ads-arrow,
+.glass-ads-slider:focus-within .glass-ads-arrow { opacity: 1; }
+.glass-ads-arrow:hover { background: var(--fl-primary, #2D5F93); color: #fff; transform: translateY(-50%) scale(1.08); }
+.glass-ads-arrow:disabled { opacity: 0.35 !important; cursor: not-allowed; }
+.glass-ads-prev { inset-inline-start: 14px; }
+.glass-ads-next { inset-inline-end: 14px; }
+
+/* ════════════════════════════════════════
+   نوار پیشرفت (progress)
+   ════════════════════════════════════════ */
+.glass-ads-progress {
+	position: relative;
+	height: 4px;
+	margin-top: 14px;
+	background: rgba(45, 95, 147, 0.15);
+	border-radius: 999px;
+	overflow: hidden;
+}
+.glass-ads-progress-bar {
+	display: block;
+	height: 100%;
+	width: 0;
+	background: var(--fl-primary, #2D5F93);
+	border-radius: 999px;
+}
+
+/* ════════════════════════════════════════
+   نقطه‌ها
+   ════════════════════════════════════════ */
+.glass-ads-dots {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin-top: 16px;
+}
+.glass-ads-dot {
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	background: rgba(45, 95, 147, 0.25);
+	transition: all 0.3s ease;
+}
+.glass-ads-dot.is-active {
+	width: 26px;
+	border-radius: 5px;
+	background: var(--fl-primary, #2D5F93);
+}
+
+/* ════════════════════════════════════════
+   دارک مود
+   ════════════════════════════════════════ */
+.dark-mode .glass-ads-slide {
+	background: rgba(15, 23, 42, 0.72);
+	border-color: rgba(255, 255, 255, 0.08);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.30);
+}
+.dark-mode .glass-ads-arrow {
+	background: rgba(15, 23, 42, 0.7);
+	border-color: rgba(255, 255, 255, 0.12);
+	color: #cbe6ff;
+}
+.dark-mode .glass-ads-arrow:hover { background: var(--fl-accent, #A4B400); color: #0b1220; }
+.dark-mode .glass-ads-dot { background: rgba(255, 255, 255, 0.25); }
+.dark-mode .glass-ads-dot.is-active { background: var(--fl-accent, #A4B400); }
+.dark-mode .glass-ads-progress { background: rgba(255, 255, 255, 0.12); }
+.dark-mode .glass-ads-progress-bar { background: var(--fl-accent, #A4B400); }
+/* Dark mode: buttons identical to light mode */
+
+/* ════════════════════════════════════════
+   ریسپانسیو (تعداد نمایش با JS کنترل می‌شود؛ اینجا فقط fallback)
+   ════════════════════════════════════════ */
+@media (max-width: 768px) {
+	.glass-ads-slider { --gads-gap: 12px; }
+	.glass-ads-arrow { width: 38px; height: 38px; opacity: 1; }
+	.glass-ads-content { padding: 16px; }
+}
+
+/* ════════════════════════════════════════
+   کاهش حرکت
+   ════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+	.glass-ads-track,
+	.glass-ads--fade .glass-ads-slide,
+	.glass-ads-arrow,
+	.glass-ads-btn { transition: none !important; }
+}

@@ -1,0 +1,821 @@
+/* ════════════════════════════════════════════════════════════════
+   FLAVOR CONTACT PAGE
+   ════════════════════════════════════════════════════════════════ */
+
+.fl-contact-page {
+    max-width: 1280px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.fl-contact-page *,
+.fl-contact-page *::before,
+.fl-contact-page *::after { box-sizing: border-box; }
+
+/* ════════════════════════════════════════════════════════════════
+   1. HERO SECTION
+   ════════════════════════════════════════════════════════════════ */
+.fl-contact-hero {
+    text-align: center;
+    padding: 50px 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg,
+        rgba(45, 95, 147, 0.92),
+        rgba(27, 63, 99, 0.88));
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(45, 95, 147, 0.18);
+    position: relative;
+    overflow: hidden;
+    color: #334155;
+}
+
+.fl-contact-hero::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    inset-inline-end: -150px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(164, 180, 0, 0.25), transparent 70%);
+    pointer-events: none;
+}
+.fl-contact-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    inset-inline-start: -150px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 70%);
+    pointer-events: none;
+}
+
+.fl-contact-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.fl-contact-hero-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    animation: fl-pulse 2s ease-in-out infinite;
+}
+
+@keyframes fl-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.fl-contact-hero-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: white;
+}
+
+.fl-contact-hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: #17212b;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.fl-contact-hero-sub {
+    font-size: 1.05rem;
+    color: #17212b;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   2. INFO GRID (3 ستون)
+   ════════════════════════════════════════════════════════════════ */
+.fl-contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.fl-contact-card {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 30px 26px;
+    box-shadow: 0 10px 40px rgba(45, 95, 147, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.fl-contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--fl-primary, #2D5F93), var(--fl-accent, #A4B400));
+}
+
+.fl-contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(45, 95, 147, 0.14);
+}
+
+.fl-contact-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2D5F93;
+    box-shadow: 0 8px 20px rgba(45, 95, 147, 0.25);
+    margin-bottom: 6px;
+}
+.fl-contact-card-icon svg {
+    width: 28px;
+    height: 28px;
+    stroke: white;
+}
+
+.fl-contact-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #17212b;
+    margin: 0;
+}
+
+/* ───── شماره تلفن‌ها ───── */
+.fl-contact-phones {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.fl-contact-phones li {
+    margin: 0;
+    padding: 0;
+}
+.fl-contact-phones li::before { display: none !important; content: none !important; }
+
+.fl-contact-phones a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(45, 95, 147, 0.10);
+    border-radius: 10px;
+    color: #17212b;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.875rem;
+    font-family: monospace, sans-serif;
+    transition: all 0.25s ease;
+    direction: ltr;
+    text-align: start;
+    letter-spacing: 0.5px;
+}
+
+.fl-contact-phones a::before {
+    content: '';
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--fl-accent, #A4B400);
+    box-shadow: 0 0 8px var(--fl-accent, #A4B400);
+}
+
+.fl-contact-phones a:hover {
+    background: #2D5F93;
+    color: white;
+    border-color: transparent;
+    transform: translateX(-4px);
+    box-shadow: 0 6px 16px rgba(45, 95, 147, 0.25);
+}
+[dir="ltr"] .fl-contact-phones a:hover {
+    transform: translateX(4px);
+}
+
+.fl-contact-phones a:hover::before {
+    background: white;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* ───── آدرس ───── */
+.fl-contact-address {
+    margin: 0;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(45, 95, 147, 0.10);
+    border-radius: 10px;
+    color: var(--fl-text, #17212B);
+    line-height: 1.85;
+    font-size: 0.92rem;
+}
+
+.fl-contact-map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 16px;
+    background: linear-gradient(135deg, var(--fl-accent, #A4B400), var(--fl-accent-hover, #7C8B00));
+    color: #17212b;
+    border-radius: 999px;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 0.82rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 14px rgba(164, 180, 0, 0.28);
+    align-self: flex-start;
+}
+.fl-contact-map-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(164, 180, 0, 0.38);
+    color: #17212b;
+}
+.fl-contact-map-link svg {
+    width: 14px;
+    height: 14px;
+    stroke: white;
+}
+
+/* ───── ایمیل ───── */
+.fl-contact-email {
+    display: inline-block;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(45, 95, 147, 0.10);
+    border-radius: 10px;
+    color: #17212b;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.875rem;
+    transition: all 0.25s ease;
+    word-break: break-all;
+}
+.fl-contact-email:hover {
+    background: #2D5F93;
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 6px 16px rgba(45, 95, 147, 0.25);
+}
+
+/* ───── ساعات کاری ───── */
+.fl-contact-hours {
+    margin-top: 8px;
+    padding: 14px 16px;
+    background: linear-gradient(135deg, rgba(164, 180, 0, 0.08), rgba(45, 95, 147, 0.05));
+    border-radius: 10px;
+    border-inline-start: 3px solid var(--fl-accent, #A4B400);
+}
+.fl-contact-hours-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #17212b;
+    margin-bottom: 8px;
+}
+.fl-contact-hours-title svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--fl-accent, #A4B400);
+    fill: none;
+    stroke-width: 2;
+}
+.fl-contact-hours-list {
+    color: #334155;
+    font-size: 0.82rem;
+    line-height: 1.8;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   3. MAP + SOCIALS ROW
+   ════════════════════════════════════════════════════════════════ */
+.fl-contact-map-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* ───── نقشه ───── */
+.fl-contact-map-wrap {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(45, 95, 147, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.fl-contact-map-header {
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(45, 95, 147, 0.08);
+    background: rgba(255, 255, 255, 0.3);
+}
+.fl-contact-map-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #17212b;
+}
+.fl-contact-map-header svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--fl-accent, #A4B400);
+    fill: none;
+    stroke-width: 2;
+}
+
+.fl-contact-map-frame {
+    width: 100%;
+    height: 450px;
+    background: rgba(0, 0, 0, 0.04);
+    position: relative;
+}
+.fl-contact-map-frame iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.fl-contact-map-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 24px;
+    background: #2D5F93;
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 0.92rem;
+    transition: all 0.25s ease;
+}
+.fl-contact-map-cta:hover {
+    background: #2D5F93;
+    color: white !important;
+    letter-spacing: 0.5px;
+}
+.fl-contact-map-cta svg {
+    width: 18px;
+    height: 18px;
+    stroke: white;
+    transition: transform 0.25s ease;
+}
+.fl-contact-map-cta:hover svg { transform: translateX(4px); }
+[dir="rtl"] .fl-contact-map-cta:hover svg { transform: translateX(-4px); }
+
+/* ───── شبکه‌های اجتماعی ───── */
+.fl-contact-socials-box {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 26px;
+    box-shadow: 0 10px 40px rgba(45, 95, 147, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fl-contact-socials-box h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #17212b;
+}
+.fl-contact-socials-box h2 svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--fl-accent, #A4B400);
+    fill: none;
+    stroke-width: 2;
+}
+
+.fl-contact-socials-desc {
+    margin: 0;
+    color: #334155;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.fl-contact-socials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fl-contact-social {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(45, 95, 147, 0.08);
+    border-radius: 12px;
+    text-decoration: none !important;
+    font-weight: 700;
+    color: var(--fl-text, #17212B) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.fl-contact-social::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    inset-inline-start: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, currentColor);
+    opacity: 0.1;
+    transition: inset-inline-start 0.4s ease;
+}
+
+.fl-contact-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    color: #17212b;
+    border-color: transparent;
+}
+.fl-contact-social:hover::before {
+    inset-inline-start: 0;
+}
+
+.fl-contact-social-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(45, 95, 147, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+.fl-contact-social-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+.fl-contact-social:hover .fl-contact-social-icon {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.fl-contact-social-label {
+    position: relative;
+    z-index: 1;
+    font-size: 0.875rem;
+}
+
+/* رنگ‌بندی هر شبکه */
+.fl-contact-social--instagram:hover {
+    background: linear-gradient(135deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888);
+}
+.fl-contact-social--telegram:hover {
+    background: linear-gradient(135deg, #0088cc, #006699);
+}
+.fl-contact-social--whatsapp:hover {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+.fl-contact-social--facebook:hover {
+    background: linear-gradient(135deg, #1877f2, #0d5fbb);
+}
+.fl-contact-social--linkedin:hover {
+    background: linear-gradient(135deg, #0a66c2, #074885);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   4. CONTACT FORM SECTION
+   ════════════════════════════════════════════════════════════════ */
+.fl-contact-form-section {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(45, 95, 147, 0.08);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.fl-contact-form-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    inset-inline-end: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(164, 180, 0, 0.12), transparent 70%);
+    pointer-events: none;
+}
+
+.fl-contact-form-header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.fl-contact-form-header h2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #17212b;
+}
+.fl-contact-form-header h2 svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--fl-accent, #A4B400);
+    fill: none;
+    stroke-width: 2;
+}
+
+.fl-contact-form-header p {
+    margin: 0;
+    color: #334155;
+    font-size: 0.875rem;
+}
+
+/* Override فرم تماس داخل این section */
+.fl-contact-form-section .fl-contact-form-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   5. CUSTOM CONTENT (محتوای ویرایشگر برگه)
+   ════════════════════════════════════════════════════════════════ */
+.fl-contact-custom-content {
+    margin-top: 30px;
+}
+
+.fl-contact-custom-inner {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 20px;
+    padding: 32px 36px;
+    box-shadow: 0 10px 30px rgba(45, 95, 147, 0.06);
+    line-height: 1.85;
+    color: var(--fl-text, #17212B);
+}
+
+.fl-contact-custom-inner h2,
+.fl-contact-custom-inner h3 {
+    color: #17212b;
+    margin-top: 1.5em;
+    margin-bottom: 0.6em;
+}
+
+.fl-contact-custom-inner > *:first-child { margin-top: 0; }
+.fl-contact-custom-inner > *:last-child { margin-bottom: 0; }
+
+/* ════════════════════════════════════════════════════════════════
+   6. RESPONSIVE
+   ════════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .fl-contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .fl-contact-map-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .fl-contact-page {
+        padding: 0 14px;
+        margin-bottom: 40px;
+    }
+    .fl-contact-hero {
+        padding: 36px 20px;
+        margin-bottom: 22px;
+    }
+    .fl-contact-hero-icon {
+        width: 64px;
+        height: 64px;
+    }
+    .fl-contact-hero-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+    .fl-contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 28px;
+    }
+    .fl-contact-card {
+        padding: 24px 22px;
+    }
+    .fl-contact-map-row {
+        gap: 18px;
+        margin-bottom: 28px;
+    }
+    .fl-contact-map-frame {
+        height: 320px;
+    }
+    .fl-contact-form-section {
+        padding: 28px 22px;
+    }
+    .fl-contact-custom-inner {
+        padding: 24px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fl-contact-hero {
+        padding: 28px 16px;
+        border-radius: 18px;
+    }
+    .fl-contact-hero-title {
+        font-size: 1.4rem;
+    }
+    .fl-contact-hero-sub {
+        font-size: 0.92rem;
+    }
+    .fl-contact-card {
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+    .fl-contact-card-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+    }
+    .fl-contact-card-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    .fl-contact-card-title {
+        font-size: 1.05rem;
+    }
+    .fl-contact-phones a {
+        padding: 9px 12px;
+        font-size: 0.88rem;
+    }
+    .fl-contact-map-frame {
+        height: 260px;
+    }
+    .fl-contact-form-section {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+    .fl-contact-form-header h2 {
+        font-size: 1.05rem;
+    }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   7. PRINT
+   ════════════════════════════════════════════════════════════════ */
+@media print {
+    .fl-contact-hero,
+    .fl-contact-form-section,
+    .fl-contact-map-cta {
+        display: none !important;
+    }
+    .fl-contact-card,
+    .fl-contact-map-wrap,
+    .fl-contact-socials-box {
+        background: white !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   8. DARK MODE — هماهنگ با پالت سراسری قالب
+   این بخش عمداً در انتهای فایل است تا استایل‌های لایتِ همین فایل را override کند.
+   ════════════════════════════════════════════════════════════════ */
+html.dark-mode .fl-contact-page { color: #e5e7eb; }
+html.dark-mode .fl-contact-hero {
+    background: linear-gradient(135deg, #162B3F 0%, #0F1724 100%) !important;
+    border: 1px solid rgba(255,255,255,.08) !important;
+    box-shadow: 0 16px 44px rgba(0,0,0,.24) !important;
+    color: #e5e7eb !important;
+}
+html.dark-mode .fl-contact-hero-title { color: #f1f5f9 !important; }
+html.dark-mode .fl-contact-hero-sub { color: #9ca3af !important; }
+html.dark-mode .fl-contact-hero-icon {
+    background: rgba(255,255,255,.07) !important;
+    border-color: rgba(255,255,255,.10) !important;
+}
+html.dark-mode .fl-contact-card,
+html.dark-mode .fl-contact-map-wrap,
+html.dark-mode .fl-contact-socials-box,
+html.dark-mode .fl-contact-form-section,
+html.dark-mode .fl-contact-custom-inner {
+    background: #162B3F !important;
+    border-color: rgba(255,255,255,.08) !important;
+    box-shadow: 0 12px 36px rgba(0,0,0,.20) !important;
+    color: #e5e7eb !important;
+}
+html.dark-mode .fl-contact-card:hover,
+html.dark-mode .fl-contact-map-wrap:hover,
+html.dark-mode .fl-contact-socials-box:hover {
+    border-color: rgba(127,179,232,.22) !important;
+    box-shadow: 0 16px 42px rgba(0,0,0,.28) !important;
+}
+html.dark-mode .fl-contact-card-title,
+html.dark-mode .fl-contact-hours-title,
+html.dark-mode .fl-contact-map-header h2,
+html.dark-mode .fl-contact-socials-box h2,
+html.dark-mode .fl-contact-form-header h2,
+html.dark-mode .fl-contact-form-header h3,
+html.dark-mode .fl-contact-custom-inner h2,
+html.dark-mode .fl-contact-custom-inner h3 { color: #e5e7eb !important; }
+html.dark-mode .fl-contact-address,
+html.dark-mode .fl-contact-phones a,
+html.dark-mode .fl-contact-email,
+html.dark-mode .fl-contact-social {
+    background: #0F1724 !important;
+    border-color: rgba(255,255,255,.08) !important;
+    color: #d1d5db !important;
+}
+html.dark-mode .fl-contact-phones a:hover,
+html.dark-mode .fl-contact-email:hover {
+    background: #2D5F93 !important;
+    border-color: #2D5F93 !important;
+    color: #fff !important;
+}
+html.dark-mode .fl-contact-hours {
+    background: rgba(255,255,255,.045) !important;
+    border-inline-start-color: #A4B400 !important;
+}
+html.dark-mode .fl-contact-hours-list,
+html.dark-mode .fl-contact-socials-desc,
+html.dark-mode .fl-contact-form-header p { color: #9ca3af !important; }
+html.dark-mode .fl-contact-map-header {
+    background: rgba(255,255,255,.035) !important;
+    border-bottom-color: rgba(255,255,255,.08) !important;
+}
+html.dark-mode .fl-contact-map-frame { background: #0F1724 !important; }
+html.dark-mode .fl-contact-social-icon { background: rgba(255,255,255,.07) !important; }
+html.dark-mode .fl-contact-social:hover { color: #fff !important; }
+html.dark-mode .fl-contact-form-section label,
+html.dark-mode .fl-contact-custom-inner { color: #d1d5db !important; }
+html.dark-mode .fl-contact-form-section input,
+html.dark-mode .fl-contact-form-section textarea,
+html.dark-mode .fl-contact-form-section select,
+html.dark-mode .fl-contact-field input,
+html.dark-mode .fl-contact-field textarea,
+html.dark-mode .fl-contact-field select {
+    background: #0F1724 !important;
+    border-color: rgba(255,255,255,.10) !important;
+    color: #e5e7eb !important;
+    box-shadow: none !important;
+}
+html.dark-mode .fl-contact-form-section input:focus,
+html.dark-mode .fl-contact-form-section textarea:focus,
+html.dark-mode .fl-contact-form-section select:focus,
+html.dark-mode .fl-contact-field input:focus,
+html.dark-mode .fl-contact-field textarea:focus,
+html.dark-mode .fl-contact-field select:focus {
+    border-color: #2D5F93 !important;
+    box-shadow: 0 0 0 3px rgba(45,95,147,.22) !important;
+}
+html.dark-mode .fl-contact-form-section input::placeholder,
+html.dark-mode .fl-contact-form-section textarea::placeholder { color: #6b7280 !important; }

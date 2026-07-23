@@ -1,0 +1,532 @@
+/* ════════════════════════════════════════
+   Glass User Panel — لاگین + داشبورد
+   ════════════════════════════════════════ */
+
+.glass-auth-wrap,
+.glass-dash-wrap {
+    direction: inherit;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 16px;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+}
+
+/* ── کارت احراز هویت ── */
+.glass-auth-wrap { max-width: 440px; }
+
+.glass-auth-card {
+    background: var(--fl-glass-bg, #ffffff);
+    border: 1px solid var(--fl-glass-border, #ffffff);
+    border-radius: var(--fl-radius, 20px);
+    box-shadow: var(--fl-shadow, 0 12px 40px rgba(0,0,0,0.06));
+    padding: 32px 28px;
+}
+
+.glass-auth-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #17212b;
+    margin: 0 0 6px;
+}
+.glass-auth-sub {
+    color: #334155;
+    font-size: 0.9rem;
+    margin: 0 0 18px;
+}
+
+/* ── تب‌ها ── */
+.glass-auth-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 22px;
+    background: rgba(45,95,147,0.06);
+    border-radius: 12px;
+    padding: 5px;
+}
+.glass-auth-tab {
+    flex: 1;
+    padding: 10px;
+    border-radius: 9px;
+    background: transparent;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: #334155;
+    transition: all 0.25s ease;
+}
+.glass-auth-tab.is-active {
+    background: var(--fl-primary, #2D5F93);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(45,95,147,0.25);
+}
+
+/* ── فیلدها ── */
+.glass-auth-field { margin-bottom: 16px; }
+.glass-auth-field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--fl-text, #17212B);
+    margin-bottom: 6px;
+}
+.glass-auth-field input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(45,95,147,0.18);
+    border-radius: 11px;
+    background: rgba(255,255,255,0.7);
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--fl-text, #17212B);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.glass-auth-field input:focus {
+    outline: none;
+    border-color: var(--fl-primary, #2D5F93);
+    box-shadow: 0 0 0 3px rgba(45,95,147,0.12);
+}
+
+/* کپچای ریاضی */
+.glass-captcha-field {
+    background: rgba(45,95,147,0.05);
+    border: 1px dashed rgba(45,95,147,0.25);
+    border-radius: 11px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+}
+.glass-captcha-field label {
+    font-size: 0.82rem;
+    margin-bottom: 8px;
+}
+.glass-captcha-field label strong {
+    color: var(--fl-primary, #2D5F93);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.dark-mode .glass-captcha-field {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(255,255,255,0.15);
+}
+.dark-mode .glass-captcha-field label strong { color: #93c5fd; }
+
+.glass-auth-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #334155;
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+
+/* ── دکمه‌ها ── */
+.glass-auth-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 13px;
+    border-radius: 12px;
+    background: var(--fl-primary, #2D5F93);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+.glass-auth-btn:hover {
+    background: var(--fl-primary-dark, #1B4A73);
+    transform: translateY(-2px);
+}
+.glass-auth-btn--ghost {
+    background: transparent;
+    color: var(--fl-primary, #2D5F93);
+    border: 1px solid rgba(45,95,147,0.25);
+}
+.glass-auth-btn--ghost:hover {
+    background: rgba(45,95,147,0.08);
+    color: #17212b;
+}
+
+.glass-auth-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 14px;
+    background: transparent;
+    color: #334155;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.glass-auth-link:hover { color: var(--fl-primary, #2D5F93); }
+
+.glass-auth-loggedin-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+/* ── اعلان‌ها ── */
+.glass-auth-notice {
+    padding: 12px 16px;
+    border-radius: 11px;
+    font-size: 0.88rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+.glass-auth-notice--error {
+    background: rgba(239,68,68,0.10);
+    color: #334155;
+    border: 1px solid rgba(239,68,68,0.2);
+}
+.glass-auth-notice--success {
+    background: rgba(16,185,129,0.10);
+    color: #334155;
+    border: 1px solid rgba(16,185,129,0.2);
+}
+
+/* ════════════════════════════════════════
+   داشبورد
+   ════════════════════════════════════════ */
+.glass-dash-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+.glass-dash-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--fl-primary-dark, #1B4A73);
+    margin: 0;
+}
+.glass-dash-sub {
+    color: #334155;
+    font-size: 0.9rem;
+    margin: 4px 0 0;
+}
+.glass-dash-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.glass-dash-logout { width: auto; padding: 10px 22px; }
+
+/* دکمه ثبت آگهی جدید در هدر داشبورد */
+.glass-dash-newad {
+    width: auto;
+    padding: 10px 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--fl-accent, #A4B400);
+}
+.glass-dash-newad:hover { background: var(--fl-accent-hover, #7C8B00); }
+
+/* دکمه ثبت آگهی در حالت خالی */
+.glass-dash-empty-btn {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    margin-top: 16px;
+}
+
+.glass-dash-empty {
+    background: var(--fl-glass-bg, #ffffff);
+    border: 1px solid var(--fl-glass-border, #ffffff);
+    border-radius: var(--fl-radius, 20px);
+    padding: 50px 20px;
+    text-align: center;
+    color: #334155;
+}
+
+.glass-dash-list {
+    display: grid;
+    gap: 16px;
+}
+
+.glass-dash-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 18px;
+    background: var(--fl-glass-bg, #ffffff);
+    border: 1px solid var(--fl-glass-border, #ffffff);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: var(--fl-shadow, 0 12px 40px rgba(0,0,0,0.06));
+    transition: transform 0.25s ease;
+}
+.glass-dash-card:hover { transform: translateY(-2px); }
+.glass-dash-card--sold { opacity: 0.85; }
+.glass-dash-card--expired { opacity: 0.9; }
+
+.glass-dash-card-thumb {
+    position: relative;
+    width: 160px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.glass-dash-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.glass-dash-noimg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(45,95,147,0.08);
+    color: #334155;
+    font-size: 0.8rem;
+}
+.glass-dash-badge {
+    position: absolute;
+    top: 8px;
+    inset-inline-start: 8px;
+    color: #17212b;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.glass-dash-card-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+.glass-dash-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--fl-text, #17212B);
+    margin: 2px 0 8px;
+}
+.glass-dash-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 0.82rem;
+    color: #334155;
+    margin-bottom: 14px;
+}
+
+.glass-dash-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+.glass-dash-inline { display: inline; margin: 0; }
+.glass-dash-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    background: rgba(45,95,147,0.08);
+    color: #1e40af;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.glass-dash-btn:hover { transform: translateY(-1px); }
+.glass-dash-btn--view   { background: rgba(45,95,147,0.10); }
+.glass-dash-btn--renew  { background: var(--fl-accent, #A4B400); color: #334155; }
+.glass-dash-btn--renew:hover { background: var(--fl-accent-hover, #7C8B00); }
+.glass-dash-btn--sold   { background: rgba(16,185,129,0.12); color: #334155; }
+.glass-dash-btn--restore{ background: rgba(245,158,11,0.12); color: #334155; }
+.glass-dash-btn--edit   { background: rgba(99,102,241,0.10); color: #334155; }
+.glass-dash-btn--delete { background: rgba(239,68,68,0.10); color: #334155; }
+
+/* ════════════════════════════════════════
+   دارک مود
+   ════════════════════════════════════════ */
+.dark-mode .glass-auth-card,
+.dark-mode .glass-dash-card,
+.dark-mode .glass-dash-empty {
+    background: rgba(15,23,42,0.72);
+    border-color: rgba(255,255,255,0.08);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.30);
+}
+.dark-mode .glass-auth-title,
+.dark-mode .glass-dash-title { color: #f1f5f9; }
+.dark-mode .glass-dash-card-title { color: #e2e8f0; }
+.dark-mode .glass-auth-field label { color: #e2e8f0; }
+.dark-mode .glass-auth-field input {
+    background: rgba(0,0,0,0.25);
+    border-color: rgba(255,255,255,0.12);
+    color: #e2e8f0;
+}
+.dark-mode .glass-auth-tabs { background: rgba(255,255,255,0.05); }
+/* Dark mode: dash button identical to light mode */
+
+/* ════════════════════════════════════════
+   ریسپانسیو
+   ════════════════════════════════════════ */
+@media (max-width: 640px) {
+    .glass-dash-header { flex-direction: column; align-items: stretch; }
+    .glass-dash-header-actions { width: 100%; }
+    .glass-dash-newad, .glass-dash-logout { flex: 1; justify-content: center; }
+
+    .glass-dash-card {
+        grid-template-columns: 1fr;
+    }
+    .glass-dash-card-thumb {
+        width: 100%;
+        height: 180px;
+    }
+    .glass-dash-actions { gap: 6px; }
+    .glass-dash-btn { flex: 1; justify-content: center; }
+}
+
+/* ════════════════════════════════════════
+   جفت دکمه CTA (ثبت آگهی + ورود/ثبت‌نام)
+   ════════════════════════════════════════ */
+.glass-cta-buttons {
+    display: inline-flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.glass-cta-buttons--block {
+    display: flex;
+    width: 100%;
+}
+.glass-cta-buttons--block .glass-cta-btn { flex: 1; }
+
+.glass-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 20px;
+    border-radius: 11px;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.glass-cta-btn svg { flex-shrink: 0; }
+.glass-cta-btn--primary {
+    background: var(--fl-primary, #2D5F93) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(45,95,147,0.2);
+}
+.glass-cta-btn--primary:hover {
+    background: var(--fl-primary-dark, #1B4A73) !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+.glass-cta-btn--ghost {
+    background: transparent;
+    color: var(--fl-primary, #2D5F93) !important;
+    border: 1.5px solid rgba(45,95,147,0.35);
+}
+.glass-cta-btn--ghost:hover {
+    background: rgba(45,95,147,0.08);
+    color: var(--fl-primary-dark, #1B4A73) !important;
+    transform: translateY(-2px);
+}
+.dark-mode .glass-cta-btn--primary {
+    background: #2D5F93 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(45,95,147,0.35);
+}
+.dark-mode .glass-cta-btn--primary:hover {
+    background: #1B4A73 !important;
+    color: #ffffff !important;
+}
+.dark-mode .glass-cta-btn--ghost {
+    color: #ffffff !important;
+    border-color: rgba(255,255,255,0.35);
+}
+.dark-mode .glass-cta-btn--ghost:hover {
+    background: rgba(255,255,255,0.08);
+    color: #ffffff !important;
+}
+
+/* ════════════════════════════════════════
+   جعبه هوشمند ورود/ثبت‌نام بالای فرم آگهی
+   ════════════════════════════════════════ */
+.glass-auth-prompt {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    margin-bottom: 22px;
+}
+.glass-auth-prompt--out {
+    background: linear-gradient(135deg, rgba(164,180,0,0.10), rgba(45,95,147,0.08));
+    border: 1px solid rgba(45,95,147,0.18);
+}
+.glass-auth-prompt--in {
+    background: rgba(16,185,129,0.08);
+    border: 1px solid rgba(16,185,129,0.2);
+}
+.glass-auth-prompt-ico {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: var(--fl-primary, #2D5F93);
+    box-shadow: 0 4px 12px rgba(45,95,147,0.15);
+}
+.glass-auth-prompt--in .glass-auth-prompt-ico { color: #10b981; }
+.glass-auth-prompt-txt {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.glass-auth-prompt-txt strong {
+    font-size: 0.95rem;
+    color: var(--fl-text, #17212B);
+}
+.glass-auth-prompt-txt span {
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--fl-text-light, #64748B);
+}
+.glass-auth-prompt-txt b { color: var(--fl-primary, #2D5F93); }
+.glass-auth-prompt-btn { flex-shrink: 0; }
+
+.dark-mode .glass-auth-prompt--out {
+    background: linear-gradient(135deg, rgba(196,214,0,0.08), rgba(56,189,248,0.06));
+    border-color: rgba(255,255,255,0.1);
+}
+.dark-mode .glass-auth-prompt--in {
+    background: rgba(16,185,129,0.10);
+    border-color: rgba(16,185,129,0.25);
+}
+.dark-mode .glass-auth-prompt-ico { background: rgba(15,23,42,0.8); }
+.dark-mode .glass-auth-prompt-txt strong { color: #f1f5f9; }
+.dark-mode .glass-auth-prompt-txt span { color: #94a3b8; }
+.dark-mode .glass-auth-prompt-txt b { color: #93c5fd; }
+
+@media (max-width: 600px) {
+    .glass-auth-prompt {
+        flex-direction: column;
+        text-align: center;
+    }
+    .glass-auth-prompt-txt { text-align: center; }
+    .glass-auth-prompt-btn { width: 100%; }
+    .glass-cta-buttons { width: 100%; }
+    .glass-cta-buttons .glass-cta-btn { flex: 1; }
+}

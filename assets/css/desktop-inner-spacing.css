@@ -1,0 +1,96 @@
+/* Reduced inner padding for desktop/tablet content; controls are not targeted. */
+@media (min-width: 769px) {
+    /* Standard pages and single blog. */
+    .gl-page-card,
+    .fl-sb-content {
+        padding: 28px 24px !important;
+    }
+    .gl-page-hero-card {
+        padding: 18px !important;
+    }
+
+    /* Single portfolio content surfaces. */
+    .fl-sp-header,
+    .fl-sp-body {
+        padding-inline: 20px !important;
+    }
+    .fl-sp-submit-wrap {
+        padding-inline: 14px !important;
+    }
+    .fl-sp-tags,
+    .fl-sb-footer-meta,
+    .fl-sb-share-nav {
+        padding-inline: 18px !important;
+    }
+
+    /* Contact, search and comments. */
+    .fl-contact-card,
+    .fl-contact-custom-inner,
+    .fl-contact-form-section {
+        padding-inline: 20px !important;
+    }
+    .gs-card__body {
+        padding-inline: 12px !important;
+    }
+    .comment-body {
+        padding-inline: 22px !important;
+    }
+
+    /* Archive/product card bodies. */
+    .fl-arch-card-body,
+    .fl-pf-body {
+        padding-inline: 10px !important;
+    }
+    .agh-card__body {
+        padding-inline: 12px !important;
+    }
+
+    /* Reusable content design blocks. */
+    .agh-glass {
+        padding-inline: 20px !important;
+    }
+    .agh-formula,
+    .agh-highlight,
+    .agh-warning,
+    .agh-info {
+        padding-inline: 14px !important;
+    }
+    .agh-cta-band {
+        padding-inline: 22px !important;
+    }
+    body:not(.elementor-active) .site-main {
+        padding-inline: 28px !important;
+    }
+
+    /* Supplied .agh-aw home-page blocks. */
+    .agh-aw .aw-hero-main,
+    .agh-aw .aw-used {
+        padding-inline: 22px !important;
+    }
+    .agh-aw .aw-kpi,
+    .agh-aw .aw-rail-item,
+    .agh-aw .aw-process-card,
+    .agh-aw .aw-contact-item {
+        padding-inline: 12px !important;
+    }
+    .agh-aw .aw-manifest-card,
+    .agh-aw .aw-used-panel,
+    .agh-aw .aw-contact-panel {
+        padding-inline: 16px !important;
+    }
+    .agh-aw .aw-feature-card .agh-card__body {
+        padding-inline: 16px !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+    .gl-page-card,
+    .fl-sb-content {
+        padding-inline: 18px !important;
+    }
+    .agh-glass,
+    .fl-contact-form-section,
+    .fl-contact-custom-inner {
+        padding-inline: 16px !important;
+    }
+}

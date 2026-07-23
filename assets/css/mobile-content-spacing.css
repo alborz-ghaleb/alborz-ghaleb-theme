@@ -1,0 +1,84 @@
+/*
+ * Mobile outer gutters only — card/form inner padding is intentionally intact.
+ */
+@media (max-width: 768px) {
+    /* WordPress archive/index/comments containers. */
+    body .container,
+    #main-content > .container,
+    .gl-archive-wrap > .container,
+    .gc-section > .container {
+        padding-inline: 6px !important;
+    }
+
+    /* Single blog and single portfolio outer shells. */
+    .fl-sp-blog,
+    .fl-sp-page {
+        padding-inline: 6px !important;
+    }
+
+    /* Standard pages: hero and content stay perfectly aligned. */
+    .gl-page-hero-wrap,
+    .gl-page-content-wrap {
+        padding-inline: 6px !important;
+    }
+
+    /* Contact, search and archive outer wrappers. */
+    .fl-contact-page,
+    .fl-archive,
+    .gs-container,
+    .fl-pf-page {
+        padding-inline: 6px !important;
+    }
+
+    /* User login/dashboard wrappers. */
+    .glass-auth-wrap,
+    .glass-dash-wrap {
+        padding-inline: 6px !important;
+    }
+
+    /* Breadcrumb follows the same mobile gutter. */
+    .fl-breadcrumb-wrap {
+        padding-inline: 6px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body .container,
+    #main-content > .container,
+    .gl-archive-wrap > .container,
+    .gc-section > .container,
+    .fl-sp-blog,
+    .fl-sp-page,
+    .gl-page-hero-wrap,
+    .gl-page-content-wrap,
+    .fl-contact-page,
+    .fl-archive,
+    .gs-container,
+    .fl-pf-page,
+    .glass-auth-wrap,
+    .glass-dash-wrap,
+    .fl-breadcrumb-wrap {
+        padding-inline: 4px !important;
+    }
+}
+
+/* Keep a tiny safe gutter instead of touching the physical screen edge. */
+@media (max-width: 340px) {
+    body .container,
+    #main-content > .container,
+    .gl-archive-wrap > .container,
+    .gc-section > .container,
+    .fl-sp-blog,
+    .fl-sp-page,
+    .gl-page-hero-wrap,
+    .gl-page-content-wrap,
+    .fl-contact-page,
+    .fl-archive,
+    .gs-container,
+    .fl-pf-page,
+    .glass-auth-wrap,
+    .glass-dash-wrap,
+    .fl-breadcrumb-wrap {
+        padding-inline: 3px !important;
+    }
+}

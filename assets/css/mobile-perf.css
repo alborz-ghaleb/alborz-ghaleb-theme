@@ -1,0 +1,85 @@
+/**
+ * Mobile Performance Optimization
+ * 
+ * No backdrop-filter exists anymore — this file handles
+ * lightweight mobile-specific adjustments.
+ *
+ * @version 5.17.0
+ */
+
+/* ── Mobile: solid backgrounds ── */
+@media (max-width: 768px) {
+    .glass-card,
+    .glass-form-card,
+    .glass-auth-card,
+    .glass-dash-card,
+    .fl-sb-vip-card,
+    .fl-sp-page,
+    .glass-comment,
+    .gc-form-wrap,
+    .gs-result,
+    .fl-sb-rel-card,
+    .fl-sp-rel-card,
+    .fl-sb-glass,
+    .gl-page-card,
+    .gl-page-hero-card {
+        background: #ffffff !important;
+    }
+}
+
+/* ── Dark mode mobile ── */
+@media (max-width: 768px) {
+    .dark-mode .glass-card,
+    .dark-mode .glass-form-card,
+    .dark-mode .glass-auth-card,
+    .dark-mode .glass-dash-card,
+    .dark-mode .fl-sb-vip-card,
+    .dark-mode .fl-sp-page,
+    .dark-mode .fl-sb-glass,
+    .dark-mode .gl-page-card {
+        background: rgba(22, 43, 63, 0.95) !important;
+    }
+}
+
+/* ── Reduced motion ── */
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ── will-change cleanup on mobile ── */
+@media (max-width: 768px) {
+    .glass-card:not(:hover),
+    .fl-sb-vip-card:not(:hover) {
+        will-change: auto !important;
+        transform: none;
+    }
+}
+
+/* ── Lighter shadows on small screens ── */
+@media (max-width: 480px) {
+    .glass-card,
+    .glass-auth-card,
+    .fl-sb-vip-card,
+    .fl-sp-page,
+    .fl-sb-glass {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06) !important;
+    }
+}
+
+/* ── content-visibility for off-screen sections ── */
+@media (max-width: 768px) {
+    .fl-sb-rel,
+    .fl-sp-rel,
+    .gc-section,
+    #secondary {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 400px;
+    }
+}

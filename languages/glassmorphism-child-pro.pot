@@ -1,0 +1,877 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR m.dasht abadi
+# This file is distributed under the same license as the Glassmorphism PRO package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Glassmorphism PRO 5.15.19\n"
+"Report-Msgid-Bugs-To: https://www.alborz-ghaleb.com/\n"
+"POT-Creation-Date: 2026-07-11 17:00+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: 404.php:31
+msgid "صفحه‌ای که دنبالش بودید پیدا نشد."
+msgstr ""
+
+#: 404.php:32
+msgid ""
+"ممکن است آدرس اشتباه باشد یا صفحه حذف شده باشد. می‌توانید جستجو کنید یا به "
+"صفحه‌ی اصلی برگردید."
+msgstr ""
+
+#: 404.php:40
+msgid "بازگشت به صفحه اصلی"
+msgstr ""
+
+#: archive.php:74 comments.php:66 inc/legacy/functions-ads-slider.php:606
+#: index.php:51
+msgid "قبلی"
+msgstr ""
+
+#: archive.php:75 comments.php:67 inc/legacy/functions-ads-slider.php:609
+#: index.php:52
+msgid "بعدی"
+msgstr ""
+
+#: comments.php:27
+msgid "دیدگاه‌ها و نظرات"
+msgstr ""
+
+#: comments.php:29
+msgid "نظر شما برای ما ارزشمنده"
+msgstr ""
+
+#: comments.php:30
+msgid "تجربه و دیدگاه خود را با ما و دیگر کاربران به اشتراک بگذارید"
+msgstr ""
+
+#: comments.php:44
+#, php-format
+msgid "%s دیدگاه"
+msgstr ""
+
+#: comments.php:80
+msgid "هنوز دیدگاهی ثبت نشده. اولین نفر باشید!"
+msgstr ""
+
+#: comments.php:112
+msgid "امکان ثبت دیدگاه جدید وجود ندارد."
+msgstr ""
+
+#: footer.php:99
+msgid "دسترسی سریع"
+msgstr ""
+
+#: footer.php:111
+msgid "داشبورد من"
+msgstr ""
+
+#: footer.php:112 footer.php:116
+msgid "ثبت آگهی جدید"
+msgstr ""
+
+#: footer.php:113
+msgid "خروج"
+msgstr ""
+
+#: footer.php:115
+msgid "ورود / ثبت‌نام"
+msgstr ""
+
+#: footer.php:125
+msgid "درباره ما"
+msgstr ""
+
+#: footer.php:133
+msgid ""
+"برای نمایش این بخش، یک فهرست به مکان «فوتر: درباره ما» اختصاص دهید (نمایش → "
+"فهرست‌ها)."
+msgstr ""
+
+#: footer.php:140
+msgid "ارتباط با ما"
+msgstr ""
+
+#: header.php:182
+msgid "Toggle Dark Mode"
+msgstr ""
+
+#: header.php:224
+msgid "Primary Navigation"
+msgstr ""
+
+#: header.php:244
+msgid "Search"
+msgstr ""
+
+#: header.php:251 header.php:375
+msgid "Search..."
+msgstr ""
+
+#: header.php:258
+msgid "Open menu"
+msgstr ""
+
+#: header.php:278
+msgid "Navigation"
+msgstr ""
+
+#: header.php:292
+msgid "Close"
+msgstr ""
+
+#: inc/accessibility.php:32 template-parts/header/skip-link.php:12
+msgid "پرش به محتوای اصلی"
+msgstr ""
+
+#: inc/elementor-integration.php:29 inc/setup.php:167
+msgid "Glassmorphism PRO"
+msgstr ""
+
+#: inc/legacy/functions-ads-slider.php:564
+msgid "تبلیغات"
+msgstr ""
+
+#: inc/legacy/functions-ads-slider.php:619
+msgid "انتخاب اسلاید"
+msgstr ""
+
+#: inc/legacy/functions-blog.php:65
+msgid "وبلاگ"
+msgstr ""
+
+#: inc/legacy/functions-blog.php:77
+msgid "برچسب:"
+msgstr ""
+
+#: inc/legacy/functions-blog.php:82
+msgid "نتایج جستجو برای:"
+msgstr ""
+
+#: inc/legacy/functions-blog.php:455
+msgid "مقاله ویژه"
+msgstr ""
+
+#: inc/legacy/functions-blog.php:490
+msgid "صفحه"
+msgstr ""
+
+#: inc/legacy/functions-blog.php:492
+msgid "مقاله"
+msgstr ""
+
+#: inc/legacy/functions-blog.php:509
+#: inc/widgets/class-widget-glass-card.php:120
+msgid "بیشتر بخوانید"
+msgstr ""
+
+#: inc/legacy/functions-blog.php:511
+msgid "مطالعه مقاله"
+msgstr ""
+
+#: inc/legacy/functions-blog.php:535
+#, php-format
+msgid "نتیجه‌ای برای جستجوی \"%s\" یافت نشد."
+msgstr ""
+
+#: inc/legacy/functions-blog.php:537
+msgid "هیچ پستی با این برچسب یافت نشد."
+msgstr ""
+
+#: inc/legacy/functions-blog.php:539
+msgid "هیچ مقاله‌ای یافت نشد."
+msgstr ""
+
+#: inc/legacy/functions-footer.php:19
+msgid "فوتر: دسترسی سریع"
+msgstr ""
+
+#: inc/legacy/functions-footer.php:20
+msgid "فوتر: درباره ما"
+msgstr ""
+
+#: inc/legacy/functions-footer.php:26
+msgid "⬇ Footer Settings"
+msgstr ""
+
+#: inc/legacy/functions-footer.php:28
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/legacy/functions-footer.php:30
+msgid "Footer Description"
+msgstr ""
+
+#: inc/legacy/functions-footer.php:32
+msgid "Contact Phone"
+msgstr ""
+
+#: inc/legacy/functions-footer.php:34
+msgid "Contact Email"
+msgstr ""
+
+#: inc/legacy/functions-footer.php:36
+msgid "Address"
+msgstr ""
+
+#: inc/legacy/functions-header.php:23
+msgid "Primary - Default"
+msgstr ""
+
+#: inc/legacy/functions-header.php:24
+msgid "Primary - فارسی"
+msgstr ""
+
+#: inc/legacy/functions-header.php:25
+msgid "Primary - English"
+msgstr ""
+
+#: inc/legacy/functions-header.php:26
+msgid "Primary - Հայերեն"
+msgstr ""
+
+#: inc/legacy/functions-header.php:27
+msgid "Primary - العربية"
+msgstr ""
+
+#: inc/legacy/functions-header.php:28
+msgid "Primary - Türkçe"
+msgstr ""
+
+#: inc/legacy/functions-header.php:29
+msgid "Primary - Русский"
+msgstr ""
+
+#: inc/legacy/functions-header.php:48
+msgid "⬆ Header Info Bar"
+msgstr ""
+
+#: inc/legacy/functions-header.php:58
+msgid "📞 Phone 1"
+msgstr ""
+
+#: inc/legacy/functions-header.php:69
+msgid "📞 Phone 2 (Optional)"
+msgstr ""
+
+#: inc/legacy/functions-header.php:80
+msgid "📧 Email (Optional)"
+msgstr ""
+
+#: inc/legacy/functions-header.php:91
+msgid "📍 Address"
+msgstr ""
+
+#: inc/legacy/functions-header.php:102
+msgid "Show Info Bar"
+msgstr ""
+
+#: inc/legacy/functions-header.php:232
+msgid "Toggle submenu"
+msgstr ""
+
+#: inc/legacy/functions-header.php:282
+msgid "Toggle"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:39
+msgid "💳 درگاه پرداخت آگهی (ریالی و کریپتو)"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:49
+msgid "فعال‌سازی درگاه زرین‌پال (فارسی)"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:59
+msgid "مبلغ ثبت آگهی زرین‌پال (تومان)"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:69
+msgid "کد مرچنت زرین‌پال (Merchant ID)"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:80
+msgid "فعال‌سازی پرداخت کریپتو (سایر زبان‌ها)"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:81
+msgid "برای آگهی‌هایی که در صفحات غیرفارسی ثبت می‌شوند."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:91
+msgid "مبلغ ثبت آگهی کریپتو (USDT)"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:101
+msgid "آدرس ولت تتر (Tether USDT - TRC20)"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:102
+msgid "آدرس کیف پول تتر شبکه TRC20 جهت واریز هزینه آگهی."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:211
+msgid "خطای امنیتی رخ داده است. لطفاً صفحه را رفرش کرده و دوباره تلاش کنید."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:239
+msgid "نام و نام خانوادگی نمی‌تواند خالی باشد."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:242
+msgid "عنوان آگهی نمی‌تواند خالی باشد."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:245
+msgid "لطفاً دسته‌بندی آگهی را انتخاب کنید."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:248
+msgid "لطفاً نام شهر آگهی را وارد کنید."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:251
+msgid "متن آگهی نمی‌تواند خالی باشد."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:254
+msgid "شماره تماس الزامی است."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:256
+msgid ""
+"شماره تماس وارد شده معتبر نیست. لطفاً یک شماره ۱۱ رقمی معتبر وارد کنید (مثال: "
+"09121234567)."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:263
+msgid "Please enter the transaction hash (TxID) of your USDT payment."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:265
+msgid "The transaction hash (TxID) entered is invalid."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:270
+msgid ""
+"درج هرگونه آدرس اینترنتی (لینک، دامنه‌ مانند com. یا ir.، وب‌سایت شروع‌شونده با "
+"www یا http) و همچنین کدهای HTML و اسکریپت در فیلدهای آگهی مجاز نیست."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:298
+msgid "متأسفانه در ثبت آگهی مشکلی پیش آمد. لطفا مجدداً تلاش کنید."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:344
+#, php-format
+msgid "فایل %s بزرگتر از ۱ مگابایت است."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:366
+#, php-format
+msgid "فرمت فایل %s معتبر نیست. فقط JPG, JPEG, PNG مجاز هستند."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:459
+msgid "خطا در اتصال به درگاه زرین‌پال. آگهی شما ذخیره نشد."
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:764
+msgid "Your ad has been submitted successfully!"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:765
+msgid ""
+"We have received your payment transaction ID. Our administrator is verifying "
+"your transaction. Your ad will be published as soon as the transaction is "
+"confirmed!"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:975
+msgid "Paste Your Transaction Hash (TxID) Here"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:1000
+msgid "Submit Ad & Verify Payment"
+msgstr ""
+
+#: inc/legacy/functions-portfolio-submit.php:1000
+msgid "Submit Classified Ad"
+msgstr ""
+
+#: inc/legacy/functions-portfolio.php:1072
+msgid "وضعیت تایید آگهی"
+msgstr ""
+
+#: inc/legacy/functions-portfolio.php:1134
+msgid "خطای امنیتی رخ داده است."
+msgstr ""
+
+#: inc/legacy/functions-portfolio.php:1160
+msgid "آگهی با موفقیت تایید و در سایت منتشر شد."
+msgstr ""
+
+#: inc/legacy/functions-user-panel.php:471
+msgid ""
+"تعداد تلاش‌های ثبت‌نام بیش از حد مجاز است. لطفاً چند دقیقه بعد دوباره تلاش کنید."
+msgstr ""
+
+#: inc/legacy/functions-user-panel.php:535
+msgid ""
+"تعداد درخواست‌های بازیابی رمز بیش از حد مجاز است. لطفاً چند دقیقه بعد دوباره "
+"تلاش کنید."
+msgstr ""
+
+#: inc/polylang.php:203
+msgid "ترجمه‌های قالب با موفقیت همگام‌سازی شدند (خانه‌های خالی پر شدند)."
+msgstr ""
+
+#: inc/polylang.php:213
+msgid ""
+"برای پر کردن خودکار ترجمه‌های خالیِ رشته‌های قالب در همهٔ زبان‌ها روی دکمهٔ زیر "
+"بزنید."
+msgstr ""
+
+#: inc/polylang.php:215
+msgid "همگام‌سازی ترجمه‌های قالب"
+msgstr ""
+
+#: inc/post-types.php:31 inc/post-types.php:33 inc/post-types.php:35
+msgid "دست دوم"
+msgstr ""
+
+#: inc/post-types.php:34
+msgid "آگهی"
+msgstr ""
+
+#: inc/post-types.php:36
+msgid "افزودن آگهی جدید"
+msgstr ""
+
+#: inc/post-types.php:37
+msgid "ویرایش آگهی"
+msgstr ""
+
+#: inc/post-types.php:38
+msgid "مشاهده آگهی"
+msgstr ""
+
+#: inc/post-types.php:39
+msgid "همه آگهی‌ها"
+msgstr ""
+
+#: inc/post-types.php:40
+msgid "جستجو در آگهی‌ها"
+msgstr ""
+
+#: inc/post-types.php:41
+msgid "آگهی‌ای یافت نشد"
+msgstr ""
+
+#: inc/post-types.php:66
+msgid "دسته‌بندی‌ها"
+msgstr ""
+
+#: inc/post-types.php:66 inc/widgets/class-widget-glass-ad-grid.php:103
+msgid "دسته‌بندی"
+msgstr ""
+
+#: inc/security.php:175
+msgid ""
+"تعداد تلاش‌های ناموفق بیش از حد مجاز است. لطفاً چند دقیقه بعد دوباره تلاش کنید."
+msgstr ""
+
+#: inc/seo.php:204
+msgid "خانه"
+msgstr ""
+
+#: inc/seo.php:227
+msgid "نتایج جستجو"
+msgstr ""
+
+#: inc/setup.php:168
+msgid ""
+"برای استفاده از تمام ویجت‌ها و قالب‌های آماده، افزونه‌ی Elementor را نصب کنید."
+msgstr ""
+
+#: inc/setup.php:170
+msgid "نصب Elementor"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ad-grid.php:34
+msgid "گرید آگهی‌ها"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ad-grid.php:74
+msgid "تنظیمات"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ad-grid.php:82
+msgid "تعداد آگهی"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ad-grid.php:93
+msgid "تعداد ستون"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ad-grid.php:119
+msgid "همه دسته‌ها"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ad-grid.php:163
+msgid "آگهی‌ای یافت نشد."
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:30
+msgid "اسلایدر تبلیغی PRO"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:76
+msgid "همهٔ اسلایدها"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:97
+msgid "تنظیمات اسلایدر"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:102
+msgid "گروه اسلایدر"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:109
+msgid "تعداد اسلاید (-1 = همه)"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:115
+msgid "افکت"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:119
+msgid "لغزشی (Slide)"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:120
+msgid "محوشونده (Fade)"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:125
+msgid "پخش خودکار (میلی‌ثانیه، 0 = خاموش)"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:131
+msgid "حلقهٔ بی‌نهایت"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:138
+msgid "فلش‌ها"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:145
+msgid "نقطه‌ها"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:152
+msgid "نوار پیشرفت"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:159
+msgid "توقف هنگام Hover"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:169
+msgid "چیدمان"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:174
+msgid "تعداد در دسکتاپ"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:180
+msgid "تعداد در تبلت"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:186
+msgid "تعداد در موبایل"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:193
+msgid "فاصلهٔ بین اسلایدها (px)"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-ads-slider.php:199
+msgid "نسبت ابعاد (عرض:ارتفاع)"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:34
+msgid "کارت شیشه‌ای"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:74
+msgid "محتوا"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:82
+msgid "عنوان"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:84
+msgid "عنوان کارت"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:91
+msgid "متن"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:93
+msgid "توضیح کوتاه کارت اینجا قرار می‌گیرد."
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:100
+msgid "آیکون"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:109
+msgid "لینک"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:118
+msgid "متن دکمه"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:130
+msgid "استایل"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:138
+msgid "رنگ عنوان"
+msgstr ""
+
+#: inc/widgets/class-widget-glass-card.php:147
+msgid "رنگ آیکون"
+msgstr ""
+
+#: page.php:56
+msgid "آخرین به‌روزرسانی:"
+msgstr ""
+
+#: page.php:61
+msgid "منتشر شده:"
+msgstr ""
+
+#: single-portfolio.php:142
+#, php-format
+msgid "شهر: %s"
+msgstr ""
+
+#: single-portfolio.php:143 single-portfolio.php:268 single-portfolio.php:544
+msgid "انتخاب شهر"
+msgstr ""
+
+#: single-portfolio.php:223 single-portfolio.php:224
+msgid "قالب بتن"
+msgstr ""
+
+#: single-portfolio.php:227 single-portfolio.php:228
+msgid "داربست مدولار"
+msgstr ""
+
+#: single-portfolio.php:231 single-portfolio.php:232
+msgid "جک سقفی"
+msgstr ""
+
+#: single-portfolio.php:235 single-portfolio.php:236
+msgid "ماشین آلات"
+msgstr ""
+
+#: single-portfolio.php:239 single-portfolio.php:240
+msgid "تجهیزات قالب بندی"
+msgstr ""
+
+#: single-portfolio.php:243 single-portfolio.php:244
+msgid "والپست"
+msgstr ""
+
+#: single-portfolio.php:275
+msgid "قصد فروش تجهیزات خود را دارید؟"
+msgstr ""
+
+#: single-portfolio.php:276
+msgid "آگهی خود را رایگان ثبت کنید تا هزاران خریدار آن را ببینند."
+msgstr ""
+
+#: single-portfolio.php:281
+msgid "ثبت آگهی رایگان"
+msgstr ""
+
+#: single-portfolio.php:340
+#, php-format
+msgid "تصویر %d"
+msgstr ""
+
+#: single-portfolio.php:346 single-portfolio.php:495
+msgid "بدون تصویر"
+msgstr ""
+
+#: single-portfolio.php:360
+msgid "آیا تجهیزات دست‌دوم برای فروش دارید؟"
+msgstr ""
+
+#: single-portfolio.php:361
+msgid "آگهی خود را به صورت رایگان ثبت کنید تا هزاران خریدار آن را ببینند."
+msgstr ""
+
+#: single-portfolio.php:367
+msgid "ثبت آگهی دست دوم"
+msgstr ""
+
+#: single-portfolio.php:392
+#, php-format
+msgid "%s بازدید"
+msgstr ""
+
+#: single-portfolio.php:404
+msgid "برای قیمت تماس بگیرید"
+msgstr ""
+
+#: single-portfolio.php:405
+msgid "مرکز تخصصی قالب و تجهیزات بتن"
+msgstr ""
+
+#: single-portfolio.php:411
+msgid "شماره تماس مالک آگهی"
+msgstr ""
+
+#: single-portfolio.php:426
+msgid "نمایش شماره تماس مالک"
+msgstr ""
+
+#: single-portfolio.php:445
+msgid "شماره‌های همراه"
+msgstr ""
+
+#: single-portfolio.php:446 single-portfolio.php:447
+msgid "فروش"
+msgstr ""
+
+#: single-portfolio.php:448
+msgid "پشتیبانی"
+msgstr ""
+
+#: single-portfolio.php:451
+msgid "تلفن‌های دفتر"
+msgstr ""
+
+#: single-portfolio.php:459
+msgid "شروع گفتگوی آنلاین (Chat)"
+msgstr ""
+
+#: single-portfolio.php:463
+msgid "بازار خرید و فروش"
+msgstr ""
+
+#: single-portfolio.php:463
+msgid "فعال"
+msgstr ""
+
+#: single-portfolio.php:463
+msgid "آگهی‌های دست‌دوم و درخواست خرید"
+msgstr ""
+
+#: single-portfolio.php:467
+msgid "کانال تلگرام"
+msgstr ""
+
+#: single-portfolio.php:467
+msgid "لیست قیمت و موجودی انبار"
+msgstr ""
+
+#: single-portfolio.php:471
+msgid "گالری تولیدات"
+msgstr ""
+
+#: single-portfolio.php:471
+msgid "فیلم و عکس پروژه‌های اجرایی"
+msgstr ""
+
+#: single-portfolio.php:506
+msgid "مشاهده"
+msgstr ""
+
+#: single-portfolio.php:546
+msgid "بستن"
+msgstr ""
+
+#: single-portfolio.php:553
+msgid "جستجوی شهر..."
+msgstr ""
+
+#: single-portfolio.php:557
+msgid "شهری با این نام پیدا نشد."
+msgstr ""
+
+#: single-portfolio.php:566
+msgid "هشدار امنیتی و رفع مسئولیت"
+msgstr ""
+
+#: single-portfolio.php:572
+msgid ""
+"کاربر گرامی، این آگهی توسط کاربران سایت ثبت شده است. <strong>تمام مسئولیت "
+"متن، عکس‌ها و مندرجات این آگهی کاملاً بر عهده شخص آگهی‌دهنده می‌باشد و سایت "
+"هیچ‌گونه مسئولیت یا تعهدی در قبال آن‌ها ندارد.</strong>\n"
+"            <br><br>\n"
+"            <strong>نکات امنیتی بسیار مهم قبل از معامله:</strong>\n"
+"            <br>\n"
+"            ۱. از پرداخت هرگونه <strong>پیش‌پرداخت یا بیعانه</strong> قبل از "
+"تحویل و تست فیزیکی کالا، جداً خودداری فرمایید.\n"
+"            <br>\n"
+"            ۲. معامله را فقط به صورت <strong>حضوری</strong> انجام داده و "
+"کالا را پس از بررسی دقیق فیزیکی دریافت کنید.\n"
+"            <br>\n"
+"            ۳. در صورت مشاهده هرگونه مورد مشکوک یا خارج از عرف، معامله را "
+"متوقف کرده و آگهی را گزارش دهید."
+msgstr ""
+
+#: single-portfolio.php:587
+msgid "انصراف"
+msgstr ""
+
+#: single-portfolio.php:588
+msgid "موافق و تأیید می‌کنم"
+msgstr ""
+
+#: template-parts/content/content-none.php:13
+msgid "محتوایی یافت نشد."
+msgstr ""
+
+#. SecFix v5.15.18 – Crypto TxID validation
+#: inc/legacy/portfolio-submit/submission-handler.php:95
+msgid "The transaction hash (TxID) entered is invalid. Expected: 0x…64 hex (ETH) or 64 hex (TRON)."
+msgstr ""
+
+#. SecFix v5.15.18 – Payment HMAC
+#: inc/legacy/portfolio-submit/payment-callback.php:45
+msgid "Payment verification HMAC failed – possible tampering detected."
+msgstr ""
+
+#. SecFix v5.15.18 – Zarinpal replay
+#: inc/legacy/portfolio-submit/payment-callback.php:102
+msgid "This payment has already been processed (Zarinpal code 101)."
+msgstr ""
+
+#. SecFix v5.15.18 – File editor security notice
+#: inc/security.php:28
+msgid "توصیه امنیتی Glassmorphism PRO: لطفاً define('DISALLOW_FILE_EDIT', true) را در wp-config.php قرار دهید."
+msgstr ""
+
+#. SecFix v5.15.18 – Trusted proxy
+#: inc/security.php:55
+msgid "Trusted proxy IP validation active"
+msgstr ""

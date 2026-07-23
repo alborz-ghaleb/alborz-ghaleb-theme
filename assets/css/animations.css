@@ -1,0 +1,43 @@
+/* ════════════════════════════════════════════════════════════════
+   ANIMATIONS — DISABLED (v7.0)
+   تمام انیمیشن‌های لود بخش‌ها غیرفعال شدند.
+   المان‌ها بلافاصله نمایش داده می‌شوند.
+   ════════════════════════════════════════════════════════════════ */
+
+/* تمام المان‌های reveal بلافاصله نمایش داده شوند */
+.gl-reveal,
+.gl-reveal.is-visible,
+.gl-stagger > *,
+.gl-stagger.is-visible > * {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* site-main بدون انیمیشن ورود */
+.site-main {
+    animation: none !important;
+    opacity: 1 !important;
+}
+
+/* VIP section بدون float */
+.fl-sb-vip {
+    animation: none !important;
+}
+
+/* Hover effects هنوز فعال هستند (انیمیشن نیستند) */
+.gl-hover-lift:hover {
+    transform: translateY(-5px);
+}
+.fl-fab-item:hover,
+.fl-ft-back-top:hover {
+    transform: translateY(-3px) scale(1.06);
+}
+.gl-img-zoom:hover img {
+    transform: scale(1.05);
+}
+.fl-sb-tag:hover,
+.blog-tag-item:hover {
+    transform: translateY(-2px) scale(1.04);
+}

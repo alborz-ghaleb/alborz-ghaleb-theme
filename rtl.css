@@ -1,0 +1,24 @@
+/*
+ * RTL Stylesheet — Alborz Ghaleb
+ *
+ * وردپرس این فایل را به‌صورت خودکار زمانی که is_rtl() درست باشد بارگذاری می‌کند
+ * (به‌شرط فعال بودن زبان RTL یا rtl_css).
+ *
+ * توجه: بخش عمده‌ی مدیریت RTL در فایل‌های کامپوننتی با ویژگی‌های منطقی
+ * (margin-inline / padding-inline / inset-inline) انجام شده است؛ این فایل
+ * فقط اصلاحات نقطه‌ای عمومی را پوشش می‌دهد.
+ */
+
+body { direction: rtl; text-align: right; }
+
+.glass-skip-link { inset-inline-start: 8px; }
+
+/* اطمینان از جهت درست لیست‌ها و نقل‌قول‌ها */
+.entry-content ul,
+.entry-content ol { padding-inline-start: 1.5em; padding-inline-end: 0; }
+
+blockquote { border-inline-start: 4px solid var(--fl-primary, #2D5F93); border-inline-end: 0; }
+
+/* فرم‌ها */
+input, textarea, select { text-align: right; }
+input[type="email"], input[type="url"], input[type="tel"] { direction: ltr; text-align: left; }

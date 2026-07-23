@@ -1,0 +1,1017 @@
+/*
+Theme Name:   Alborz Ghaleb
+Theme URI:    https://dashtseo.ir
+Description:  قالب مستقل و حرفه‌ای سازگار با المنتور — Dark Mode + RTL/فارسی + چندزبانه (Polylang) + Schema (سازگار با Rank Math) + بهینه‌سازی Core Web Vitals + WCAG 2.2 AA. کاملاً مستقل (بدون نیاز به قالب مادر) و production-grade.
+Author:       M.Dasht Abadi
+Author URI:   https://dashtseo.ir
+Version:      8.9.2
+Requires at least: 6.5
+Tested up to: 6.8
+Requires PHP: 8.1
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  glassmorphism-child-pro
+Domain Path:  /languages
+Tags:         elementor, dark-mode, multilingual, rtl-support, custom-colors, threaded-comments, translation-ready, accessibility-ready
+*/
+
+
+/* ════════════════════════════════════════
+   CSS CUSTOM PROPERTIES (ROOT VARIABLES)
+   ════════════════════════════════════════ */
+
+:root {
+    /* Brand Colors */
+    --fl-primary:        #2D5F93;
+    --fl-primary-dark:   #1B4A73;
+    --fl-accent:         #A4B400;
+    --fl-accent-hover:   #7C8B00;
+
+    /* Text */
+    --fl-text:           #17212B;
+    --fl-text-light:     #64748B;
+    --fl-white:          #FFFFFF;
+
+    /* Card Backgrounds — Solid, Clean */
+    --fl-glass-bg:       #ffffff;
+    --fl-glass-border:   rgba(0, 0, 0, 0.07);
+    --fl-glass-blur:     0px;
+
+    /* Shadows — Clean & Subtle */
+    --fl-shadow:         0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --fl-shadow-soft:    0 2px 8px rgba(0, 0, 0, 0.06);
+    --fl-shadow-inset:   none;
+    --fl-glass-bg-solid: #ffffff;
+
+    /* Motion */
+    --fl-speed:          0.35s;
+    --fl-ease:           cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Radius — Soft UI (rounded) */
+    --fl-radius:         22px;
+
+    /* Background base */
+    --gl-bg-base:        #f0f5fc;
+}
+
+/* ════════════════════════════════════════
+   RESET
+   ════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+    color: var(--fl-text);
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    background: #F8FAFC;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* گرید پس‌زمینه سایت — نرم، ظریف و روشن */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(45, 95, 147, 0.10) 1px, transparent 1px),
+        linear-gradient(rgba(45, 95, 147, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45, 95, 147, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px, 48px 48px, 48px 48px;
+    mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.05) 100%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.05) 100%);
+}
+.dark-mode body::before {
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(96, 165, 250, 0.12) 1px, transparent 1px),
+        linear-gradient(rgba(96, 165, 250, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96, 165, 250, 0.04) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.1) 100%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.1) 100%);
+}
+
+a {
+    text-decoration: none;
+    color: #17212b;
+    transition: color var(--fl-speed) var(--fl-ease);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ════════════════════════════════════════
+   LAYOUT
+   ════════════════════════════════════════ */
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.site-main {
+    min-height: 60vh;
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Elementor: حذف padding اضافه */
+.elementor-active .site-main {
+    padding: 0;
+}
+
+/* ════════════════════════════════════════
+   ACCESSIBILITY
+   ════════════════════════════════════════ */
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+:focus-visible {
+    outline: 2px solid var(--fl-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ════════════════════════════════════════
+   PRINT
+   ════════════════════════════════════════ */
+
+@media print {
+    body {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    .fl-header-group,
+    .fl-footer,
+    .fl-floating-buttons,
+    #fl-fab-call,
+    #fl-fab-social,
+    .fl-dark-toggle {
+        display: none !important;
+    }
+}
+
+/* ════════════════════════════════════════
+   CTA BUTTONS & AUTH PROMPT (global)
+   دکمه‌های ثبت آگهی + ورود/ثبت‌نام و جعبه هوشمند
+   ════════════════════════════════════════ */
+.glass-cta-buttons { display: inline-flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.glass-cta-buttons--block { display: flex; width: 100%; }
+.glass-cta-buttons--block .glass-cta-btn { flex: 1; }
+.glass-cta-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+    padding: 11px 20px; border-radius: 11px; font-size: 0.86rem; font-weight: 700;
+    text-decoration: none; transition: all 0.25s ease; white-space: nowrap; cursor: pointer;
+    line-height: 1.2;
+}
+.glass-cta-btn svg { flex-shrink: 0; }
+.glass-cta-btn--primary { background: var(--fl-primary, #2D5F93) !important; color: #fff !important; box-shadow: 0 4px 12px rgba(45,95,147,0.2); }
+.glass-cta-btn--primary:hover { background: var(--fl-primary-dark, #1B4A73) !important; transform: translateY(-2px); color:#fff !important; }
+.glass-cta-btn--ghost { background: transparent; color: var(--fl-primary, #2D5F93) !important; border: 1.5px solid rgba(45,95,147,0.35); }
+.glass-cta-btn--ghost:hover { background: rgba(45,95,147,0.08); transform: translateY(-2px); color: var(--fl-primary-dark, #1B4A73) !important; }
+/* دارک مود: دکمه primary روشن‌تر و خوانا، ghost با متن روشن */
+/* Dark mode: buttons identical to light mode — no changes */
+
+
+.glass-auth-prompt {
+    display: flex; align-items: center; gap: 16px; padding: 16px 18px;
+    border-radius: 14px; margin-bottom: 22px;
+}
+.glass-auth-prompt--out { background: linear-gradient(135deg, rgba(164,180,0,0.10), rgba(45,95,147,0.08)); border: 1px solid rgba(45,95,147,0.18); }
+.glass-auth-prompt--in { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); }
+.glass-auth-prompt-ico {
+    flex-shrink: 0; width: 46px; height: 46px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #fff; color: var(--fl-primary, #2D5F93); box-shadow: 0 4px 12px rgba(45,95,147,0.15);
+}
+.glass-auth-prompt--in .glass-auth-prompt-ico { color: #10b981; }
+.glass-auth-prompt-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.glass-auth-prompt-txt strong { font-size: 0.875rem; color: var(--fl-text, #17212B); }
+.glass-auth-prompt-txt span { font-size: 0.8rem; line-height: 1.7; color: var(--fl-text-light, #64748B); }
+.glass-auth-prompt-txt b { color: var(--fl-primary, #2D5F93); }
+.glass-auth-prompt-btn { flex-shrink: 0; }
+.dark-mode .glass-auth-prompt--out { background: linear-gradient(135deg, rgba(196,214,0,0.08), rgba(56,189,248,0.06)); border-color: rgba(255,255,255,0.1); }
+.dark-mode .glass-auth-prompt--in { background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.25); }
+.dark-mode .glass-auth-prompt-ico { background: #162B3F; }
+.dark-mode .glass-auth-prompt-txt strong { color: #f1f5f9; }
+.dark-mode .glass-auth-prompt-txt span { color: #94a3b8; }
+.dark-mode .glass-auth-prompt-txt b { color: #93c5fd; }
+
+@media (max-width: 600px) {
+    .glass-auth-prompt { flex-direction: column; text-align: center; }
+    .glass-auth-prompt-txt { text-align: center; }
+    .glass-auth-prompt-btn { width: 100%; }
+    .glass-cta-buttons { width: 100%; }
+    .glass-cta-buttons .glass-cta-btn { flex: 1; }
+}
+
+/* ════════════════════════════════════════
+   GLOBAL MOTION SAFETY (prefers-reduced-motion)
+   احترام به ترجیح کاربر برای کاهش حرکت — سراسری.
+   ════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ════════════════════════════════════════
+   IMAGE/MEDIA CLS SAFETY
+   جلوگیری از پرش چیدمان هنگام بارگذاری تصاویر.
+   ════════════════════════════════════════ */
+img,
+iframe {
+    height: auto;
+}
+img[width][height] {
+    height: auto;
+}
+
+/* [SEO FIX v5.15.3] عادی‌سازی وزن انکر تکست‌های عمومی */
+/* [SEO FIX v5.15.20] فهرست کامل شد: تمام لینک/دکمه‌های متنیِ عمومی و صفحه‌بندی‌ها
+   در همهٔ زبان‌ها (مشاهده/View/عرض/Görüntüle/Просмотр، بعدی/قبلی/التالي/السابق/
+   следующая/предыдущая، مطالعه مقاله/Read article/Makaleyi oku/بیشتر بخوانید و …) */
+.fl-blog-more,
+.fl-blog-more *,
+.fl-sb-nav-btn,
+.fl-sp-rel-more,
+.fl-sp-rel-more *,
+.glass-ads-btn,
+.glass-dash-btn,
+.glass-dash-btn *,
+.glass-ads-arrow,
+.fl-pf-more,
+.fl-pf-more *,
+.fl-pf-pagi a,
+.fl-pf-pagi span,
+.fl-pagination a,
+.fl-pagination span,
+.gs-card__view-btn,
+.gs-card__view-btn *,
+.gs-pagination .page-numbers,
+.blog-pagination-btn,
+.blog-pagination-btn *,
+.blog-pagination-num,
+.glass-cta-btn,
+.glass-cta-btn *,
+.glass-auth-btn,
+.glass-auth-btn *,
+.glass-auth-tab,
+.glass-auth-link,
+.gs-hero__btn,
+.gs-hero__btn *,
+.fl-btn,
+.fl-btn *,
+.glass-nav-links a,
+.glass-nav-links span,
+.fl-bc-item,
+.fl-bc-current,
+.gh-blog-readmore {
+    font-weight: 400 !important;
+}
+
+/* [UI CONTRAST FIX v5.15.12] حل کامل مشکل ناخوانایی ستون انتخاب شهر در تمامی صفحات دست‌دوم (آرشیو، تکی و کشوی موبایل) */
+.fl-city-list li a,
+.fl-sp-city-list li a,
+.fl-drawer-list li a {
+    color: #162B3F !important;
+}
+.fl-city-list .sub-menu li a,
+.fl-sp-city-list .sub-menu li a,
+.fl-drawer-list .sub-menu li a {
+    color: #475569 !important;
+}
+
+html.dark-mode .fl-city-list li a,
+html.dark-mode .fl-sp-city-list li a,
+html.dark-mode .fl-drawer-list li a,
+.dark-mode .fl-city-list li a,
+.dark-mode .fl-sp-city-list li a,
+.dark-mode .fl-drawer-list li a {
+    color: #f1f5f9 !important;
+}
+html.dark-mode .fl-city-list .sub-menu li a,
+html.dark-mode .fl-sp-city-list .sub-menu li a,
+html.dark-mode .fl-drawer-list .sub-menu li a,
+.dark-mode .fl-city-list .sub-menu li a,
+.dark-mode .fl-sp-city-list .sub-menu li a,
+.dark-mode .fl-drawer-list .sub-menu li a {
+    color: #94a3b8 !important;
+}
+/* ═══════════════════════════════════════════════════════════════════════════
+   ELEMENTOR CONTENT FORMATTING (.agh-*) — Cleaned & Dark Mode WCAG AA Ready
+   استایل‌های بارگذاری محتوا در المنتور — مرتب‌شده و مجهز به خوانایی عالی در دارک‌مود
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ─── BASE CONTAINER ─── */
+.agh-sec {
+    font-family: 'Vazirmatn', -apple-system, 'Segoe UI', Roboto, sans-serif;
+    text-align: start;
+    line-height: 1.75;
+    font-size: 0.88rem;
+    color: var(--fl-text, #17212B);
+    margin: 0 auto 24px;
+    max-width: 1080px;
+}
+[dir="rtl"] .agh-sec {
+    text-align: right;
+}
+[dir="ltr"] .agh-sec {
+    text-align: left;
+}
+
+.agh-glass {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: var(--fl-radius, 16px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 28px;
+}
+
+/* ─── HEADINGS & TEXT ─── */
+.agh-sec h2 { color: var(--fl-primary-dark, #1B4A73); font-size: 1.05rem; margin: 0 0 12px; font-weight: 700; }
+.agh-sec h3 { color: var(--fl-primary, #2D5F93); font-size: 0.9rem; margin: 18px 0 8px; font-weight: 600; }
+.agh-sec h4 { color: var(--fl-primary-dark, #1B4A73); font-size: 0.82rem; margin: 14px 0 6px; font-weight: 600; }
+.agh-sec p  { margin: 0 0 12px; font-size: 0.88rem; }
+.agh-sec a  { color: var(--fl-primary, #2D5F93); font-weight: 600; text-decoration: none; transition: color 0.2s ease; }
+.agh-sec a:hover { color: var(--fl-accent-hover, #7C8B00); }
+
+/* ─── LISTS ─── */
+.agh-list { padding-inline-start: 20px; margin: 0 0 14px; list-style-type: disc; }
+.agh-list li { margin-bottom: 10px; }
+
+/* ─── BADGE ─── */
+.agh-badge {
+    display: inline-block;
+    background: rgba(164, 180, 0, 0.14);
+    color: #5d6600;
+    border: 1px solid rgba(164, 180, 0, 0.35);
+    border-radius: 30px;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* ─── BUTTONS ─── */
+.agh-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--fl-primary, #2D5F93);
+    color: #ffffff !important;
+    padding: 12px 26px;
+    border-radius: 14px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 6px 4px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(45, 95, 147, 0.25);
+}
+.agh-btn:hover { background: var(--fl-primary-dark, #1B4A73); transform: translateY(-2px); color: #ffffff !important; }
+
+.agh-btn--accent { background: var(--fl-accent, #A4B400); color: #17212b !important; box-shadow: 0 4px 14px rgba(164, 180, 0, 0.25); }
+.agh-btn--accent:hover { background: var(--fl-accent-hover, #7C8B00); color: #ffffff !important; }
+
+.agh-btn--wa { background: #25D366; color: #ffffff !important; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25); }
+.agh-btn--wa:hover { background: #1da851; color: #ffffff !important; }
+
+/* ─── GRIDS & CARDS (.agh-grid) ─── */
+.agh-grid { display: grid !important; gap: 20px !important; width: 100% !important; }
+.agh-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+.agh-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+.agh-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+
+@media (max-width: 1024px) {
+    .agh-grid--3, .agh-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+.agh-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: var(--fl-radius, 16px);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.agh-card:hover { transform: translateY(-4px); box-shadow: 0 16px 50px rgba(45, 95, 147, 0.2); }
+.agh-card img { width: 100%; height: 160px; object-fit: cover; display: block; }
+
+.agh-card__body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+.agh-card__body h3 { font-size: 1rem; font-weight: 700; color: var(--fl-primary-dark, #1B4A73); margin: 0 0 8px; text-align: center; }
+.agh-card__body p  { font-size: 0.85rem; color: var(--fl-text-light, #64748B); flex: 1; text-align: center; margin: 0; }
+.agh-card .agh-btn { width: 100%; justify-content: center; padding: 10px 16px; font-size: 0.875rem; margin: 12px 0 0; }
+
+/* ─── TABLES ─── */
+.agh-table-wrap { overflow-x: auto; border-radius: var(--fl-radius, 16px); margin: 20px 0; border: 1px solid rgba(0,0,0,0.07); }
+.agh-table { width: 100%; border-collapse: collapse; background: #ffffff; font-size: 0.875rem; min-width: 600px; }
+.agh-table th { background: var(--fl-primary, #2D5F93); color: #ffffff; padding: 14px 16px; font-weight: 700; text-align: start; }
+.agh-table td { padding: 12px 16px; border-bottom: 1px solid rgba(45, 95, 147, 0.12); text-align: start; color: var(--fl-text, #17212b); }
+.agh-table tr:nth-child(even) td { background: rgba(45, 95, 147, 0.04); }
+.agh-table tr:hover td { background: rgba(45, 95, 147, 0.08); }
+
+/* ─── FAQ ACCORDIONS ─── */
+.agh-faq details { background: #ffffff; border: 1px solid rgba(45, 95, 147, 0.12); border-radius: 12px; margin-bottom: 14px; overflow: hidden; transition: border-color 0.25s ease; }
+.agh-faq details[open] { border-color: var(--fl-primary, #2D5F93); }
+.agh-faq summary { cursor: pointer; padding: 12px 16px; font-weight: 700; color: var(--fl-primary-dark, #1B4A73); font-size: 0.88rem; list-style: none; transition: background 0.2s ease; }
+.agh-faq summary::-webkit-details-marker { display: none; }
+.agh-faq summary::before { content: '+'; float: inline-start; font-size: 1.4rem; color: var(--fl-accent, #A4B400); font-weight: 700; line-height: 1; }
+.agh-faq details[open] summary::before { content: '−'; }
+.agh-faq .agh-faq__a { padding: 0 22px 18px; color: var(--fl-text-light, #475569); line-height: 1.8; }
+
+/* ─── CTA BAND ─── */
+.agh-cta-band { background: linear-gradient(135deg, var(--fl-primary, #2D5F93), var(--fl-primary-dark, #1B4A73)); border-radius: var(--fl-radius, 20px); padding: 32px 24px; text-align: center; color: #ffffff; box-shadow: 0 12px 36px rgba(45, 95, 147, 0.3); }
+.agh-cta-band h2 { color: #ffffff; margin-bottom: 12px; font-size: 1.1rem; }
+.agh-cta-band p  { color: rgba(255, 255, 255, 0.92); margin-bottom: 16px; }
+.agh-cta-band .agh-btn { background: #ffffff; color: var(--fl-primary, #2D5F93) !important; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); }
+.agh-cta-band .agh-btn:hover { background: rgba(255, 255, 255, 0.92); transform: translateY(-2px); }
+
+/* ─── HIGHLIGHT BOXES & FORMULAS ─── */
+.agh-formula { background: rgba(45, 95, 147, 0.07); border: 1px dashed var(--fl-primary, #2D5F93); border-radius: 14px; padding: 18px 22px; margin: 16px 0; font-size: 0.875rem; line-height: 1.8; color: var(--fl-text, #17212b); }
+.agh-formula strong { color: var(--fl-primary-dark, #1B4A73); }
+
+.agh-highlight { background: linear-gradient(135deg, rgba(164, 180, 0, 0.12), rgba(45, 95, 147, 0.05)); border-inline-start: 4px solid #A4B400; padding: 16px 20px; margin: 20px 0; border-radius: 0 12px 12px 0; color: var(--fl-text, #17212b); }
+.agh-warning   { background: rgba(239, 68, 68, 0.08); border-inline-start: 4px solid #dc2626; padding: 16px 20px; margin: 20px 0; border-radius: 0 12px 12px 0; color: var(--fl-text, #17212b); }
+.agh-info      { background: rgba(59, 130, 246, 0.08); border-inline-start: 4px solid #2D5F93; padding: 16px 20px; margin: 20px 0; border-radius: 0 12px 12px 0; color: var(--fl-text, #17212b); }
+
+/* ─── STEPS ─── */
+.agh-step { display: flex; align-items: flex-start; gap: 16px; margin: 16px 0; padding: 18px; background: #ffffff; border: 1px solid rgba(0,0,0,0.07); border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); transition: transform 0.25s ease; }
+.agh-step:hover { transform: translateX(-4px); }
+[dir="rtl"] .agh-step:hover { transform: translateX(4px); }
+.agh-step-num { background: var(--fl-primary, #2D5F93); color: #ffffff; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; box-shadow: 0 4px 12px rgba(45, 95, 147, 0.3); }
+.agh-step-content { flex: 1; }
+.agh-step-content h4 { margin: 0 0 6px; color: var(--fl-primary-dark, #1B4A73); font-size: 0.88rem; }
+.agh-step-content p  { margin: 0; color: var(--fl-text-light, #64748B); font-size: 0.84rem; }
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DARK MODE OVERRIDES (html.dark-mode .agh-*) — 100% Crisp WCAG AA Contrast
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+html.dark-mode .agh-sec,
+.dark-mode .agh-sec {
+    color: #f1f5f9;
+}
+
+html.dark-mode .agh-glass,
+.dark-mode .agh-glass {
+    background: #162B3F;
+    border-color: rgba(255, 255, 255, 0.10);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+html.dark-mode .agh-sec h2, .dark-mode .agh-sec h2 { color: #93c5fd; }
+html.dark-mode .agh-sec h3, .dark-mode .agh-sec h3 { color: #60a5fa; }
+html.dark-mode .agh-sec h4, .dark-mode .agh-sec h4 { color: #93c5fd; }
+html.dark-mode .agh-sec a,  .dark-mode .agh-sec a  { color: #38bdf8; }
+html.dark-mode .agh-sec a:hover, .dark-mode .agh-sec a:hover { color: #A4B400; }
+
+html.dark-mode .agh-badge, .dark-mode .agh-badge {
+    background: rgba(196, 214, 0, 0.15);
+    color: #d9ec00;
+    border-color: rgba(196, 214, 0, 0.45);
+}
+
+/* Dark mode: unify button text colors */
+.dark-mode .glass-cta-btn--primary,
+html.dark-mode .glass-cta-btn--primary,
+.dark-mode .glass-cta-btn--ghost,
+html.dark-mode .glass-cta-btn--ghost { color: #fff !important; }
+.dark-mode .glass-cta-btn--ghost,
+html.dark-mode .glass-cta-btn--ghost { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.05); }
+.dark-mode .glass-cta-btn--ghost:hover,
+html.dark-mode .glass-cta-btn--ghost:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.55); color: #fff !important; }
+
+/* Dark mode: accent buttons — light text for readability */
+html.dark-mode .agh-btn--accent,
+.dark-mode .agh-btn--accent { color: #17212b !important; }
+html.dark-mode .agh-btn--accent:hover,
+.dark-mode .agh-btn--accent:hover { color: #ffffff !important; }
+
+html.dark-mode .agh-card, .dark-mode .agh-card {
+    background: #162B3F;
+    border-color: rgba(255, 255, 255, 0.10);
+}
+html.dark-mode .agh-card:hover, .dark-mode .agh-card:hover {
+    border-color: rgba(96, 165, 250, 0.35);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
+}
+html.dark-mode .agh-card__body h3, .dark-mode .agh-card__body h3 { color: #f1f5f9; }
+html.dark-mode .agh-card__body p,  .dark-mode .agh-card__body p  { color: #cbd5e1; }
+
+html.dark-mode .agh-table, .dark-mode .agh-table {
+    background: #162B3F;
+}
+html.dark-mode .agh-table th, .dark-mode .agh-table th {
+    background: #1B4A73;
+    color: #f8fafc;
+    border-bottom: 2px solid #2D5F93;
+}
+html.dark-mode .agh-table td, .dark-mode .agh-table td {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    color: #e2e8f0;
+}
+html.dark-mode .agh-table tr:nth-child(even) td, .dark-mode .agh-table tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.03);
+}
+html.dark-mode .agh-table tr:hover td, .dark-mode .agh-table tr:hover td {
+    background: rgba(96, 165, 250, 0.12);
+}
+
+html.dark-mode .agh-faq details, .dark-mode .agh-faq details {
+    background: #162B3F;
+    border-color: rgba(255, 255, 255, 0.10);
+}
+html.dark-mode .agh-faq details[open], .dark-mode .agh-faq details[open] {
+    border-color: #2D5F93;
+}
+html.dark-mode .agh-faq summary, .dark-mode .agh-faq summary {
+    color: #f1f5f9;
+}
+html.dark-mode .agh-faq .agh-faq__a, .dark-mode .agh-faq .agh-faq__a {
+    color: #cbd5e1;
+}
+
+html.dark-mode .agh-cta-band, .dark-mode .agh-cta-band {
+    background: linear-gradient(135deg, #162B3F, #0F1724);
+    border: 1px solid rgba(96, 165, 250, 0.25);
+}
+html.dark-mode .agh-cta-band h2, .dark-mode .agh-cta-band h2,
+html.dark-mode .agh-cta-band p, .dark-mode .agh-cta-band p { color: #f1f5f9 !important; }
+html.dark-mode .agh-cta-band .agh-btn, .dark-mode .agh-cta-band .agh-btn {
+    background: #ffffff; color: #162B3F !important; box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+html.dark-mode .agh-cta-band .agh-btn:hover, .dark-mode .agh-cta-band .agh-btn:hover {
+    background: #e2e8f0; color: #0F1724 !important; }
+
+html.dark-mode .agh-formula, .dark-mode .agh-formula {
+    background: #162B3F;
+    border-color: #2D5F93;
+    color: #e2e8f0;
+}
+html.dark-mode .agh-formula strong, .dark-mode .agh-formula strong { color: #93c5fd; }
+
+html.dark-mode .agh-highlight, .dark-mode .agh-highlight { background: rgba(196, 214, 0, 0.08); color: #f1f5f9; }
+html.dark-mode .agh-warning,   .dark-mode .agh-warning   { background: rgba(239, 68, 68, 0.12); color: #f1f5f9; }
+html.dark-mode .agh-info,      .dark-mode .agh-info      { background: rgba(59, 130, 246, 0.12); color: #f1f5f9; }
+
+html.dark-mode .agh-step, .dark-mode .agh-step {
+    background: #162B3F;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+html.dark-mode .agh-step-num, .dark-mode .agh-step-num {
+    background: #38bdf8;
+    color: #0b1220;
+}
+html.dark-mode .agh-step-content h4, .dark-mode .agh-step-content h4 { color: #93c5fd; }
+html.dark-mode .agh-step-content p,  .dark-mode .agh-step-content p  { color: #cbd5e1; }
+
+/* ─── RESPONSIVE (≤768px) ─── */
+@media (max-width: 768px) {
+    .agh-glass { padding: 20px 16px; }
+    .agh-sec h2 { font-size: 0.92rem; }
+    .agh-grid--2, .agh-grid--3, .agh-grid--4 { grid-template-columns: 1fr !important; }
+    .agh-card img { height: 140px; }
+    .agh-table { font-size: 0.88rem; }
+    .agh-table th, .agh-table td { padding: 10px 12px; }
+    .agh-step { padding: 14px; gap: 12px; }
+
+    /* CTAهای محتوایی: کوچک، فشرده و کنار هم در موبایل */
+    .agh-sec .agh-btn,
+    .gl-page-content .agh-btn,
+    .fl-sb-content .agh-btn {
+        width: auto !important;
+        min-width: 0;
+        min-height: 34px;
+        padding: 7px 10px !important;
+        margin: 3px 1px !important;
+        gap: 4px;
+        border-radius: 9px;
+        font-size: 0.72rem !important;
+        line-height: 1.45;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+        box-shadow: 0 2px 8px rgba(45, 95, 147, 0.18);
+    }
+
+    /* پاراگراف‌های شامل چند دکمه نیز به شبکه دو ستونه تبدیل شوند. */
+    .agh-sec p:has(> .agh-btn),
+    .gl-page-content p:has(> .agh-btn),
+    .fl-sb-content p:has(> .agh-btn) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        align-items: stretch;
+    }
+    .agh-sec p:has(> .agh-btn) > .agh-btn,
+    .gl-page-content p:has(> .agh-btn) > .agh-btn,
+    .fl-sb-content p:has(> .agh-btn) > .agh-btn {
+        width: 100% !important;
+        height: 100%;
+        margin: 0 !important;
+        padding-inline: 6px !important;
+        overflow-wrap: anywhere;
+    }
+
+    /* ردیف CTA همیشه دو ستونه باشد و دکمه‌ها زیر هم نیفتند. */
+    .agh-cta-row {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        width: 100%;
+        margin: 8px 0 12px;
+        align-items: stretch;
+    }
+    .agh-cta-row .agh-btn {
+        width: 100% !important;
+        height: 100%;
+        margin: 0 !important;
+        padding: 7px 6px !important;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+    .agh-cta-row .agh-btn--tel { direction: rtl; }
+
+    /* دکمه داخل کارت باید مثل قبل تمام‌عرض بماند. */
+    .agh-card .agh-btn { width: 100% !important; }
+}
+
+@media (max-width: 380px) {
+    .agh-sec .agh-btn,
+    .gl-page-content .agh-btn,
+    .fl-sb-content .agh-btn {
+        padding-inline: 7px !important;
+        font-size: 0.68rem !important;
+    }
+    .agh-cta-row { gap: 5px; }
+}
+/* ════════════════════════════════════════════════════════════════
+   LIGHTWEIGHT ANIMATIONS — Alborz Ghaleb
+   Only transform + opacity (GPU accelerated). No layout thrashing.
+   Respects prefers-reduced-motion.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Keyframes ── */
+@keyframes glFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes glFadeInUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glFadeInScale {
+    from { opacity: 0; transform: scale(0.96); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glSlideInRight {
+    from { opacity: 0; transform: translateX(-12px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── New: Subtle micro-animations ── */
+@keyframes glSubtlePulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: .85; }
+}
+
+@keyframes glFloat {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-4px); }
+}
+
+@keyframes glBorderGlow {
+    0%, 100% { border-color: rgba(164,180,0,.15); }
+    50%      { border-color: rgba(164,180,0,.35); }
+}
+
+/* Reveal animations are disabled for faster first paint. */
+.gl-reveal,
+.gl-reveal.is-visible,
+.gl-stagger > *,
+.gl-stagger.is-visible > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    will-change: auto;
+}
+
+/* ── Card hover lift (already present on many cards, unified here) ── */
+.gl-hover-lift {
+    transition: transform .35s cubic-bezier(.4,0,.2,1), box-shadow .35s ease;
+}
+.gl-hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+/* ── Image zoom on hover ── */
+.gl-img-zoom {
+    overflow: hidden;
+}
+.gl-img-zoom img {
+    transition: transform .5s cubic-bezier(.4,0,.2,1);
+}
+.gl-img-zoom:hover img {
+    transform: scale(1.05);
+}
+
+/* ── Button shine (subtle) ── */
+@keyframes glShine {
+    from { left: -100%; }
+    to   { left: 100%; }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   NEW SMOOTH MICRO-ANIMATIONS (v6.0)
+   ────────────────────────────────────────────────────────────────
+   Design principles:
+   - Only transform + opacity (GPU composited, zero layout cost)
+   - Durations 200–500ms (snappy, not sluggish)
+   - cubic-bezier(.4,0,.2,1) easing (Material-like, natural feel)
+   - No animation on text (prevents reflow)
+   - All animations respect prefers-reduced-motion
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── 1) Smooth link underline slide (content links) ── */
+.fl-sb-content a,
+.agh-sec a {
+    text-decoration: none !important;
+    background-image: linear-gradient(var(--fl-primary, #2D5F93), var(--fl-primary, #2D5F93));
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .35s cubic-bezier(.4,0,.2,1), color .25s ease;
+}
+.fl-sb-content a:hover,
+.agh-sec a:hover {
+    background-size: 100% 1px;
+}
+.dark-mode .fl-sb-content a,
+.dark-mode .agh-sec a {
+    background-image: linear-gradient(#60a5fa, #60a5fa);
+}
+
+/* ── 2) Tag chip subtle bounce on hover ── */
+.fl-sb-tag,
+.blog-tag-item {
+    transition: transform .25s cubic-bezier(.34,1.56,.64,1), background .25s ease, color .25s ease, box-shadow .25s ease;
+}
+.fl-sb-tag:hover,
+.blog-tag-item:hover {
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* ── 3) Share button micro-press ── */
+.fl-sb-share-btn {
+    transition: transform .2s cubic-bezier(.4,0,.2,1), box-shadow .25s ease, background .25s ease;
+}
+.fl-sb-share-btn:active {
+    transform: scale(.92) !important;
+}
+
+/* ── 4) Card border glow on hover (very subtle) ── */
+.fl-sb-glass,
+.fl-sb-rel-card,
+.blog-post-card,
+.gc-section .comment-body {
+    transition: transform .35s cubic-bezier(.4,0,.2,1),
+                box-shadow .35s ease,
+                border-color .35s ease,
+                background .35s ease;
+}
+
+/* ── 5) Nav button slide indicator ── */
+.fl-sb-nav-btn {
+    transition: transform .25s cubic-bezier(.4,0,.2,1),
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease,
+                box-shadow .25s ease;
+}
+.fl-sb-nav-btn:active {
+    transform: scale(.96);
+}
+
+/* ── 6) TOC link slide-in indicator ── */
+.fl-sb-toc-link {
+    transition: background .2s ease,
+                color .2s ease,
+                font-weight .15s ease,
+                border-color .2s ease,
+                padding-inline-start .2s ease;
+}
+.fl-sb-toc-link.fl-sb-toc-active {
+    padding-inline-start: 14px;
+}
+
+/* ── 7) Floating icon gentle hover ── */
+.fl-fab-item,
+.fl-ft-back-top,
+.fl-dark-toggle {
+    transition: transform .3s cubic-bezier(.34,1.56,.64,1),
+                background .25s ease,
+                box-shadow .25s ease,
+                border-color .25s ease;
+}
+.fl-fab-item:hover,
+.fl-ft-back-top:hover {
+    transform: translateY(-3px) scale(1.06);
+}
+
+/* ── 8) CTA button hover lift + subtle shadow growth ── */
+.glass-cta-btn,
+.agh-btn,
+.gc-submit,
+.blog-post-readmore,
+.fl-header-submit-ad {
+    transition: transform .25s cubic-bezier(.4,0,.2,1),
+                box-shadow .3s ease,
+                background .25s ease,
+                color .2s ease,
+                border-color .25s ease;
+}
+.glass-cta-btn:active,
+.agh-btn:active,
+.gc-submit:active {
+    transform: translateY(-1px) scale(.98) !important;
+}
+
+/* ── 9) Pagination button subtle scale ── */
+.blog-pagination-num,
+.blog-pagination-btn,
+.nav-links a,
+.fl-pf-pagi a {
+    transition: transform .2s cubic-bezier(.4,0,.2,1),
+                background .25s ease,
+                color .2s ease,
+                border-color .25s ease,
+                box-shadow .25s ease;
+}
+.blog-pagination-num:active,
+.blog-pagination-btn:active {
+    transform: scale(.94);
+}
+
+/* ── 10) Smooth page entrance for main containers ── */
+.site-main {
+    animation: glFadeIn .4s ease both;
+}
+
+/* ── 11) VIP section gentle float animation (very subtle, pause on hover) ── */
+.fl-sb-vip {
+    animation: glFloat 6s ease-in-out infinite;
+}
+.fl-sb-vip:hover {
+    animation-play-state: paused;
+}
+
+/* ── 12) Breadcrumb chip hover lift ── */
+.fl-bc-item {
+    transition: transform .2s cubic-bezier(.4,0,.2,1),
+                background .25s ease,
+                color .2s ease,
+                border-color .25s ease,
+                box-shadow .25s ease;
+}
+.fl-bc-item:active {
+    transform: scale(.96);
+}
+
+/* ── 13) Gallery thumb active scale ── */
+.fl-sb-gallery-thumb {
+    transition: transform .3s cubic-bezier(.34,1.56,.64,1),
+                border-color .25s ease,
+                opacity .25s ease;
+}
+.fl-sb-gallery-thumb:hover {
+    transform: scale(1.06);
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    .gl-reveal,
+    .gl-stagger > *,
+    .site-main,
+    .fl-sb-vip {
+        opacity: 1;
+        transform: none;
+        animation: none !important;
+    }
+    .gl-hover-lift:hover,
+    .fl-fab-item:hover,
+    .fl-ft-back-top:hover {
+        transform: none;
+    }
+    .gl-img-zoom:hover img,
+    .fl-sb-gallery-thumb:hover {
+        transform: none;
+    }
+    .fl-sb-tag:hover,
+    .blog-tag-item:hover {
+        transform: none;
+    }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   MAIN CONTENT SHEET — page-like card over the background grid
+   ════════════════════════════════════════════════════════════════ */
+.site-main {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow:
+        0 16px 48px rgba(45, 95, 147, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.04);
+    max-width: 1320px;
+    margin: 40px auto;
+    padding: 60px 40px;
+}
+
+/* Elementor pages keep their own full-width canvas */
+.elementor-active .site-main {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+}
+
+.dark-mode .site-main {
+    background: #162B3F;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 16px 48px rgba(0, 0, 0, 0.35),
+        0 1px 3px rgba(0, 0, 0, 0.20);
+}
+
+@media (max-width: 768px) {
+    .site-main {
+        margin: 24px auto;
+        border-radius: 16px;
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-main {
+        margin: 16px auto;
+        border-radius: 12px;
+        padding: 28px 14px;
+    }
+}

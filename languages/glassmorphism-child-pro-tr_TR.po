@@ -1,0 +1,381 @@
+# glassmorphism-child-pro — tr_TR
+msgid ""
+msgstr ""
+"Project-Id-Version: Glassmorphism Child PRO 4.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%s دیدگاه"
+msgstr "%s yorum"
+
+msgid "Address"
+msgstr "Adres"
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Contact Email"
+msgstr "İletişim E-postası"
+
+msgid "Contact Phone"
+msgstr "İletişim Telefonu"
+
+msgid "Copyright Text"
+msgstr "Telif Hakkı Metni"
+
+msgid "Footer Description"
+msgstr "Alt Bilgi Açıklaması"
+
+msgid "Glassmorphism PRO"
+msgstr "Glassmorphism PRO"
+
+msgid "Navigation"
+msgstr "Gezinme"
+
+msgid "No content found."
+msgstr "İçerik bulunamadı."
+
+msgid "Open menu"
+msgstr "Menüyü aç"
+
+msgid "Paste Your Transaction Hash (TxID) Here"
+msgstr "İşlem Hash'inizi (TxID) Buraya Yapıştırın"
+
+msgid "Please enter the transaction hash (TxID) of your USDT payment."
+msgstr "Lütfen USDT ödemenizin işlem hash'ini (TxID) girin."
+
+msgid "Primary - Default"
+msgstr "Birincil - Varsayılan"
+
+msgid "Primary - English"
+msgstr "Birincil - İngilizce"
+
+msgid "Primary - Türkçe"
+msgstr "Birincil - Türkçe"
+
+msgid "Primary - Русский"
+msgstr "Birincil - Rusça"
+
+msgid "Primary - Հայերեն"
+msgstr "Birincil - Ermenice"
+
+msgid "Primary - العربية"
+msgstr "Birincil - Arapça"
+
+msgid "Primary - فارسی"
+msgstr "Birincil - Farsça"
+
+msgid "Primary Navigation"
+msgstr "Birincil Gezinme"
+
+msgid "Search"
+msgstr "Ara"
+
+msgid "Search..."
+msgstr "Ara..."
+
+msgid "Show Info Bar"
+msgstr "Bilgi Çubuğunu Göster"
+
+msgid "Submit Ad & Verify Payment"
+msgstr "İlanı Gönder ve Ödemeyi Doğrula"
+
+msgid "Submit Classified Ad"
+msgstr "İlan Ver"
+
+msgid "The transaction hash (TxID) entered is invalid."
+msgstr "Girilen işlem hash'i (TxID) geçersiz."
+
+msgid "Toggle"
+msgstr "Aç/Kapat"
+
+msgid "Toggle Dark Mode"
+msgstr "Karanlık Modu Aç/Kapat"
+
+msgid "Toggle submenu"
+msgstr "Alt menüyü aç/kapat"
+
+msgid "We have received your payment transaction ID. Our administrator is verifying your transaction. Your ad will be published as soon as the transaction is confirmed!"
+msgstr "Ödeme işlem kimliğinizi aldık. Yöneticimiz işleminizi doğruluyor. İşlem onaylanır onaylanmaz ilanınız yayınlanacaktır!"
+
+msgid "Your ad has been submitted successfully!"
+msgstr "İlanınız başarıyla gönderildi!"
+
+msgid "آخرین به‌روزرسانی:"
+msgstr "Son güncelleme:"
+
+msgid "آدرس ولت تتر (Tether USDT - TRC20)"
+msgstr "Tether Cüzdan Adresi (USDT - TRC20)"
+
+msgid "آدرس کیف پول تتر شبکه TRC20 جهت واریز هزینه آگهی."
+msgstr "İlan ücretini ödemek için TRC20 ağındaki Tether cüzdan adresi."
+
+msgid "آگهی با موفقیت تایید و در سایت منتشر شد."
+msgstr "İlan başarıyla onaylandı ve sitede yayınlandı."
+
+msgid "آگهی‌ای یافت نشد."
+msgstr "İlan bulunamadı."
+
+msgid "آیکون"
+msgstr "Simge"
+
+msgid "ارتباط با ما"
+msgstr "Bize Ulaşın"
+
+msgid "استایل"
+msgstr "Stil"
+
+msgid "امکان ثبت دیدگاه جدید وجود ندارد."
+msgstr "Yeni yorumlara izin verilmiyor."
+
+msgid "برای آگهی‌هایی که در صفحات غیرفارسی ثبت می‌شوند."
+msgstr "Farsça olmayan sayfalarda gönderilen ilanlar için."
+
+msgid "برچسب:"
+msgstr "Etiket:"
+
+msgid "بعدی"
+msgstr "Sonraki"
+
+msgid "بیشتر بخوانید"
+msgstr "Devamını oku"
+
+msgid "تبلیغات"
+msgstr "Reklam"
+
+msgid "تجربه و دیدگاه خود را با ما و دیگر کاربران به اشتراک بگذارید"
+msgstr "Deneyiminizi ve görüşünüzü bizimle ve diğer kullanıcılarla paylaşın"
+
+msgid "تعداد آگهی"
+msgstr "İlan Sayısı"
+
+msgid "تعداد تلاش‌های ناموفق بیش از حد مجاز است. لطفاً چند دقیقه بعد دوباره تلاش کنید."
+msgstr "Çok fazla başarısız deneme. Lütfen birkaç dakika sonra tekrar deneyin."
+
+msgid "تعداد ستون"
+msgstr "Sütun Sayısı"
+
+msgid "تنظیمات"
+msgstr "Ayarlar"
+
+msgid "توضیح کوتاه کارت اینجا قرار می‌گیرد."
+msgstr "Buraya kısa bir kart açıklaması gelir."
+
+msgid "ثبت آگهی جدید"
+msgstr "Yeni İlan Ver"
+
+msgid "خانه"
+msgstr "Ana Sayfa"
+
+msgid "خروج"
+msgstr "Çıkış"
+
+msgid "خطا در اتصال به درگاه زرین‌پال. آگهی شما ذخیره نشد."
+msgstr "ZarinPal ağ geçidine bağlanırken hata oluştu. İlanınız kaydedilmedi."
+
+msgid "خطای امنیتی رخ داده است."
+msgstr "Bir güvenlik hatası oluştu."
+
+msgid "خطای امنیتی رخ داده است. لطفاً صفحه را رفرش کرده و دوباره تلاش کنید."
+msgstr "Bir güvenlik hatası oluştu. Lütfen sayfayı yenileyip tekrar deneyin."
+
+msgid "داشبورد من"
+msgstr "Panelim"
+
+msgid "درباره ما"
+msgstr "Hakkımızda"
+
+msgid "درج هرگونه آدرس اینترنتی (لینک، دامنه‌ مانند com. یا ir.، وب‌سایت شروع‌شونده با www یا http) و همچنین کدهای HTML و اسکریپت در فیلدهای آگهی مجاز نیست."
+msgstr "İlan alanlarına herhangi bir web adresi (bağlantı, .com veya .ir gibi alan adı, www veya http ile başlayan site) ile HTML ve betik kodu eklenmesine izin verilmez."
+
+msgid "دسترسی سریع"
+msgstr "Hızlı Erişim"
+
+msgid "دسته‌بندی"
+msgstr "Kategori"
+
+msgid "دیدگاه‌ها و نظرات"
+msgstr "Yorumlar ve Görüşler"
+
+msgid "رنگ آیکون"
+msgstr "Simge Rengi"
+
+msgid "رنگ عنوان"
+msgstr "Başlık Rengi"
+
+msgid "شماره تماس الزامی است."
+msgstr "Telefon numarası gereklidir."
+
+msgid "شماره تماس وارد شده معتبر نیست. لطفاً یک شماره ۱۱ رقمی معتبر وارد کنید (مثال: 09121234567)."
+msgstr "Girilen telefon numarası geçersiz. Lütfen geçerli 11 haneli bir numara girin (örn. 09121234567)."
+
+msgid "صفحه"
+msgstr "Sayfa"
+
+msgid "عنوان"
+msgstr "Başlık"
+
+msgid "عنوان آگهی نمی‌تواند خالی باشد."
+msgstr "İlan başlığı boş olamaz."
+
+msgid "عنوان کارت"
+msgstr "Kart Başlığı"
+
+msgid "فایل %s بزرگتر از ۱ مگابایت است."
+msgstr "%s dosyası 1 MB'tan büyük."
+
+msgid "فرمت فایل %s معتبر نیست. فقط JPG, JPEG, PNG مجاز هستند."
+msgstr "%s dosyasının biçimi geçersiz. Yalnızca JPG, JPEG, PNG'ye izin verilir."
+
+msgid "فعال‌سازی درگاه زرین‌پال (فارسی)"
+msgstr "ZarinPal Ağ Geçidini Etkinleştir (Farsça)"
+
+msgid "فعال‌سازی پرداخت کریپتو (سایر زبان‌ها)"
+msgstr "Kripto Ödemeyi Etkinleştir (diğer diller)"
+
+msgid "قبلی"
+msgstr "Önceki"
+
+msgid "لطفاً دسته‌بندی آگهی را انتخاب کنید."
+msgstr "Lütfen bir ilan kategorisi seçin."
+
+msgid "لطفاً نام شهر آگهی را وارد کنید."
+msgstr "Lütfen ilanın şehrini girin."
+
+msgid "لینک"
+msgstr "Bağlantı"
+
+msgid "مبلغ ثبت آگهی زرین‌پال (تومان)"
+msgstr "ZarinPal İlan Ücreti (Toman)"
+
+msgid "مبلغ ثبت آگهی کریپتو (USDT)"
+msgstr "Kripto İlan Ücreti (USDT)"
+
+msgid "متأسفانه در ثبت آگهی مشکلی پیش آمد. لطفا مجدداً تلاش کنید."
+msgstr "Maalesef ilan gönderilirken bir sorun oluştu. Lütfen tekrar deneyin."
+
+msgid "متن"
+msgstr "Metin"
+
+msgid "متن آگهی نمی‌تواند خالی باشد."
+msgstr "İlan metni boş olamaz."
+
+msgid "متن دکمه"
+msgstr "Düğme Metni"
+
+msgid "محتوا"
+msgstr "İçerik"
+
+msgid "محتوایی یافت نشد."
+msgstr "İçerik bulunamadı."
+
+msgid "محصول"
+msgstr "Ürün"
+
+msgid "مشاهده محصول"
+msgstr "Ürünü Görüntüle"
+
+msgid "مطالعه مقاله"
+msgstr "Makaleyi Oku"
+
+msgid "مقاله"
+msgstr "Makale"
+
+msgid "مقاله ویژه"
+msgstr "Öne Çıkan Makale"
+
+msgid "منتشر شده:"
+msgstr "Yayınlandı:"
+
+msgid "نام و نام خانوادگی نمی‌تواند خالی باشد."
+msgstr "Ad ve soyad boş olamaz."
+
+msgid "نتایج جستجو"
+msgstr "Arama Sonuçları"
+
+msgid "نتایج جستجو برای:"
+msgstr "Şunun için arama sonuçları:"
+
+msgid "نتیجه‌ای برای جستجوی \"%s\" یافت نشد."
+msgstr "\"%s\" için sonuç bulunamadı."
+
+msgid "نظر شما برای ما ارزشمنده"
+msgstr "Görüşünüz bizim için değerli"
+
+msgid "همه دسته‌ها"
+msgstr "Tüm Kategoriler"
+
+msgid "هنوز دیدگاهی ثبت نشده. اولین نفر باشید!"
+msgstr "Henüz yorum yok. İlk yorumu siz yapın!"
+
+msgid "هیچ مقاله‌ای یافت نشد."
+msgstr "Makale bulunamadı."
+
+msgid "هیچ پستی با این برچسب یافت نشد."
+msgstr "Bu etikete sahip gönderi bulunamadı."
+
+msgid "وبلاگ"
+msgstr "Blog"
+
+msgid "ورود / ثبت‌نام"
+msgstr "Giriş / Kayıt"
+
+msgid "وضعیت تایید آگهی"
+msgstr "İlan Onay Durumu"
+
+msgid "پرش به محتوای اصلی"
+msgstr "Ana içeriğe geç"
+
+msgid "کارت شیشه‌ای"
+msgstr "Cam Kart"
+
+msgid "کد مرچنت زرین‌پال (Merchant ID)"
+msgstr "ZarinPal Üye İşyeri Kimliği (Merchant ID)"
+
+msgid "گرید آگهی‌ها"
+msgstr "İlan Izgarası"
+
+msgid "⬆ Header Info Bar"
+msgstr "⬆ Üst Bilgi Çubuğu"
+
+msgid "⬇ Footer Settings"
+msgstr "⬇ Alt Bilgi Ayarları"
+
+msgid "💳 درگاه پرداخت آگهی (ریالی و کریپتو)"
+msgstr "💳 İlan Ödeme Ağ Geçidi (Riyal ve Kripto)"
+
+msgid "📍 Address"
+msgstr "📍 Adres"
+
+msgid "📞 Phone 1"
+msgstr "📞 Telefon 1"
+
+msgid "📞 Phone 2 (Optional)"
+msgstr "📞 Telefon 2 (İsteğe bağlı)"
+
+msgid "📧 Email (Optional)"
+msgstr "📧 E-posta (İsteğe bağlı)"
+
+
+#: inc/legacy/portfolio-submit/submission-handler.php:95
+msgid "The transaction hash (TxID) entered is invalid. Expected: 0x…64 hex (ETH) or 64 hex (TRON)."
+msgstr "Girilen işlem hash'i (TxID) geçersiz. Beklenen: 0x…64 hex (ETH) veya 64 hex (TRON)."
+
+#: inc/legacy/portfolio-submit/payment-callback.php:45
+msgid "Payment verification HMAC failed – possible tampering detected."
+msgstr "Ödeme doğrulama HMAC başarısız – olası müdahale tespit edildi."
+
+#: inc/legacy/portfolio-submit/payment-callback.php:102
+msgid "This payment has already been processed (Zarinpal code 101)."
+msgstr "Bu ödeme zaten işlendi (Zarinpal kod 101)."
+
+#: inc/security.php:28
+msgid "توصیه امنیتی Glassmorphism PRO: لطفاً define('DISALLOW_FILE_EDIT', true) را در wp-config.php قرار دهید."
+msgstr "Glassmorphism PRO güvenlik önerisi: lütfen wp-config.php dosyasına define('DISALLOW_FILE_EDIT', true) ekleyin."
+
+#: inc/security.php:55
+msgid "Trusted proxy IP validation active"
+msgstr "Güvenilir proxy IP doğrulaması etkin"

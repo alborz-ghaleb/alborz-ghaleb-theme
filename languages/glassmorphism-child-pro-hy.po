@@ -1,0 +1,381 @@
+# glassmorphism-child-pro — hy
+msgid ""
+msgstr ""
+"Project-Id-Version: Glassmorphism Child PRO 4.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hy\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%s دیدگاه"
+msgstr "%s մեկնաբանություն"
+
+msgid "Address"
+msgstr "Հասցե"
+
+msgid "Close"
+msgstr "Փակել"
+
+msgid "Contact Email"
+msgstr "Կապի էլ. փոստ"
+
+msgid "Contact Phone"
+msgstr "Կապի հեռախոս"
+
+msgid "Copyright Text"
+msgstr "Հեղինակային իրավունքի տեքստ"
+
+msgid "Footer Description"
+msgstr "Ստորոտի նկարագրություն"
+
+msgid "Glassmorphism PRO"
+msgstr "Glassmorphism PRO"
+
+msgid "Navigation"
+msgstr "Նավիգացիա"
+
+msgid "No content found."
+msgstr "Բովանդակություն չի գտնվել։"
+
+msgid "Open menu"
+msgstr "Բացել ընտրացանկը"
+
+msgid "Paste Your Transaction Hash (TxID) Here"
+msgstr "Տեղադրեք ձեր գործարքի հեշը (TxID) այստեղ"
+
+msgid "Please enter the transaction hash (TxID) of your USDT payment."
+msgstr "Խնդրում ենք մուտքագրել ձեր USDT վճարման գործարքի հեշը (TxID)։"
+
+msgid "Primary - Default"
+msgstr "Հիմնական - Կանխադրված"
+
+msgid "Primary - English"
+msgstr "Հիմնական - Անգլերեն"
+
+msgid "Primary - Türkçe"
+msgstr "Հիմնական - Թուրքերեն"
+
+msgid "Primary - Русский"
+msgstr "Հիմնական - Ռուսերեն"
+
+msgid "Primary - Հայերեն"
+msgstr "Հիմնական - Հայերեն"
+
+msgid "Primary - العربية"
+msgstr "Հիմնական - Արաբերեն"
+
+msgid "Primary - فارسی"
+msgstr "Հիմնական - Պարսկերեն"
+
+msgid "Primary Navigation"
+msgstr "Հիմնական նավիգացիա"
+
+msgid "Search"
+msgstr "Որոնել"
+
+msgid "Search..."
+msgstr "Որոնել..."
+
+msgid "Show Info Bar"
+msgstr "Ցույց տալ տեղեկատվական գոտին"
+
+msgid "Submit Ad & Verify Payment"
+msgstr "Ուղարկել հայտարարությունը և հաստատել վճարումը"
+
+msgid "Submit Classified Ad"
+msgstr "Տեղադրել հայտարարություն"
+
+msgid "The transaction hash (TxID) entered is invalid."
+msgstr "Մուտքագրված գործարքի հեշը (TxID) անվավեր է։"
+
+msgid "Toggle"
+msgstr "Փոխարկել"
+
+msgid "Toggle Dark Mode"
+msgstr "Փոխարկել մուգ ռեժիմը"
+
+msgid "Toggle submenu"
+msgstr "Փոխարկել ենթացանկը"
+
+msgid "We have received your payment transaction ID. Our administrator is verifying your transaction. Your ad will be published as soon as the transaction is confirmed!"
+msgstr "Մենք ստացել ենք ձեր վճարման գործարքի ID-ն։ Մեր ադմինիստրատորը ստուգում է այն։ Ձեր հայտարարությունը կհրապարակվի գործարքի հաստատումից անմիջապես հետո!"
+
+msgid "Your ad has been submitted successfully!"
+msgstr "Ձեր հայտարարությունը հաջողությամբ ուղարկվել է!"
+
+msgid "آخرین به‌روزرسانی:"
+msgstr "Վերջին թարմացում՝"
+
+msgid "آدرس ولت تتر (Tether USDT - TRC20)"
+msgstr "Tether դրամապանակի հասցե (USDT - TRC20)"
+
+msgid "آدرس کیف پول تتر شبکه TRC20 جهت واریز هزینه آگهی."
+msgstr "Tether դրամապանակի հասցե TRC20 ցանցում՝ հայտարարության վճարի համար։"
+
+msgid "آگهی با موفقیت تایید و در سایت منتشر شد."
+msgstr "Հայտարարությունը հաջողությամբ հաստատվել և հրապարակվել է կայքում։"
+
+msgid "آگهی‌ای یافت نشد."
+msgstr "Հայտարարություններ չեն գտնվել։"
+
+msgid "آیکون"
+msgstr "Պատկերակ"
+
+msgid "ارتباط با ما"
+msgstr "Կապ մեզ հետ"
+
+msgid "استایل"
+msgstr "Ոճ"
+
+msgid "امکان ثبت دیدگاه جدید وجود ندارد."
+msgstr "Նոր մեկնաբանություններ չեն թույլատրվում։"
+
+msgid "برای آگهی‌هایی که در صفحات غیرفارسی ثبت می‌شوند."
+msgstr "Ոչ պարսկերեն էջերում տեղադրված հայտարարությունների համար։"
+
+msgid "برچسب:"
+msgstr "Պիտակ՝"
+
+msgid "بعدی"
+msgstr "Հաջորդ"
+
+msgid "بیشتر بخوانید"
+msgstr "Կարդալ ավելին"
+
+msgid "تبلیغات"
+msgstr "Գովազդ"
+
+msgid "تجربه و دیدگاه خود را با ما و دیگر کاربران به اشتراک بگذارید"
+msgstr "Կիսվեք ձեր փորձով և կարծիքով մեզ և այլ օգտատերերի հետ"
+
+msgid "تعداد آگهی"
+msgstr "Հայտարարությունների քանակ"
+
+msgid "تعداد تلاش‌های ناموفق بیش از حد مجاز است. لطفاً چند دقیقه بعد دوباره تلاش کنید."
+msgstr "Չափից շատ անհաջող փորձեր։ Խնդրում ենք կրկին փորձել մի քանի րոպեից։"
+
+msgid "تعداد ستون"
+msgstr "Սյունակների քանակ"
+
+msgid "تنظیمات"
+msgstr "Կարգավորումներ"
+
+msgid "توضیح کوتاه کارت اینجا قرار می‌گیرد."
+msgstr "Այստեղ տեղադրվում է քարտի կարճ նկարագրությունը։"
+
+msgid "ثبت آگهی جدید"
+msgstr "Տեղադրել նոր հայտարարություն"
+
+msgid "خانه"
+msgstr "Գլխավոր"
+
+msgid "خروج"
+msgstr "Ելք"
+
+msgid "خطا در اتصال به درگاه زرین‌پال. آگهی شما ذخیره نشد."
+msgstr "ZarinPal դարպասին միանալու սխալ։ Ձեր հայտարարությունը չպահպանվեց։"
+
+msgid "خطای امنیتی رخ داده است."
+msgstr "Տեղի է ունեցել անվտանգության սխալ։"
+
+msgid "خطای امنیتی رخ داده است. لطفاً صفحه را رفرش کرده و دوباره تلاش کنید."
+msgstr "Տեղի է ունեցել անվտանգության սխալ։ Թարմացրեք էջը և կրկին փորձեք։"
+
+msgid "داشبورد من"
+msgstr "Իմ վահանակը"
+
+msgid "درباره ما"
+msgstr "Մեր մասին"
+
+msgid "درج هرگونه آدرس اینترنتی (لینک، دامنه‌ مانند com. یا ir.، وب‌سایت شروع‌شونده با www یا http) و همچنین کدهای HTML و اسکریپت در فیلدهای آگهی مجاز نیست."
+msgstr "Հայտարարության դաշտերում ցանկացած վեբ հասցե (հղում, .com կամ .ir դոմեն, www կամ http-ով սկսվող կայք), ինչպես նաև HTML և սկրիպտ կոդ ներդնելը արգելված է։"
+
+msgid "دسترسی سریع"
+msgstr "Արագ հասանելիություն"
+
+msgid "دسته‌بندی"
+msgstr "Կատեգորիա"
+
+msgid "دیدگاه‌ها و نظرات"
+msgstr "Մեկնաբանություններ և կարծիքներ"
+
+msgid "رنگ آیکون"
+msgstr "Պատկերակի գույն"
+
+msgid "رنگ عنوان"
+msgstr "Վերնագրի գույն"
+
+msgid "شماره تماس الزامی است."
+msgstr "Հեռախոսահամարը պարտադիր է։"
+
+msgid "شماره تماس وارد شده معتبر نیست. لطفاً یک شماره ۱۱ رقمی معتبر وارد کنید (مثال: 09121234567)."
+msgstr "Մուտքագրված հեռախոսահամարն անվավեր է։ Խնդրում ենք մուտքագրել վավեր 11-նիշանոց համար (օր.՝ 09121234567)։"
+
+msgid "صفحه"
+msgstr "Էջ"
+
+msgid "عنوان"
+msgstr "Վերնագիր"
+
+msgid "عنوان آگهی نمی‌تواند خالی باشد."
+msgstr "Հայտարարության վերնագիրը չի կարող դատարկ լինել։"
+
+msgid "عنوان کارت"
+msgstr "Քարտի վերնագիր"
+
+msgid "فایل %s بزرگتر از ۱ مگابایت است."
+msgstr "%s ֆայլը մեծ է 1 ՄԲ-ից։"
+
+msgid "فرمت فایل %s معتبر نیست. فقط JPG, JPEG, PNG مجاز هستند."
+msgstr "%s ֆայլի ձևաչափն անվավեր է։ Թույլատրվում են միայն JPG, JPEG, PNG։"
+
+msgid "فعال‌سازی درگاه زرین‌پال (فارسی)"
+msgstr "Միացնել ZarinPal դարպասը (պարսկերեն)"
+
+msgid "فعال‌سازی پرداخت کریپتو (سایر زبان‌ها)"
+msgstr "Միացնել կրիպտո վճարումը (այլ լեզուներ)"
+
+msgid "قبلی"
+msgstr "Նախորդ"
+
+msgid "لطفاً دسته‌بندی آگهی را انتخاب کنید."
+msgstr "Խնդրում ենք ընտրել հայտարարության կատեգորիան։"
+
+msgid "لطفاً نام شهر آگهی را وارد کنید."
+msgstr "Խնդրում ենք մուտքագրել հայտարարության քաղաքը։"
+
+msgid "لینک"
+msgstr "Հղում"
+
+msgid "مبلغ ثبت آگهی زرین‌پال (تومان)"
+msgstr "ZarinPal հայտարարության վճար (Թոման)"
+
+msgid "مبلغ ثبت آگهی کریپتو (USDT)"
+msgstr "Կրիպտո հայտարարության վճար (USDT)"
+
+msgid "متأسفانه در ثبت آگهی مشکلی پیش آمد. لطفا مجدداً تلاش کنید."
+msgstr "Ցավոք, հայտարարությունն ուղարկելիս խնդիր առաջացավ։ Խնդրում ենք կրկին փորձել։"
+
+msgid "متن"
+msgstr "Տեքստ"
+
+msgid "متن آگهی نمی‌تواند خالی باشد."
+msgstr "Հայտարարության տեքստը չի կարող դատարկ լինել։"
+
+msgid "متن دکمه"
+msgstr "Կոճակի տեքստ"
+
+msgid "محتوا"
+msgstr "Բովանդակություն"
+
+msgid "محتوایی یافت نشد."
+msgstr "Բովանդակություն չի գտնվել։"
+
+msgid "محصول"
+msgstr "Ապրանք"
+
+msgid "مشاهده محصول"
+msgstr "Դիտել ապրանքը"
+
+msgid "مطالعه مقاله"
+msgstr "Կարդալ հոդվածը"
+
+msgid "مقاله"
+msgstr "Հոդված"
+
+msgid "مقاله ویژه"
+msgstr "Ընտրված հոդված"
+
+msgid "منتشر شده:"
+msgstr "Հրապարակվել է՝"
+
+msgid "نام و نام خانوادگی نمی‌تواند خالی باشد."
+msgstr "Անունը և ազգանունը չեն կարող դատարկ լինել։"
+
+msgid "نتایج جستجو"
+msgstr "Որոնման արդյունքներ"
+
+msgid "نتایج جستجو برای:"
+msgstr "Որոնման արդյունքներ՝"
+
+msgid "نتیجه‌ای برای جستجوی \"%s\" یافت نشد."
+msgstr "«%s» որոնման համար արդյունք չի գտնվել։"
+
+msgid "نظر شما برای ما ارزشمنده"
+msgstr "Ձեր կարծիքը կարևոր է մեզ համար"
+
+msgid "همه دسته‌ها"
+msgstr "Բոլոր կատեգորիաները"
+
+msgid "هنوز دیدگاهی ثبت نشده. اولین نفر باشید!"
+msgstr "Դեռ մեկնաբանություններ չկան։ Եղեք առաջինը!"
+
+msgid "هیچ مقاله‌ای یافت نشد."
+msgstr "Հոդվածներ չեն գտնվել։"
+
+msgid "هیچ پستی با این برچسب یافت نشد."
+msgstr "Այս պիտակով գրառումներ չեն գտնվել։"
+
+msgid "وبلاگ"
+msgstr "Բլոգ"
+
+msgid "ورود / ثبت‌نام"
+msgstr "Մուտք / Գրանցում"
+
+msgid "وضعیت تایید آگهی"
+msgstr "Հայտարարության հաստատման կարգավիճակ"
+
+msgid "پرش به محتوای اصلی"
+msgstr "Անցնել հիմնական բովանդակությանը"
+
+msgid "کارت شیشه‌ای"
+msgstr "Ապակե քարտ"
+
+msgid "کد مرچنت زرین‌پال (Merchant ID)"
+msgstr "ZarinPal վաճառողի ID (Merchant ID)"
+
+msgid "گرید آگهی‌ها"
+msgstr "Հայտարարությունների ցանց"
+
+msgid "⬆ Header Info Bar"
+msgstr "⬆ Վերնագրի տեղեկատվական գոտի"
+
+msgid "⬇ Footer Settings"
+msgstr "⬇ Ստորոտի կարգավորումներ"
+
+msgid "💳 درگاه پرداخت آگهی (ریالی و کریپتو)"
+msgstr "💳 Հայտարարության վճարման դարպաս (ռիալ և կրիպտո)"
+
+msgid "📍 Address"
+msgstr "📍 Հասցե"
+
+msgid "📞 Phone 1"
+msgstr "📞 Հեռախոս 1"
+
+msgid "📞 Phone 2 (Optional)"
+msgstr "📞 Հեռախոս 2 (ըստ ցանկության)"
+
+msgid "📧 Email (Optional)"
+msgstr "📧 Էլ. փոստ (ըստ ցանկության)"
+
+
+#: inc/legacy/portfolio-submit/submission-handler.php:95
+msgid "The transaction hash (TxID) entered is invalid. Expected: 0x…64 hex (ETH) or 64 hex (TRON)."
+msgstr "Մուտքագրված գործարքի հեշը (TxID) անվավեր է։ Սպասվում է՝ 0x…64 hex (ETH) կամ 64 hex (TRON)։"
+
+#: inc/legacy/portfolio-submit/payment-callback.php:45
+msgid "Payment verification HMAC failed – possible tampering detected."
+msgstr "Վճարման HMAC ստուգումը ձախողվեց – հայտնաբերվել է հնարավոր միջամտություն։"
+
+#: inc/legacy/portfolio-submit/payment-callback.php:102
+msgid "This payment has already been processed (Zarinpal code 101)."
+msgstr "Այս վճարումն արդեն մշակվել է (Zarinpal կոդ 101)։"
+
+#: inc/security.php:28
+msgid "توصیه امنیتی Glassmorphism PRO: لطفاً define('DISALLOW_FILE_EDIT', true) را در wp-config.php قرار دهید."
+msgstr "Glassmorphism PRO անվտանգության խորհուրդ. խնդրում ենք ավելացնել define('DISALLOW_FILE_EDIT', true) wp-config.php ֆայլում։"
+
+#: inc/security.php:55
+msgid "Trusted proxy IP validation active"
+msgstr "Վստահելի պրոքսի IP ստուգումը ակտիվ է"

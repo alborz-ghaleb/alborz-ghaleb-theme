@@ -1,0 +1,381 @@
+# glassmorphism-child-pro — ru_RU
+msgid ""
+msgstr ""
+"Project-Id-Version: Glassmorphism Child PRO 4.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%s دیدگاه"
+msgstr "%s комментариев"
+
+msgid "Address"
+msgstr "Адрес"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Contact Email"
+msgstr "Контактный e-mail"
+
+msgid "Contact Phone"
+msgstr "Контактный телефон"
+
+msgid "Copyright Text"
+msgstr "Текст копирайта"
+
+msgid "Footer Description"
+msgstr "Описание подвала"
+
+msgid "Glassmorphism PRO"
+msgstr "Glassmorphism PRO"
+
+msgid "Navigation"
+msgstr "Навигация"
+
+msgid "No content found."
+msgstr "Контент не найден."
+
+msgid "Open menu"
+msgstr "Открыть меню"
+
+msgid "Paste Your Transaction Hash (TxID) Here"
+msgstr "Вставьте хеш транзакции (TxID) сюда"
+
+msgid "Please enter the transaction hash (TxID) of your USDT payment."
+msgstr "Пожалуйста, введите хеш транзакции (TxID) вашего платежа USDT."
+
+msgid "Primary - Default"
+msgstr "Основное - По умолчанию"
+
+msgid "Primary - English"
+msgstr "Основное - Английский"
+
+msgid "Primary - Türkçe"
+msgstr "Основное - Турецкий"
+
+msgid "Primary - Русский"
+msgstr "Основное - Русский"
+
+msgid "Primary - Հայերեն"
+msgstr "Основное - Армянский"
+
+msgid "Primary - العربية"
+msgstr "Основное - Арабский"
+
+msgid "Primary - فارسی"
+msgstr "Основное - Персидский"
+
+msgid "Primary Navigation"
+msgstr "Основная навигация"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Search..."
+msgstr "Поиск..."
+
+msgid "Show Info Bar"
+msgstr "Показать инфопанель"
+
+msgid "Submit Ad & Verify Payment"
+msgstr "Отправить объявление и подтвердить оплату"
+
+msgid "Submit Classified Ad"
+msgstr "Подать объявление"
+
+msgid "The transaction hash (TxID) entered is invalid."
+msgstr "Введённый хеш транзакции (TxID) недействителен."
+
+msgid "Toggle"
+msgstr "Переключить"
+
+msgid "Toggle Dark Mode"
+msgstr "Переключить тёмный режим"
+
+msgid "Toggle submenu"
+msgstr "Переключить подменю"
+
+msgid "We have received your payment transaction ID. Our administrator is verifying your transaction. Your ad will be published as soon as the transaction is confirmed!"
+msgstr "Мы получили идентификатор вашей платёжной транзакции. Наш администратор проверяет её. Ваше объявление будет опубликовано сразу после подтверждения!"
+
+msgid "Your ad has been submitted successfully!"
+msgstr "Ваше объявление успешно отправлено!"
+
+msgid "آخرین به‌روزرسانی:"
+msgstr "Последнее обновление:"
+
+msgid "آدرس ولت تتر (Tether USDT - TRC20)"
+msgstr "Адрес кошелька Tether (USDT - TRC20)"
+
+msgid "آدرس کیف پول تتر شبکه TRC20 جهت واریز هزینه آگهی."
+msgstr "Адрес кошелька Tether в сети TRC20 для оплаты размещения объявления."
+
+msgid "آگهی با موفقیت تایید و در سایت منتشر شد."
+msgstr "Объявление успешно одобрено и опубликовано на сайте."
+
+msgid "آگهی‌ای یافت نشد."
+msgstr "Объявления не найдены."
+
+msgid "آیکون"
+msgstr "Иконка"
+
+msgid "ارتباط با ما"
+msgstr "Свяжитесь с нами"
+
+msgid "استایل"
+msgstr "Стиль"
+
+msgid "امکان ثبت دیدگاه جدید وجود ندارد."
+msgstr "Новые комментарии не допускаются."
+
+msgid "برای آگهی‌هایی که در صفحات غیرفارسی ثبت می‌شوند."
+msgstr "Для объявлений, размещённых на неперсидских страницах."
+
+msgid "برچسب:"
+msgstr "Метка:"
+
+msgid "بعدی"
+msgstr "Далее"
+
+msgid "بیشتر بخوانید"
+msgstr "Подробнее"
+
+msgid "تبلیغات"
+msgstr "Реклама"
+
+msgid "تجربه و دیدگاه خود را با ما و دیگر کاربران به اشتراک بگذارید"
+msgstr "Поделитесь своим опытом и мнением с нами и другими пользователями"
+
+msgid "تعداد آگهی"
+msgstr "Количество объявлений"
+
+msgid "تعداد تلاش‌های ناموفق بیش از حد مجاز است. لطفاً چند دقیقه بعد دوباره تلاش کنید."
+msgstr "Слишком много неудачных попыток. Повторите через несколько минут."
+
+msgid "تعداد ستون"
+msgstr "Количество колонок"
+
+msgid "تنظیمات"
+msgstr "Настройки"
+
+msgid "توضیح کوتاه کارت اینجا قرار می‌گیرد."
+msgstr "Здесь размещается краткое описание карточки."
+
+msgid "ثبت آگهی جدید"
+msgstr "Подать новое объявление"
+
+msgid "خانه"
+msgstr "Главная"
+
+msgid "خروج"
+msgstr "Выход"
+
+msgid "خطا در اتصال به درگاه زرین‌پال. آگهی شما ذخیره نشد."
+msgstr "Ошибка подключения к шлюзу ZarinPal. Ваше объявление не сохранено."
+
+msgid "خطای امنیتی رخ داده است."
+msgstr "Произошла ошибка безопасности."
+
+msgid "خطای امنیتی رخ داده است. لطفاً صفحه را رفرش کرده و دوباره تلاش کنید."
+msgstr "Произошла ошибка безопасности. Обновите страницу и повторите попытку."
+
+msgid "داشبورد من"
+msgstr "Мой кабинет"
+
+msgid "درباره ما"
+msgstr "О нас"
+
+msgid "درج هرگونه آدرس اینترنتی (لینک، دامنه‌ مانند com. یا ir.، وب‌سایت شروع‌شونده با www یا http) و همچنین کدهای HTML و اسکریپت در فیلدهای آگهی مجاز نیست."
+msgstr "Размещение любых веб-адресов (ссылок, доменов вроде .com или .ir, сайтов, начинающихся с www или http), а также HTML и скриптов в полях объявления запрещено."
+
+msgid "دسترسی سریع"
+msgstr "Быстрый доступ"
+
+msgid "دسته‌بندی"
+msgstr "Категория"
+
+msgid "دیدگاه‌ها و نظرات"
+msgstr "Комментарии и отзывы"
+
+msgid "رنگ آیکون"
+msgstr "Цвет иконки"
+
+msgid "رنگ عنوان"
+msgstr "Цвет заголовка"
+
+msgid "شماره تماس الزامی است."
+msgstr "Номер телефона обязателен."
+
+msgid "شماره تماس وارد شده معتبر نیست. لطفاً یک شماره ۱۱ رقمی معتبر وارد کنید (مثال: 09121234567)."
+msgstr "Введённый номер телефона недействителен. Введите корректный 11-значный номер (например, 09121234567)."
+
+msgid "صفحه"
+msgstr "Страница"
+
+msgid "عنوان"
+msgstr "Заголовок"
+
+msgid "عنوان آگهی نمی‌تواند خالی باشد."
+msgstr "Заголовок объявления не может быть пустым."
+
+msgid "عنوان کارت"
+msgstr "Заголовок карточки"
+
+msgid "فایل %s بزرگتر از ۱ مگابایت است."
+msgstr "Файл %s больше 1 МБ."
+
+msgid "فرمت فایل %s معتبر نیست. فقط JPG, JPEG, PNG مجاز هستند."
+msgstr "Недопустимый формат файла %s. Разрешены только JPG, JPEG, PNG."
+
+msgid "فعال‌سازی درگاه زرین‌پال (فارسی)"
+msgstr "Включить шлюз ZarinPal (персидский)"
+
+msgid "فعال‌سازی پرداخت کریپتو (سایر زبان‌ها)"
+msgstr "Включить криптоплатёж (другие языки)"
+
+msgid "قبلی"
+msgstr "Назад"
+
+msgid "لطفاً دسته‌بندی آگهی را انتخاب کنید."
+msgstr "Пожалуйста, выберите категорию объявления."
+
+msgid "لطفاً نام شهر آگهی را وارد کنید."
+msgstr "Пожалуйста, укажите город объявления."
+
+msgid "لینک"
+msgstr "Ссылка"
+
+msgid "مبلغ ثبت آگهی زرین‌پال (تومان)"
+msgstr "Стоимость объявления ZarinPal (томан)"
+
+msgid "مبلغ ثبت آگهی کریپتو (USDT)"
+msgstr "Стоимость объявления в крипто (USDT)"
+
+msgid "متأسفانه در ثبت آگهی مشکلی پیش آمد. لطفا مجدداً تلاش کنید."
+msgstr "К сожалению, при отправке объявления возникла проблема. Повторите попытку."
+
+msgid "متن"
+msgstr "Текст"
+
+msgid "متن آگهی نمی‌تواند خالی باشد."
+msgstr "Текст объявления не может быть пустым."
+
+msgid "متن دکمه"
+msgstr "Текст кнопки"
+
+msgid "محتوا"
+msgstr "Содержимое"
+
+msgid "محتوایی یافت نشد."
+msgstr "Контент не найден."
+
+msgid "محصول"
+msgstr "Товар"
+
+msgid "مشاهده محصول"
+msgstr "Посмотреть товар"
+
+msgid "مطالعه مقاله"
+msgstr "Читать статью"
+
+msgid "مقاله"
+msgstr "Статья"
+
+msgid "مقاله ویژه"
+msgstr "Избранная статья"
+
+msgid "منتشر شده:"
+msgstr "Опубликовано:"
+
+msgid "نام و نام خانوادگی نمی‌تواند خالی باشد."
+msgstr "Имя и фамилия не могут быть пустыми."
+
+msgid "نتایج جستجو"
+msgstr "Результаты поиска"
+
+msgid "نتایج جستجو برای:"
+msgstr "Результаты поиска по запросу:"
+
+msgid "نتیجه‌ای برای جستجوی \"%s\" یافت نشد."
+msgstr "По запросу «%s» ничего не найдено."
+
+msgid "نظر شما برای ما ارزشمنده"
+msgstr "Ваше мнение важно для нас"
+
+msgid "همه دسته‌ها"
+msgstr "Все категории"
+
+msgid "هنوز دیدگاهی ثبت نشده. اولین نفر باشید!"
+msgstr "Пока нет комментариев. Будьте первым!"
+
+msgid "هیچ مقاله‌ای یافت نشد."
+msgstr "Статьи не найдены."
+
+msgid "هیچ پستی با این برچسب یافت نشد."
+msgstr "Записи с этой меткой не найдены."
+
+msgid "وبلاگ"
+msgstr "Блог"
+
+msgid "ورود / ثبت‌نام"
+msgstr "Вход / Регистрация"
+
+msgid "وضعیت تایید آگهی"
+msgstr "Статус одобрения объявления"
+
+msgid "پرش به محتوای اصلی"
+msgstr "Перейти к основному содержанию"
+
+msgid "کارت شیشه‌ای"
+msgstr "Стеклянная карточка"
+
+msgid "کد مرچنت زرین‌پال (Merchant ID)"
+msgstr "Merchant ID ZarinPal"
+
+msgid "گرید آگهی‌ها"
+msgstr "Сетка объявлений"
+
+msgid "⬆ Header Info Bar"
+msgstr "⬆ Информационная панель шапки"
+
+msgid "⬇ Footer Settings"
+msgstr "⬇ Настройки подвала"
+
+msgid "💳 درگاه پرداخت آگهی (ریالی و کریپتو)"
+msgstr "💳 Платёжный шлюз объявлений (риал и крипто)"
+
+msgid "📍 Address"
+msgstr "📍 Адрес"
+
+msgid "📞 Phone 1"
+msgstr "📞 Телефон 1"
+
+msgid "📞 Phone 2 (Optional)"
+msgstr "📞 Телефон 2 (необязательно)"
+
+msgid "📧 Email (Optional)"
+msgstr "📧 E-mail (необязательно)"
+
+
+#: inc/legacy/portfolio-submit/submission-handler.php:95
+msgid "The transaction hash (TxID) entered is invalid. Expected: 0x…64 hex (ETH) or 64 hex (TRON)."
+msgstr "Введённый хеш транзакции (TxID) недействителен. Ожидается: 0x…64 hex (ETH) или 64 hex (TRON)."
+
+#: inc/legacy/portfolio-submit/payment-callback.php:45
+msgid "Payment verification HMAC failed – possible tampering detected."
+msgstr "Проверка платежа HMAC не удалась – обнаружено возможное вмешательство."
+
+#: inc/legacy/portfolio-submit/payment-callback.php:102
+msgid "This payment has already been processed (Zarinpal code 101)."
+msgstr "Этот платёж уже обработан (Zarinpal код 101)."
+
+#: inc/security.php:28
+msgid "توصیه امنیتی Glassmorphism PRO: لطفاً define('DISALLOW_FILE_EDIT', true) را در wp-config.php قرار دهید."
+msgstr "Рекомендация по безопасности Glassmorphism PRO: добавьте define('DISALLOW_FILE_EDIT', true) в wp-config.php."
+
+#: inc/security.php:55
+msgid "Trusted proxy IP validation active"
+msgstr "Проверка IP доверенного прокси активна"

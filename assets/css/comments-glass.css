@@ -1,0 +1,864 @@
+/* ═══════════════════════════════════
+   بخش دیدگاه‌ها — Alborz Ghaleb
+   ═══════════════════════════════════
+   [FIX v3.1.3] متغیرها از :root به .gc-section منتقل شدند تا تم را
+   آلوده نکنند. ضمناً --shadow و --shadow-hover که در همه فایل
+   استفاده می‌شدند ولی هیچ‌جا تعریف نشده بودند، اضافه شدند.
+   رنگ‌ها هم با CSS Variableهای تم (--fl-*) همگام شدند.
+   ═══════════════════════════════════ */
+
+.gc-section {
+    /* مپ به متغیرهای تم با fallback به مقادیر قبلی */
+    --primary:        var(--fl-text, #2B2E32);
+    --primary-dark:   var(--fl-primary-dark, #1a1c1f);
+    --primary-light:  #3d4146;
+    --accent:         var(--fl-accent, #A4B400);
+    --accent-hover:   var(--fl-accent-hover, #7C8B00);
+    --accent-light:   rgba(164, 180, 0, 0.12);
+    --accent-glow:    rgba(164, 180, 0, 0.30);
+    --text-dark:      var(--fl-text, #2B2E32);
+    --text-medium:    var(--fl-text-light, #4a4d52);
+    --text-light:     var(--fl-text-light, #6e7177);
+
+    /* [FIX] متغیرهای --shadow و --shadow-hover که در فایل
+       استفاده می‌شدند ولی تعریف نشده بودند → box-shadow خراب بود. */
+    --shadow:        0 8px 28px rgba(0, 0, 0, 0.06);
+    --shadow-hover:  0 16px 40px rgba(0, 0, 0, 0.10);
+}
+
+/* ──── بخش کلی ──── */
+.gc-section {
+    padding: 80px 0 90px;
+    position: relative;
+}
+
+/* ──── عنوان بخش ──── */
+.gc-section-head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gc-section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 100px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: var(--shadow);
+    color: #4d5a00;
+    font-weight: 700;
+    font-size: .82rem;
+    margin-bottom: 22px;
+}
+
+.gc-section-badge svg {
+    color: #4d5a00;
+}
+
+.gc-section-head h2 {
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.gc-section-head p {
+    color: var(--text-medium, #475569);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ──── تعداد نظرات ──── */
+.gc-count {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.gc-count span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 100px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid #ffffff;
+    box-shadow: var(--shadow);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: .95rem;
+}
+
+.gc-count svg {
+    color: #4d5a00;
+}
+
+/* ═══════════════════════════════════
+   لیست نظرات
+   ═══════════════════════════════════ */
+.gc-list {
+    list-style: none !important;
+    margin: 0 0 50px !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ریپلای‌ها */
+.gc-list .children {
+    list-style: none !important;
+    margin: 22px 38px 0 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.gc-list .children::before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+    border-radius: 3px;
+    opacity: .45;
+}
+
+/* ──── کارت هر نظر ──── */
+.comment-body {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 28px;
+    padding: 32px 34px;
+    box-shadow: var(--shadow);
+    transition: all .35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.comment-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.comment-body:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(126, 139, 2, .2);
+}
+
+.comment-body:hover::before {
+    opacity: 1;
+}
+
+/* نظر نویسنده */
+.comment-body.is-post-author {
+    border-color: rgba(126, 139, 2, .25);
+    background: #ffffff;
+}
+
+.comment-body.is-post-author::before {
+    opacity: 1;
+    background: linear-gradient(to bottom, var(--accent), var(--accent-hover));
+}
+
+/* ریپلای کارت */
+.gc-list .children .comment-body {
+    background: rgba(255,255,255,.6);
+    border-radius: 22px;
+    padding: 26px 28px;
+}
+
+/* ──── هدر نظر ──── */
+.gc-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.gc-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.gc-avatar {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 18px !important;
+    border: 3px solid rgba(255,255,255,.8) !important;
+    box-shadow: 0 6px 20px rgba(43, 46, 50, .1) !important;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+
+.gc-avatar:hover {
+    transform: scale(1.06) rotate(2deg);
+}
+
+.gc-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.gc-name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gc-name {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--primary-dark);
+}
+
+.gc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 12px;
+    border-radius: 100px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    color: #1a1c1f;
+    font-size: .72rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px var(--accent-glow);
+    letter-spacing: .3px;
+}
+
+.gc-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-medium, #475569);
+    font-size: .84rem;
+    text-decoration: none !important;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.gc-date svg {
+    opacity: .5;
+}
+
+.gc-date:hover {
+    color: #4d5a00;
+}
+
+/* ──── متن نظر ──── */
+.gc-content {
+    color: var(--text-medium, #475569);
+    line-height: 2.1;
+    margin-bottom: 6px;
+}
+
+.gc-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ──── در انتظار تایید ──── */
+.gc-moderation {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 12px 18px;
+    border-radius: 16px;
+    background: var(--accent-light);
+    border: 1px solid rgba(126, 139, 2, .2);
+    color: var(--text-dark, #3d4600);
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+/* ──── دکمه‌ها ──── */
+.gc-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(43, 46, 50, .07);
+    flex-wrap: wrap;
+}
+
+.gc-actions .comment-reply-link,
+.gc-actions .gc-edit-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    border-radius: 100px;
+    font-size: .85rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all .3s ease;
+    cursor: pointer;
+    border: none;
+    line-height: 1;
+}
+
+.gc-actions .comment-reply-link {
+    background: var(--accent-light);
+    color: #4d5a00;
+    border: 1px solid rgba(126, 139, 2, .16);
+}
+
+.gc-actions .comment-reply-link:hover {
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    color: #17212b;
+    box-shadow: 0 8px 24px var(--accent-glow);
+    transform: translateY(-3px);
+}
+
+.gc-actions .gc-edit-link a {
+    background: rgba(43, 46, 50, .06);
+    color: #17212b;
+    border: 1px solid rgba(43, 46, 50, .1);
+}
+
+.gc-actions .gc-edit-link a:hover {
+    background: var(--primary);
+    color: #fff !important;
+    box-shadow: 0 8px 24px rgba(43, 46, 50, .2);
+    transform: translateY(-3px);
+}
+
+/* ═══════════════════════════════════
+   حالت خالی و بسته
+   ═══════════════════════════════════ */
+.gc-empty {
+    text-align: center;
+    padding: 50px 30px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+}
+
+.gc-empty-icon {
+    margin-bottom: 14px;
+    color: #334155;
+    opacity: .45;
+}
+
+.gc-empty p {
+    color: #334155;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.gc-closed {
+    text-align: center;
+    padding: 28px;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* ═══════════════════════════════════
+   جداکننده
+   ═══════════════════════════════════ */
+.gc-separator {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 50px 0 35px;
+}
+
+.gc-separator::before,
+.gc-separator::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(43, 46, 50, .1), transparent);
+}
+
+.gc-separator span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: var(--shadow);
+    color: #4d5a00;
+    flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════
+   فرم ثبت نظر
+   ═══════════════════════════════════ */
+.gc-form-title {
+    font-size: clamp(1.2rem, 3vw, 1.6rem) !important;
+    color: var(--primary-dark) !important;
+    font-weight: 700 !important;
+    text-align: center;
+    margin-bottom: 10px !important;
+}
+
+.gc-form-title small {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.gc-form-title small a {
+    font-size: .82rem !important;
+    color: #4d5a00;
+    text-decoration: none !important;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 100px;
+    background: var(--accent-light);
+    border: 1px solid rgba(126, 139, 2, .15);
+    transition: all .3s;
+}
+
+.gc-form-title small a:hover {
+    background: var(--accent);
+    color: #17212b;
+}
+
+.gc-form-notes {
+    text-align: center;
+    color: #334155;
+    font-size: .9rem;
+    margin-bottom: 30px !important;
+}
+
+.gc-form-notes .required {
+    color: #4d5a00;
+    font-weight: 700;
+}
+
+/* کارت فرم */
+.comment-form {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 32px;
+    padding: 40px 38px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.comment-form::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle, rgba(126, 139, 2, .05), transparent 60%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.comment-form::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(43, 46, 50, .04), transparent 60%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.comment-form:hover {
+    box-shadow: 0 20px 60px rgba(126, 139, 2, .12);
+    border-color: rgba(126, 139, 2, .15);
+}
+
+.comment-form > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* لیبل‌ها */
+.comment-form label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: .95rem;
+}
+
+.comment-form label svg {
+    color: #4d5a00;
+    opacity: .7;
+    flex-shrink: 0;
+}
+
+.comment-form .required {
+    color: #4d5a00;
+    font-weight: 700;
+}
+
+/* ردیف 3 فیلد */
+.gc-fields-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.gc-fields-row p {
+    margin-bottom: 0 !important;
+}
+
+.comment-form p {
+    margin-bottom: 22px;
+}
+
+/* اینپوت‌ها */
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid rgba(43, 46, 50, .08);
+    border-radius: 18px;
+    background: #ffffff;
+    font-family: "Vazirmatn", sans-serif;
+    font-size: 1rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: all .3s ease;
+    line-height: 1.8;
+    box-shadow: inset 0 2px 6px rgba(43, 46, 50, .03);
+}
+
+.comment-form textarea {
+    min-height: 170px;
+    resize: vertical;
+    border-radius: 22px;
+}
+
+.comment-form input[type="text"]:focus,
+.comment-form input[type="email"]:focus,
+.comment-form input[type="url"]:focus,
+.comment-form textarea:focus {
+    border-color: var(--accent);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(126, 139, 2, .1),
+                inset 0 2px 6px rgba(43, 46, 50, .02);
+    transform: translateY(-2px);
+}
+
+.comment-form input::placeholder,
+.comment-form textarea::placeholder {
+    color: #17212b;
+    font-weight: 400;
+}
+
+/* چک‌باکس */
+.comment-form-cookies-consent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px !important;
+}
+
+.comment-form-cookies-consent input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(43, 46, 50, .15);
+    border-radius: 7px;
+    background: rgba(255,255,255,.6);
+    cursor: pointer;
+    transition: all .3s ease;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.comment-form-cookies-consent input[type="checkbox"]::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: .78rem;
+    font-weight: 600;
+    color: #17212b;
+    transition: transform .25s cubic-bezier(.4,0,.2,1);
+}
+
+.comment-form-cookies-consent input[type="checkbox"]:checked {
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.comment-form-cookies-consent input[type="checkbox"]:checked::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.comment-form-cookies-consent label {
+    margin-bottom: 0 !important;
+    color: #334155;
+    font-weight: 500;
+    font-size: .88rem;
+    cursor: pointer;
+}
+
+/* دکمه ارسال */
+.form-submit {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+}
+
+.gc-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 36px;
+    border-radius: 60px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    color: #17212b;
+    font-family: "Vazirmatn", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all .4s ease;
+    box-shadow: 0 12px 35px var(--accent-glow);
+    position: relative;
+    overflow: hidden;
+    line-height: 1;
+}
+
+.gc-submit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent);
+    transition: left .6s ease;
+}
+
+.gc-submit:hover::before {
+    left: 100%;
+}
+
+.gc-submit:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(126, 139, 2, .5);
+}
+
+.gc-submit:active {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(126, 139, 2, .4);
+}
+
+.gc-submit svg {
+    flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════
+   صفحه‌بندی نظرات
+   ═══════════════════════════════════ */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 35px 0;
+    flex-wrap: wrap;
+}
+
+.nav-links a,
+.nav-links span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-width: 46px;
+    height: 46px;
+    padding: 0 16px;
+    border-radius: 16px;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: .92rem;
+    transition: all .3s ease;
+}
+
+.nav-links a {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.07);
+    color: #17212b;
+    box-shadow: var(--shadow);
+}
+
+.nav-links a:hover {
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+    color: #17212b;
+    box-shadow: 0 10px 30px var(--accent-glow);
+    transform: translateY(-3px);
+}
+
+.nav-links span.current {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff !important;
+    border: 1px solid transparent;
+    box-shadow: 0 8px 25px rgba(43, 46, 50, .25);
+}
+
+/* ═══════════════════════════════════
+   فرم ریپلای داخل نظرات
+   ═══════════════════════════════════ */
+.gc-list #respond {
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+.gc-list #respond .comment-form {
+    border-radius: 24px;
+    padding: 30px 28px;
+    border-color: rgba(126, 139, 2, .2);
+}
+
+/* ═══════════════════════════════════
+   ریسپانسیو
+   ═══════════════════════════════════ */
+@media (max-width: 992px) {
+    .gc-fields-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gc-list .children {
+        margin-right: 22px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .gc-section {
+        padding: 50px 0 60px;
+    }
+
+    .gc-fields-row {
+        grid-template-columns: 1fr;
+    }
+
+    .gc-fields-row p {
+        margin-bottom: 18px !important;
+    }
+
+    .comment-form {
+        padding: 28px 22px;
+        border-radius: 24px;
+    }
+
+    .comment-body {
+        padding: 24px 22px;
+        border-radius: 22px;
+    }
+
+    .gc-avatar {
+        width: 46px !important;
+        height: 46px !important;
+        border-radius: 14px !important;
+    }
+
+    .gc-list .children {
+        margin-right: 16px !important;
+    }
+
+    .gc-list .children::before {
+        right: -12px;
+    }
+
+    .gc-submit {
+        width: 100%;
+        padding: 0 28px;
+    }
+
+    .gc-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .gc-actions {
+        flex-wrap: wrap;
+    }
+
+    .gc-separator span {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comment-form {
+        padding: 22px 16px;
+        border-radius: 20px;
+    }
+
+    .comment-body {
+        padding: 20px 16px;
+        border-radius: 18px;
+    }
+
+    .comment-form input[type="text"],
+    .comment-form input[type="email"],
+    .comment-form input[type="url"],
+    .comment-form textarea {
+        padding: 14px 16px;
+        border-radius: 14px;
+        font-size: .95rem;
+    }
+
+    .comment-form textarea {
+        min-height: 140px;
+        border-radius: 18px;
+    }
+
+    .gc-submit {
+        min-height: 54px;
+        font-size: .95rem;
+        border-radius: 50px;
+    }
+
+    .gc-name {
+        font-size: .95rem;
+    }
+
+    .gc-section-head h2 {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,21 @@
+/* 404 — سبک، فقط transform/opacity برای انیمیشن */
+.gl-404-wrap{min-height:60vh;display:grid;place-items:center;padding:48px 20px 80px;position:relative;z-index:1;}
+.gl-404-card{
+	max-width:560px;width:100%;text-align:center;padding:48px 36px;border-radius:var(--fl-radius,22px);
+	background:var(--fl-glass-bg,#ffffff);border:1px solid var(--fl-glass-border, rgba(0,0,0,0.07));
+	box-shadow:0 2px 12px rgba(0,0,0,.04);
+	will-change:transform,opacity;animation:gl404In .5s var(--fl-ease,cubic-bezier(.4,0,.2,1)) both;
+}
+@keyframes gl404In{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.gl-404-badge{width:88px;height:88px;margin:0 auto 14px;display:grid;place-items:center;border-radius:50%;
+	background:rgba(45,95,147,.10);color:#1e40af;}
+.gl-404-code{font-size:clamp(3rem,10vw,5rem);font-weight:600;line-height:1;margin:0;color:var(--fl-primary-dark,#1B4A73);}
+.gl-404-title{font-size:1.15rem;font-weight:700;margin:14px 0 6px;color:var(--fl-text,#17212B);}
+.gl-404-desc{color:#334155;line-height:1.85;margin:0 auto 22px;max-width:440px;}
+.gl-404-search{margin-bottom:22px;}
+.dark-mode .gl-404-card{background:rgba(15,23,42,.72);border-color:rgba(255,255,255,.08);box-shadow:0 12px 40px rgba(0,0,0,.30);}
+.dark-mode .gl-404-code{color:#93c5fd;}
+.dark-mode .gl-404-title{color:#f1f5f9;}
+.dark-mode .gl-404-desc{color:#94a3b8;}
+.dark-mode .gl-404-badge{background:rgba(147,197,253,.12);color:#93c5fd;}
+@media (prefers-reduced-motion: reduce){.gl-404-card{animation:none;}}
